@@ -7,7 +7,7 @@ from netmiko import ConnectHandler
 uname = input("Username: ")
 passwd = getpass("Password: ")
 
-#with is used to open and automatically close files
+#with is used to open and close files automatically
 #The commands.txt has all configuration commands
 #To view status use the do + show command
 with open("commands.txt") as f:
