@@ -1,11 +1,11 @@
-!!Random configs for testing purposes
 !
+!! Random configs for testing 
 !
 username automate password automation
 username automate privilege 15
 
 line vty 0 15
- transport input ssh
+ transport input telnet ssh
 
 router ospf 1
 network 0.0.0.0 0.0.0.0 area 0
