@@ -3,20 +3,20 @@ from getpass import getpass
 #ConnectionHandler is the function used by netmiko to connect to devices
 from netmiko import ConnectHandler
 
-#create variables for username and password
+#create variables to call for username, password, hostfile, and config file
 uname = input("Username: ")
 passwd = getpass("Password: ")
 cmds = input("Enter file name of configuration file: ")
 hostfile = input("Enter the name of file that has the devices: ")
 
+#Set some defaults to make testing easier
 #This will allow you to just press enter
-#This sets default values Not recommanded in any place but a lab
 if len(uname) < 1 : uname = "automate"
 if len(passwd) < 1 : passwd = "automation"
 if len(cmds) < 1 : cmds = "commands.txt"
 if len(hostfile) < 1 : hostfile = "devices.txt"
 
-#with is used to open and automatically close files
+#With is used to open and close files automatically
 #The commands.txt has all configuration commands
 #To view status use the do + show command
 with open(cmds) as f:
@@ -26,7 +26,7 @@ with open(hostfile) as f:
     devices = f.read().splitlines()
 
 
-#use a for loop to iterate through the devices
+#Use a for loop to iterate through the devices
 for device in devices:
     device_ip = device
     ios_rtr = {
