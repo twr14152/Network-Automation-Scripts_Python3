@@ -1,0 +1,124 @@
+root@debian:/home/todd/gns3# python3 netmiko_script.py 
+Username: automate
+Password: 
+192.168.10.1
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#!
+R1(config)#!! Random configs for testing 
+R1(config)#!
+R1(config)#username automate password automation
+R1(config)#username automate privilege 15
+R1(config)#
+R1(config)#line vty 0 15
+R1(config-line)# transport input ssh
+R1(config-line)#
+R1(config-line)#router ospf 1
+R1(config-router)#network 0.0.0.0 0.0.0.0 area 0
+R1(config-router)#
+R1(config-router)#ip ssh version 2
+R1(config)#
+R1(config)#int fa1/0
+R1(config-if)# description test
+R1(config-if)# no shut
+R1(config-if)#
+R1(config-if)#do show run int fa1/0
+Building configuration...
+
+Current configuration : 91 bytes
+!
+interface FastEthernet1/0
+ description test
+ no ip address
+ speed auto
+ duplex auto
+end
+
+R1(config-if)#do show ip ospf neighbor
+
+Neighbor ID     Pri   State           Dead Time   Address         Interface
+192.168.10.2      1   FULL/BDR        00:00:36    192.168.10.2    FastEthernet0/0
+192.168.10.3      1   FULL/DR         00:00:37    192.168.10.3    FastEthernet0/0
+R1(config-if)#end
+R1#
+192.168.10.2
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+R2(config)#!
+R2(config)#!! Random configs for testing 
+R2(config)#!
+R2(config)#username automate password automation
+R2(config)#username automate privilege 15
+R2(config)#
+R2(config)#line vty 0 15
+R2(config-line)# transport input ssh
+R2(config-line)#
+R2(config-line)#router ospf 1
+R2(config-router)#network 0.0.0.0 0.0.0.0 area 0
+R2(config-router)#
+R2(config-router)#ip ssh version 2
+R2(config)#
+R2(config)#int fa1/0
+R2(config-if)# description test
+R2(config-if)# no shut
+R2(config-if)#
+R2(config-if)#do show run int fa1/0
+Building configuration...
+
+Current configuration : 91 bytes
+!
+interface FastEthernet1/0
+ description test
+ no ip address
+ speed auto
+ duplex auto
+end
+
+R2(config-if)#do show ip ospf neighbor
+
+Neighbor ID     Pri   State           Dead Time   Address         Interface
+192.168.10.1      1   FULL/DROTHER    00:00:30    192.168.10.1    FastEthernet0/0
+192.168.10.3      1   FULL/DR         00:00:30    192.168.10.3    FastEthernet0/0
+R2(config-if)#end
+R2#
+192.168.10.3
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+R3(config)#!
+R3(config)#!! Random configs for testing 
+R3(config)#!
+R3(config)#username automate password automation
+R3(config)#username automate privilege 15
+R3(config)#
+R3(config)#line vty 0 15
+R3(config-line)# transport input ssh
+R3(config-line)#
+R3(config-line)#router ospf 1
+R3(config-router)#network 0.0.0.0 0.0.0.0 area 0
+R3(config-router)#
+R3(config-router)#ip ssh version 2
+R3(config)#
+R3(config)#int fa1/0
+R3(config-if)# description test
+R3(config-if)# no shut
+R3(config-if)#
+R3(config-if)#do show run int fa1/0
+Building configuration...
+
+Current configuration : 91 bytes
+!
+interface FastEthernet1/0
+ description test
+ no ip address
+ speed auto
+ duplex auto
+end
+
+R3(config-if)#do show ip ospf neighbor
+
+Neighbor ID     Pri   State           Dead Time   Address         Interface
+192.168.10.1      1   FULL/DROTHER    00:00:31    192.168.10.1    FastEthernet0/0
+192.168.10.2      1   FULL/BDR        00:00:32    192.168.10.2    FastEthernet0/0
+R3(config-if)#end
+R3#
+root@debian:/home/todd/gns3# 
