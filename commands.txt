@@ -1,0 +1,17 @@
+username automate password automation
+username automate privilege 15
+
+line vty 0 15
+ transport input ssh
+
+router ospf 1
+network 0.0.0.0 0.0.0.0 area 0
+
+ip ssh version 2
+
+int fa1/0
+ description test
+ no shut
+
+do show run int fa1/0
+do show ip ospf neighbor
