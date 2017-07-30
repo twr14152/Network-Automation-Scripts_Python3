@@ -1,3 +1,6 @@
+#
+#Use netmiko to connect to three gns3 ios devices and configure something 
+#
 #getpass will not display password
 from getpass import getpass
 #ConnectionHandler is the function used by netmiko to connect to devices
