@@ -1,5 +1,6 @@
 #
-#This script will allow for user to interactively entering hosts and commands on the fly
+#This script will allow for user to interactively enter hosts and commands on the fly
+#No config or host files necessary
 #
 #getpass will not display password
 from getpass import getpass
