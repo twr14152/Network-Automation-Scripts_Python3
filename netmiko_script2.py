@@ -1,3 +1,6 @@
+#
+#This script will use a host and configuration file to implement some predetermined configuration commands
+#
 #getpass will not display password
 from getpass import getpass
 #ConnectionHandler is the function used by netmiko to connect to devices
