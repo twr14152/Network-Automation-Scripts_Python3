@@ -1,0 +1,101 @@
+Python 3.4.2 (default, Oct  8 2014, 10:45:20) 
+[GCC 4.9.1] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from napalm_base import get_network_driver
+>>> import napalm_ios
+>>> driver = get_network_driver('ios')
+>>> rtr = driver('192.168.10.1', 'cisco', 'cisco') 
+>>> rtr.open()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/usr/local/lib/python3.4/dist-packages/napalm_ios/ios.py", line 140, in open
+    self.dest_file_system = self.device._autodetect_fs()
+  File "/usr/local/lib/python3.4/dist-packages/netmiko/cisco_base_connection.py", line 149, in _autodetect_fs
+    "system: {} {}".format(cmd, output))
+ValueError: An error occurred in dynamically determining remote file system: dir %Error opening disk0:/ (No such device)
+>>> 
+>>> from pprint import pprint
+>>> interfaces = rtr.get_interfaces()
+>>> pprint(interfaces)
+{'FastEthernet0/0': {'description': '',
+                     'is_enabled': True,
+                     'is_up': True,
+                     'last_flapped': -1.0,
+                     'mac_address': 'CA:01:09:BE:00:00',
+                     'speed': 100},
+ 'FastEthernet1/0': {'description': 'interactive script test',
+                     'is_enabled': True,
+                     'is_up': True,
+                     'last_flapped': -1.0,
+                     'mac_address': 'CA:01:09:BE:00:1C',
+                     'speed': 100},
+ 'FastEthernet1/1': {'description': '',
+                     'is_enabled': False,
+                     'is_up': False,
+                     'last_flapped': -1.0,
+                     'mac_address': 'CA:01:09:BE:00:1D',
+                     'speed': 100},
+ 'Loopback1': {'description': 'test loopback',
+               'is_enabled': True,
+               'is_up': True,
+               'last_flapped': -1.0,
+               'mac_address': '',
+               'speed': 8000},
+ 'Loopback100': {'description': 'test',
+                 'is_enabled': True,
+                 'is_up': True,
+                 'last_flapped': -1.0,
+                 'mac_address': '',
+                 'speed': 8000},
+ 'Loopback101': {'description': 'test123',
+                 'is_enabled': True,
+                 'is_up': True,
+                 'last_flapped': -1.0,
+                 'mac_address': '',
+                 'speed': 8000},
+ 'Serial2/0': {'description': '',
+               'is_enabled': False,
+               'is_up': False,
+               'last_flapped': -1.0,
+               'mac_address': '',
+               'speed': 2},
+ 'Serial2/1': {'description': '',
+               'is_enabled': False,
+               'is_up': False,
+               'last_flapped': -1.0,
+               'mac_address': '',
+               'speed': 2},
+ 'Serial2/2': {'description': '',
+               'is_enabled': False,
+               'is_up': False,
+               'last_flapped': -1.0,
+               'mac_address': '',
+               'speed': 2},
+ 'Serial2/3': {'description': '',
+               'is_enabled': False,
+               'is_up': False,
+               'last_flapped': -1.0,
+               'mac_address': '',
+               'speed': 2}}
+
+
+>>> pprint (rtr.get_facts())
+{'fqdn': 'R1.lab.test',
+ 'hostname': 'R1',
+ 'interface_list': ['FastEthernet0/0',
+                    'FastEthernet1/0',
+                    'FastEthernet1/1',
+                    'Serial2/0',
+                    'Serial2/1',
+                    'Serial2/2',
+                    'Serial2/3',
+                    'Loopback1',
+                    'Loopback100',
+                    'Loopback101'],
+ 'model': '7206VXR',
+ 'os_version': '7200 Software (C7200-ADVENTERPRISEK9-M), Version 15.2(4)S7, '
+               'RELEASE SOFTWARE (fc4)',
+ 'serial_number': '4279256517',
+ 'uptime': 40440,
+ 'vendor': 'Cisco'}
+>>> 
