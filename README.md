@@ -9,3 +9,8 @@ Testing Telnetlib module
 - Use python3 telnetlib module
 - capture output of scripts
 
+Napalm for ios
+- Tested with python3.4 napalm_base and napalm_ios
+- Could run interactivly however I was not able to get script to run at this time with python3
+- Output was captured
+- Was informed by creator that Napalm should be used with python2.7 at this time
