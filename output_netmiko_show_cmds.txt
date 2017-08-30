@@ -1,73 +1,233 @@
 root@debian:/home/todd/gns3# ./netmiko_show_cmds.py 
 Username: 
 Password: 
-Enter config commands seperated by ',': show ip int brief | inc up, show cdp nei
+Enter config commands seperated by ',': show ip int brief, show ip route, show cdp nei
 Enter the host IPs seperate with space: r1 r2 r3 r4 r5
-Connected to host: r1
-FastEthernet0/0        192.168.10.1    YES manual up                    up      
-FastEthernet1/0        unassigned      YES unset  up                    up      
-Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
-                  S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone, 
-                  D - Remote, C - CVTA, M - Two-port Mac Relay 
-
-Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
-R2.testlab.com   Fas 1/0           146               R    7206VXR   Fas 1/0
-R2.testlab.com   Fas 0/0           148               R    7206VXR   Fas 0/0
-R3.testlab.com   Fas 1/0           133               R    7206VXR   Fas 1/0
-R3.testlab.com   Fas 0/0           131               R    7206VXR   Fas 0/0
-R4.testlab.com   Fas 0/0           176               R    7206VXR   Fas 0/0
-R5.testlab.com   Fas 0/0           150               R    7206VXR   Fas 0/0
-Connected to host: r2
-FastEthernet0/0        192.168.10.2    YES manual up                    up      
-FastEthernet1/0        unassigned      YES unset  up                    up      
-Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
-                  S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone, 
-                  D - Remote, C - CVTA, M - Two-port Mac Relay 
-
-Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
-R3.testlab.com   Fas 1/0           129               R    7206VXR   Fas 1/0
-R3.testlab.com   Fas 0/0           126               R    7206VXR   Fas 0/0
-R1.testlab.com   Fas 1/0           139               R    7206VXR   Fas 1/0
-R1.testlab.com   Fas 0/0           161               R    7206VXR   Fas 0/0
-R4.testlab.com   Fas 0/0           169               R    7206VXR   Fas 0/0
-R5.testlab.com   Fas 0/0           147               R    7206VXR   Fas 0/0
-Connected to host: r3
-FastEthernet0/0        192.168.10.3    YES manual up                    up      
-FastEthernet1/0        unassigned      YES unset  up                    up      
-Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
-                  S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone, 
-                  D - Remote, C - CVTA, M - Two-port Mac Relay 
-
-Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
-R2.testlab.com   Fas 1/0           138               R    7206VXR   Fas 1/0
-R2.testlab.com   Fas 0/0           139               R    7206VXR   Fas 0/0
-R1.testlab.com   Fas 1/0           133               R    7206VXR   Fas 1/0
-R1.testlab.com   Fas 0/0           156               R    7206VXR   Fas 0/0
-R4.testlab.com   Fas 0/0           164               R    7206VXR   Fas 0/0
-R5.testlab.com   Fas 0/0           142               R    7206VXR   Fas 0/0
-Connected to host: r4
-FastEthernet0/0        192.168.10.4    YES manual up                    up      
-FastEthernet1/0        unassigned      YES unset  up                    up      
-Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
-                  S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone, 
-                  D - Remote, C - CVTA, M - Two-port Mac Relay 
-
-Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
-R2.testlab.com   Fas 0/0           137               R    7206VXR   Fas 0/0
-R3.testlab.com   Fas 0/0           168               R    7206VXR   Fas 0/0
-R1.testlab.com   Fas 0/0           154               R    7206VXR   Fas 0/0
-R5.testlab.com   Fas 0/0           139               R    7206VXR   Fas 0/0
 Connected to host: r5
+Connected to host: r4
+Connected to host: r3
+Connected to host: r2
+Connected to host: r1
+Connected to host: r5
+Interface              IP-Address      OK? Method Status                Protocol
 FastEthernet0/0        192.168.10.5    YES manual up                    up      
 FastEthernet1/0        unassigned      YES unset  up                    up      
+FastEthernet1/1        unassigned      YES unset  administratively down down    
+Serial2/0              unassigned      YES unset  administratively down down    
+Serial2/1              unassigned      YES unset  administratively down down    
+Serial2/2              unassigned      YES unset  administratively down down    
+Serial2/3              unassigned      YES unset  administratively down down    
+Loopback0              unassigned      YES unset  up                    up      
+Loopback1              unassigned      YES unset  up                    up      
+Loopback2              unassigned      YES unset  up                    up      
+
+---- Elapsed time= 5.652666807174683
+Connected to host: r4
+Interface              IP-Address      OK? Method Status                Protocol
+FastEthernet0/0        192.168.10.4    YES manual up                    up      
+FastEthernet1/0        unassigned      YES unset  up                    up      
+FastEthernet1/1        unassigned      YES unset  administratively down down    
+Serial2/0              unassigned      YES unset  administratively down down    
+Serial2/1              unassigned      YES unset  administratively down down    
+Serial2/2              unassigned      YES unset  administratively down down    
+Serial2/3              unassigned      YES unset  administratively down down    
+Loopback0              unassigned      YES unset  up                    up      
+Loopback1              unassigned      YES unset  up                    up      
+Loopback2              unassigned      YES unset  up                    up      
+
+---- Elapsed time= 5.668063163757324
+Connected to host: r3
+Interface              IP-Address      OK? Method Status                Protocol
+FastEthernet0/0        192.168.10.3    YES manual up                    up      
+FastEthernet1/0        unassigned      YES unset  up                    up      
+FastEthernet1/1        unassigned      YES unset  administratively down down    
+Serial2/0              unassigned      YES unset  administratively down down    
+Serial2/1              unassigned      YES unset  administratively down down    
+Serial2/2              unassigned      YES unset  administratively down down    
+Serial2/3              unassigned      YES unset  administratively down down    
+Loopback0              unassigned      YES unset  up                    up      
+Loopback1              unassigned      YES unset  up                    up      
+Loopback2              unassigned      YES unset  up                    up      
+
+---- Elapsed time= 5.67682409286499
+Connected to host: r1
+Interface              IP-Address      OK? Method Status                Protocol
+FastEthernet0/0        192.168.10.1    YES manual up                    up      
+FastEthernet1/0        unassigned      YES unset  up                    up      
+FastEthernet1/1        unassigned      YES unset  administratively down down    
+Serial2/0              unassigned      YES unset  administratively down down    
+Serial2/1              unassigned      YES unset  administratively down down    
+Serial2/2              unassigned      YES unset  administratively down down    
+Serial2/3              unassigned      YES unset  administratively down down    
+Loopback0              unassigned      YES unset  up                    up      
+Loopback1              unassigned      YES unset  up                    up      
+Loopback2              unassigned      YES unset  up                    up      
+
+---- Elapsed time= 5.834769248962402
+Connected to host: r2
+Interface              IP-Address      OK? Method Status                Protocol
+FastEthernet0/0        192.168.10.2    YES manual up                    up      
+FastEthernet1/0        unassigned      YES unset  up                    up      
+FastEthernet1/1        unassigned      YES unset  administratively down down    
+Serial2/0              unassigned      YES unset  administratively down down    
+Serial2/1              unassigned      YES unset  administratively down down    
+Serial2/2              unassigned      YES unset  administratively down down    
+Serial2/3              unassigned      YES unset  administratively down down    
+Loopback0              unassigned      YES unset  up                    up      
+Loopback1              unassigned      YES unset  up                    up      
+Loopback2              unassigned      YES unset  up                    up      
+
+---- Elapsed time= 5.835348844528198
+Connected to host: r5
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route, H - NHRP, l - LISP
+       + - replicated route, % - next hop override
+
+Gateway of last resort is not set
+
+      192.168.10.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.10.0/24 is directly connected, FastEthernet0/0
+L        192.168.10.5/32 is directly connected, FastEthernet0/0
+
+---- Elapsed time= 6.257869482040405
+Connected to host: r4
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route, H - NHRP, l - LISP
+       + - replicated route, % - next hop override
+
+Gateway of last resort is not set
+
+      192.168.10.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.10.0/24 is directly connected, FastEthernet0/0
+L        192.168.10.4/32 is directly connected, FastEthernet0/0
+
+---- Elapsed time= 6.271155834197998
+Connected to host: r3
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route, H - NHRP, l - LISP
+       + - replicated route, % - next hop override
+
+Gateway of last resort is not set
+
+      192.168.10.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.10.0/24 is directly connected, FastEthernet0/0
+L        192.168.10.3/32 is directly connected, FastEthernet0/0
+
+---- Elapsed time= 6.281125783920288
+Connected to host: r1
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route, H - NHRP, l - LISP
+       + - replicated route, % - next hop override
+
+Gateway of last resort is not set
+
+      192.168.10.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.10.0/24 is directly connected, FastEthernet0/0
+L        192.168.10.1/32 is directly connected, FastEthernet0/0
+
+---- Elapsed time= 6.439993143081665
+Connected to host: r2
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route, H - NHRP, l - LISP
+       + - replicated route, % - next hop override
+
+Gateway of last resort is not set
+
+      192.168.10.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.10.0/24 is directly connected, FastEthernet0/0
+L        192.168.10.2/32 is directly connected, FastEthernet0/0
+
+---- Elapsed time= 6.440559148788452
+Connected to host: r5
 Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
                   S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone, 
                   D - Remote, C - CVTA, M - Two-port Mac Relay 
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
-R2.testlab.com   Fas 0/0           132               R    7206VXR   Fas 0/0
-R3.testlab.com   Fas 0/0           163               R    7206VXR   Fas 0/0
-R1.testlab.com   Fas 0/0           149               R    7206VXR   Fas 0/0
-R4.testlab.com   Fas 0/0           157               R    7206VXR   Fas 0/0
-root@debian:/home/todd/gns3#
+R2.testlab.com   Fas 0/0           178               R    7206VXR   Fas 0/0
+R3.testlab.com   Fas 0/0           168               R    7206VXR   Fas 0/0
+R1.testlab.com   Fas 0/0           147               R    7206VXR   Fas 0/0
+R4.testlab.com   Fas 0/0           148               R    7206VXR   Fas 0/0
 
+---- Elapsed time= 6.861003160476685
+Connected to host: r4
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone, 
+                  D - Remote, C - CVTA, M - Two-port Mac Relay 
+
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+R2.testlab.com   Fas 0/0           179               R    7206VXR   Fas 0/0
+R3.testlab.com   Fas 0/0           171               R    7206VXR   Fas 0/0
+R1.testlab.com   Fas 0/0           152               R    7206VXR   Fas 0/0
+R5.testlab.com   Fas 0/0           151               R    7206VXR   Fas 0/0
+
+---- Elapsed time= 6.87527322769165
+Connected to host: r3
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone, 
+                  D - Remote, C - CVTA, M - Two-port Mac Relay 
+
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+R2.testlab.com   Fas 1/0           141               R    7206VXR   Fas 1/0
+R2.testlab.com   Fas 0/0           178               R    7206VXR   Fas 0/0
+R1.testlab.com   Fas 1/0           177               R    7206VXR   Fas 1/0
+R1.testlab.com   Fas 0/0           149               R    7206VXR   Fas 0/0
+R4.testlab.com   Fas 0/0           149               R    7206VXR   Fas 0/0
+R5.testlab.com   Fas 0/0           148               R    7206VXR   Fas 0/0
+
+---- Elapsed time= 6.885010480880737
+Connected to host: r2
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone, 
+                  D - Remote, C - CVTA, M - Two-port Mac Relay 
+
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+R3.testlab.com   Fas 1/0           154               R    7206VXR   Fas 1/0
+R3.testlab.com   Fas 0/0           168               R    7206VXR   Fas 0/0
+R1.testlab.com   Fas 1/0           177               R    7206VXR   Fas 1/0
+R1.testlab.com   Fas 0/0           147               R    7206VXR   Fas 0/0
+R4.testlab.com   Fas 0/0           148               R    7206VXR   Fas 0/0
+R5.testlab.com   Fas 0/0           147               R    7206VXR   Fas 0/0
+
+---- Elapsed time= 7.0455427169799805
+Connected to host: r1
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone, 
+                  D - Remote, C - CVTA, M - Two-port Mac Relay 
+
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+R2.testlab.com   Fas 1/0           141               R    7206VXR   Fas 1/0
+R2.testlab.com   Fas 0/0           178               R    7206VXR   Fas 0/0
+R3.testlab.com   Fas 1/0           155               R    7206VXR   Fas 1/0
+R3.testlab.com   Fas 0/0           168               R    7206VXR   Fas 0/0
+R4.testlab.com   Fas 0/0           149               R    7206VXR   Fas 0/0
+R5.testlab.com   Fas 0/0           148               R    7206VXR   Fas 0/0
+
+---- Elapsed time= 7.045804023742676
+[None, None, None, None, None]
+root@debian:/home/todd/gns3# 
