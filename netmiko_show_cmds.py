@@ -1,11 +1,14 @@
 #!/usr/bin/python3
 #This script will allow for user pick hosts and enter show commands interactively
-#This script depending on account permissions will be able to issue wr mem
 #
+#Enable Multiprocessing
+from multiprocessing import Pool
 #getpass will not display password
 from getpass import getpass
 #ConnectionHandler is the function used by netmiko to connect to devices
 from netmiko import ConnectHandler
+#Time tracker
+from time import time
 
 #create variables for username and password
 #create variables for configs and hosts
@@ -23,9 +26,10 @@ if len(passwd) < 1 : passwd = "automation"
 hosts = host.split()
 cmds = cmd.split(",")
 
+starting_time = time()
+
 #this for loop is used to iterate through the devices
-for host in hosts:
-    host_ip = host
+def run_script(host_ip):
     ios_rtr = {
         "device_type": "cisco_ios",
         "ip": host_ip,
@@ -40,12 +44,9 @@ for host in hosts:
     for show_commands in cmds:
         output = net_connect.send_command(show_commands)
         print(output)
+        print('\n---- Elapsed time=', time()-starting_time)
 
-
-#This is the key to sending show commands vs config commands
-#show commands --> net_connect.send_command()
-#config commmands --> net_connect.send_config_set()
-
-
-
+if __name__ == "__main__":
+    with Pool(5) as p:
+        print(p.map(run_script, hosts))
 
