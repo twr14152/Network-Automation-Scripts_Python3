@@ -2,6 +2,10 @@
 Network automation using various python modules
 
 Testing Netmiko module
+- Added multiprocessing Pools to scripts to speed them up
+    - netmiko_conf_mp_pools.py 
+    - netmiko_show_cmds.py to speed them up
+    - results were capture in output files
 - netmiko_script#.py
 - capture output of scripts
 
