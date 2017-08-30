@@ -1,0 +1,72 @@
+root@debian:/home/todd/gns3# ./netmiko_show_cmds.py 
+Username: 
+Password: 
+Enter config commands seperated by ',': show ip int brief | inc up, show cdp nei
+Enter the host IPs seperate with space: r1 r2 r3 r4 r5
+Connected to host: r1
+FastEthernet0/0        192.168.10.1    YES manual up                    up      
+FastEthernet1/0        unassigned      YES unset  up                    up      
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone, 
+                  D - Remote, C - CVTA, M - Two-port Mac Relay 
+
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+R2.testlab.com   Fas 1/0           146               R    7206VXR   Fas 1/0
+R2.testlab.com   Fas 0/0           148               R    7206VXR   Fas 0/0
+R3.testlab.com   Fas 1/0           133               R    7206VXR   Fas 1/0
+R3.testlab.com   Fas 0/0           131               R    7206VXR   Fas 0/0
+R4.testlab.com   Fas 0/0           176               R    7206VXR   Fas 0/0
+R5.testlab.com   Fas 0/0           150               R    7206VXR   Fas 0/0
+Connected to host: r2
+FastEthernet0/0        192.168.10.2    YES manual up                    up      
+FastEthernet1/0        unassigned      YES unset  up                    up      
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone, 
+                  D - Remote, C - CVTA, M - Two-port Mac Relay 
+
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+R3.testlab.com   Fas 1/0           129               R    7206VXR   Fas 1/0
+R3.testlab.com   Fas 0/0           126               R    7206VXR   Fas 0/0
+R1.testlab.com   Fas 1/0           139               R    7206VXR   Fas 1/0
+R1.testlab.com   Fas 0/0           161               R    7206VXR   Fas 0/0
+R4.testlab.com   Fas 0/0           169               R    7206VXR   Fas 0/0
+R5.testlab.com   Fas 0/0           147               R    7206VXR   Fas 0/0
+Connected to host: r3
+FastEthernet0/0        192.168.10.3    YES manual up                    up      
+FastEthernet1/0        unassigned      YES unset  up                    up      
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone, 
+                  D - Remote, C - CVTA, M - Two-port Mac Relay 
+
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+R2.testlab.com   Fas 1/0           138               R    7206VXR   Fas 1/0
+R2.testlab.com   Fas 0/0           139               R    7206VXR   Fas 0/0
+R1.testlab.com   Fas 1/0           133               R    7206VXR   Fas 1/0
+R1.testlab.com   Fas 0/0           156               R    7206VXR   Fas 0/0
+R4.testlab.com   Fas 0/0           164               R    7206VXR   Fas 0/0
+R5.testlab.com   Fas 0/0           142               R    7206VXR   Fas 0/0
+Connected to host: r4
+FastEthernet0/0        192.168.10.4    YES manual up                    up      
+FastEthernet1/0        unassigned      YES unset  up                    up      
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone, 
+                  D - Remote, C - CVTA, M - Two-port Mac Relay 
+
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+R2.testlab.com   Fas 0/0           137               R    7206VXR   Fas 0/0
+R3.testlab.com   Fas 0/0           168               R    7206VXR   Fas 0/0
+R1.testlab.com   Fas 0/0           154               R    7206VXR   Fas 0/0
+R5.testlab.com   Fas 0/0           139               R    7206VXR   Fas 0/0
+Connected to host: r5
+FastEthernet0/0        192.168.10.5    YES manual up                    up      
+FastEthernet1/0        unassigned      YES unset  up                    up      
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone, 
+                  D - Remote, C - CVTA, M - Two-port Mac Relay 
+
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+R2.testlab.com   Fas 0/0           132               R    7206VXR   Fas 0/0
+R3.testlab.com   Fas 0/0           163               R    7206VXR   Fas 0/0
+R1.testlab.com   Fas 0/0           149               R    7206VXR   Fas 0/0
+R4.testlab.com   Fas 0/0           157               R    7206VXR   Fas 0/0
+root@debian:/home/todd/gns3# 
