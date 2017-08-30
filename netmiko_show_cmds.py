@@ -1,8 +1,10 @@
 #!/usr/bin/python3
+#
 #This script will allow for user pick hosts and enter show commands interactively
 #
 #Enable Multiprocessing
 from multiprocessing import Pool
+#
 #getpass will not display password
 from getpass import getpass
 #ConnectionHandler is the function used by netmiko to connect to devices
@@ -43,10 +45,17 @@ def run_script(host_ip):
     #this for loop is used to iterate through the show commands
     for show_commands in cmds:
         output = net_connect.send_command(show_commands)
+        print("Connected to host:", host_ip)
         print(output)
         print('\n---- Elapsed time=', time()-starting_time)
 
 if __name__ == "__main__":
     with Pool(5) as p:
         print(p.map(run_script, hosts))
+
+
+#This is the key to sending show commands vs config commands
+#show commands --> net_connect.send_command()
+#config commmands --> net_connect.send_config_set()
+
 
