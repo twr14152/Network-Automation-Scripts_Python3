@@ -1,114 +1,46 @@
-root@debian:/home/todd/gns3# python3 netmiko_script3.py 
+root@debian:/home/todd/gns3# ./netmiko_script3.py 
 Username: 
 Password: 
-Enter config commands seperated by ',': interface fa1/0, description interactive script test, do sh interface fa1/0 
-Enter the host IPs seperate with space: 192.168.10.1 192.168.10.2 192.168.10.3
-Connected to host: 192.168.10.1
+Enter config commands seperated by ',': interface loop 0, description configured by netmiko, 
+Enter the host IPs seperate with space: r1 r2 r3 r4 r5
+Connected to host: r1
 config term
 Enter configuration commands, one per line.  End with CNTL/Z.
-R1(config)#interface fa1/0
-R1(config-if)# description interactive script test
-R1(config-if)# do sh interface fa1/0 
-FastEthernet1/0 is up, line protocol is up 
-  Hardware is i82543 (Livengood), address is ca01.09be.001c (bia ca01.09be.001c)
-  Description: interactive script test
-  MTU 1500 bytes, BW 100000 Kbit/sec, DLY 100 usec, 
-     reliability 255/255, txload 1/255, rxload 1/255
-  Encapsulation ARPA, loopback not set
-  Keepalive set (10 sec)
-  Full-duplex, 100Mb/s, 100BaseTX/FX
-  ARP type: ARPA, ARP Timeout 04:00:00
-  Last input never, output never, output hang never
-  Last clearing of "show interface" counters never
-  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
-  Queueing strategy: fifo
-  Output queue: 0/40 (size/max)
-  5 minute input rate 0 bits/sec, 0 packets/sec
-  5 minute output rate 0 bits/sec, 0 packets/sec
-     0 packets input, 0 bytes
-     Received 0 broadcasts (0 IP multicasts)
-     0 runts, 0 giants, 0 throttles 
-     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
-     0 watchdog
-     0 input packets with dribble condition detected
-     2831 packets output, 308476 bytes, 0 underruns
-     0 output errors, 0 collisions, 12 interface resets
-     0 unknown protocol drops
-     0 babbles, 0 late collision, 0 deferred
-     0 lost carrier, 0 no carrier
-     0 output buffer failures, 0 output buffers swapped out
+R1(config)#interface loop 0
+R1(config-if)# description configured by netmiko
+R1(config-if)# 
 R1(config-if)#end
 R1#
-Connected to host: 192.168.10.2
+Connected to host: r2
 config term
 Enter configuration commands, one per line.  End with CNTL/Z.
-R2(config)#interface fa1/0
-R2(config-if)# description interactive script test
-R2(config-if)# do sh interface fa1/0 
-FastEthernet1/0 is up, line protocol is up 
-  Hardware is i82543 (Livengood), address is ca02.09c8.001c (bia ca02.09c8.001c)
-  Description: interactive script test
-  MTU 1500 bytes, BW 100000 Kbit/sec, DLY 100 usec, 
-     reliability 255/255, txload 1/255, rxload 1/255
-  Encapsulation ARPA, loopback not set
-  Keepalive set (10 sec)
-  Full-duplex, 100Mb/s, 100BaseTX/FX
-  ARP type: ARPA, ARP Timeout 04:00:00
-  Last input never, output never, output hang never
-  Last clearing of "show interface" counters never
-  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
-  Queueing strategy: fifo
-  Output queue: 0/40 (size/max)
-  5 minute input rate 0 bits/sec, 0 packets/sec
-  5 minute output rate 0 bits/sec, 0 packets/sec
-     0 packets input, 0 bytes
-     Received 0 broadcasts (0 IP multicasts)
-     0 runts, 0 giants, 0 throttles 
-     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
-     0 watchdog
-     0 input packets with dribble condition detected
-     2823 packets output, 307715 bytes, 0 underruns
-     0 output errors, 0 collisions, 12 interface resets
-     0 unknown protocol drops
-     0 babbles, 0 late collision, 0 deferred
-     0 lost carrier, 0 no carrier
-     0 output buffer failures, 0 output buffers swapped out
+R2(config)#interface loop 0
+R2(config-if)# description configured by netmiko
+R2(config-if)# 
 R2(config-if)#end
 R2#
-Connected to host: 192.168.10.3
+Connected to host: r3
 config term
 Enter configuration commands, one per line.  End with CNTL/Z.
-R3(config)#interface fa1/0
-R3(config-if)# description interactive script test
-R3(config-if)# do sh interface fa1/0 
-FastEthernet1/0 is up, line protocol is up 
-  Hardware is i82543 (Livengood), address is ca03.0b61.001c (bia ca03.0b61.001c)
-  Description: interactive script test
-  MTU 1500 bytes, BW 100000 Kbit/sec, DLY 100 usec, 
-     reliability 255/255, txload 1/255, rxload 1/255
-  Encapsulation ARPA, loopback not set
-  Keepalive set (10 sec)
-  Full-duplex, 100Mb/s, 100BaseTX/FX
-  ARP type: ARPA, ARP Timeout 04:00:00
-  Last input never, output never, output hang never
-  Last clearing of "show interface" counters never
-  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
-  Queueing strategy: fifo
-  Output queue: 0/40 (size/max)
-  5 minute input rate 0 bits/sec, 0 packets/sec
-  5 minute output rate 0 bits/sec, 0 packets/sec
-     0 packets input, 0 bytes
-     Received 0 broadcasts (0 IP multicasts)
-     0 runts, 0 giants, 0 throttles 
-     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
-     0 watchdog
-     0 input packets with dribble condition detected
-     2810 packets output, 305973 bytes, 0 underruns
-     0 output errors, 0 collisions, 12 interface resets
-     0 unknown protocol drops
-     0 babbles, 0 late collision, 0 deferred
-     0 lost carrier, 0 no carrier
-     0 output buffer failures, 0 output buffers swapped out
+R3(config)#interface loop 0
+R3(config-if)# description configured by netmiko
+R3(config-if)# 
 R3(config-if)#end
 R3#
+Connected to host: r4
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+R4(config)#interface loop 0
+R4(config-if)# description configured by netmiko
+R4(config-if)# 
+R4(config-if)#end
+R4#
+Connected to host: r5
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+R5(config)#interface loop 0
+R5(config-if)# description configured by netmiko
+R5(config-if)# 
+R5(config-if)#end
+R5#
 root@debian:/home/todd/gns3# 
