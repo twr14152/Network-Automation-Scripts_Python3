@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-#
 #This script will allow for user pick hosts and enter show commands interactively
+#This script depending on account permissions will be able to issue wr mem
 #
 #getpass will not display password
 from getpass import getpass
