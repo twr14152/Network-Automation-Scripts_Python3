@@ -1,6 +1,5 @@
-#
-#This script will use a host and configuration file to implement some predetermined configuration commands
-#
+#!/usr/bin/python3
+
 #getpass will not display password
 from getpass import getpass
 #ConnectionHandler is the function used by netmiko to connect to devices
@@ -13,7 +12,7 @@ cmds = input("Enter file name of configuration file: ")
 hostfile = input("Enter the name of file that has the devices: ")
 
 #This will allow you to just press enter
-#This sets default values for each variable
+#This sets default values Not recommanded in any place but a lab
 if len(uname) < 1 : uname = "automate"
 if len(passwd) < 1 : passwd = "automation"
 if len(cmds) < 1 : cmds = "commands.txt"
@@ -47,7 +46,6 @@ for host in hosts:
     output = net_connect.send_config_set(cmds_to_send)
     #print the output
     print(output)
-
 
 
 
