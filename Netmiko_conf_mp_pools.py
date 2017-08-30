@@ -1,13 +1,14 @@
 #!/usr/bin/python3
 #
 #This script will allow up to update a group of hosts with common config shared by all
-
 #Enable Multiprocessing
 from multiprocessing import Pool
 #getpass will not display password
 from getpass import getpass
 #ConnectionHandler is the function used by netmiko to connect to devices
 from netmiko import ConnectHandler
+#Time tracker
+from time import time
 
 #create variables for username and password
 #create variables for configs and hosts
@@ -26,6 +27,8 @@ if len(passwd) < 1 : passwd = "automation"
 hosts = host.split()
 cmds = cmd.split(",")
 
+starting_time = time()
+
 #For loop used to iterate through the devices
 def run_script(host_ip):
     ios_rtr = {
@@ -42,7 +45,7 @@ def run_script(host_ip):
     output = net_connect.send_config_set(cmds)
     #print the output
     print(output)
-
+    print('\n---- Elapsed time=', time()-starting_time)
 
 if __name__ == "__main__":
     with Pool(5) as p:
