@@ -1,6 +1,6 @@
+#!/usr/bin/python3
 #
-#This script will allow for user to interactively enter hosts and commands on the fly
-#No config or host files necessary
+#This script will allow up to update a group of hosts with common config shared by all
 #
 #getpass will not display password
 from getpass import getpass
@@ -12,20 +12,19 @@ from netmiko import ConnectHandler
 uname = input("Username: ")
 passwd = getpass("Password: ")
 cmd = input("Enter config commands seperated by ',': ")
-host = input("Enter the host IPs seperate with space: ")
+host = input("Enter the DNS hostnames or IPs seperated by a space: ")
 
 #This will allow you to just press enter
 #This sets default values Not recommanded in any place but a lab
 if len(uname) < 1 : uname = "automate"
 if len(passwd) < 1 : passwd = "automation"
 
-#create lists for commands
+#create lists of hosts and cmds to iterate through
 #This list can contain show or config commands show commands require "do + command"
 hosts = host.split()
 cmds = cmd.split(",")
 
-
-#use a for loop to iterate through the devices
+#For loop used to iterate through the devices
 for host in hosts:
     host_ip = host
     ios_rtr = {
@@ -34,7 +33,6 @@ for host in hosts:
         "username": uname,
         "password": passwd,
         }
-
     #connect to the device via ssh
     net_connect = ConnectHandler(**ios_rtr)
     #print the device IP to identify which device is being configured
@@ -43,6 +41,7 @@ for host in hosts:
     output = net_connect.send_config_set(cmds)
     #print the output
     print(output)
+
 
 
 
