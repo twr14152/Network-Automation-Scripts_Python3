@@ -51,11 +51,12 @@ R5(config-if)# description this is a test
 R5(config-if)#end
 R5#
 
+---- Elapsed time= 42.538753032684326
+
 **********************************
 With Multiprocessing pools enabled
 **********************************
 
----- Elapsed time= 42.538753032684326
 root@debian:/home/todd/gns3# ./netmiko_conf_mp_pools.py
 Username: 
 Password: 
