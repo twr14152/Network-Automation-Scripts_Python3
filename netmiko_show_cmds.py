@@ -30,7 +30,7 @@ cmds = cmd.split(",")
 
 starting_time = time()
 
-#this for loop is used to iterate through the devices
+#Each memeber of the pool (Pool(5)) will be run through this function
 def run_script(host_ip):
     ios_rtr = {
         "device_type": "cisco_ios",
