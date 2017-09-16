@@ -47,5 +47,7 @@ def run_script(host_ip):
     print('\n---- Elapsed time=', time()-starting_time)
 
 if __name__ == "__main__":
+    # You can increase or shrink the number of process you want to run at a time
+    # If you have 10 hosts there will be two groups of 5 done sequentially
     with Pool(5) as p:
         print(p.map(run_script, hosts))
