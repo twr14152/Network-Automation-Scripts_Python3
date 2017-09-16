@@ -28,7 +28,7 @@ cmds = cmd.split(",")
 
 starting_time = time()
 
-#Up to 5 hosts (Pool(5)) will be run through this function
+#Each member of the pool of 5 will be run through this function
 def run_script(host_ip):
     ios_rtr = {
         "device_type": "cisco_ios",
@@ -47,7 +47,6 @@ def run_script(host_ip):
     print('\n---- Elapsed time=', time()-starting_time)
 
 if __name__ == "__main__":
-    # You can increase or shrink the number of process you want to run at a time
-    # If you have 10 hosts there will be two groups of 5 done sequentially
+    # Pool(5) means 5 process will be run at a time, more hosts will go in the next group
     with Pool(5) as p:
         print(p.map(run_script, hosts))
