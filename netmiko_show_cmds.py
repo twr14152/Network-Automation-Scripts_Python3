@@ -30,7 +30,7 @@ cmds = cmd.split(",")
 
 starting_time = time()
 
-#Each memeber of the pool (Pool(5)) will be run through this function
+#Each member of the pool of 5 will be run through this function
 def run_script(host_ip):
     ios_rtr = {
         "device_type": "cisco_ios",
@@ -50,6 +50,7 @@ def run_script(host_ip):
         print('\n---- Elapsed time=', time()-starting_time)
 
 if __name__ == "__main__":
+    # Pool(5) means 5 process will be run at a time, more hosts will go in the next group
     with Pool(5) as p:
         print(p.map(run_script, hosts))
 
@@ -57,5 +58,3 @@ if __name__ == "__main__":
 #This is the key to sending show commands vs config commands
 #show commands --> net_connect.send_command()
 #config commmands --> net_connect.send_config_set()
-
-
