@@ -28,7 +28,7 @@ cmds = cmd.split(",")
 
 starting_time = time()
 
-#For loop used to iterate through the devices
+#Each hosts will run through this function
 def run_script(host_ip):
     ios_rtr = {
         "device_type": "cisco_ios",
