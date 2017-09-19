@@ -1,5 +1,7 @@
 #This is the telnet Library for Python3
 #Make sure transport input telnet is enabled on router validate
+#This scripts will run commands you choose on the remote devices using telnet as transport
+#The results will be print to screen and captured in files named ("router_" + HOST)
 
 from getpass import getpass
 import telnetlib
