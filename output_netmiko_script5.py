@@ -1,4 +1,4 @@
-root@debian:/home/todd/gns3# ./netmiko_conf_mp_pools.py
+root@debian:/home/todd/gns3# ./netmiko_script5.py
 Username: 
 Password: 
 Enter config commands seperated by ',': interface loopback 1, description this is a test
@@ -56,7 +56,7 @@ root@debian:/home/todd/gns3#
 Adding an ACL
 **************
 
-todd@debian:~/gns3$ ./netmiko_conf_mp_pools.py 
+todd@debian:~/gns3$ ./netmiko_script5.py 
 Username: 
 Password: 
 Enter config commands seperated by ',': ip access-list extended test_acl, permit tcp any any log, permit udp any any log
