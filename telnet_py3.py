@@ -27,7 +27,10 @@ for HOST in hosts:
     for CMD in cmds:
         tn.write(CMD.encode('ascii') + b"\n")
     tn.write(b"exit\n")
-    print(tn.read_all().decode('ascii'))
-
-
-
+    readoutput = tn.read_all().decode('ascii')
+    saveoutput =  open("router_" + HOST, "w")
+    saveoutput.write(readoutput)
+    saveoutput.write("\n")
+    saveoutput.close
+    #This command will print out the saved output on your screen
+    print(readoutput)
