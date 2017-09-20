@@ -1,0 +1,451 @@
+I have been trying to get Napalm working with base ios module in GNS3
+
+I could get commands to run from python interpreter but not from a script.
+I repeatedly got the following error message when I would run a script.
+
+
+root@debian:/home/todd/gns3# python3 napalm_script1.py 
+Traceback (most recent call last):
+  File "napalm_script1.py", line 17, in <module>
+    main()
+  File "napalm_script1.py", line 8, in main
+    rtr.open()
+  File "/usr/local/lib/python3.4/dist-packages/napalm_ios/ios.py", line 140, in open
+    self.dest_file_system = self.device._autodetect_fs()
+  File "/usr/local/lib/python3.4/dist-packages/netmiko/cisco_base_connection.py", line 149, in _autodetect_fs
+    "system: {} {}".format(cmd, output))
+ValueError: An error occurred in dynamically determining remote file system: dir %Error opening disk0:/ (No such device)
+^C
+
+
+In an effort to get this working with my version of ios on GNS3  I commmented out the Exception ValueError,
+The problem cleared up and now I can write a napalm script.
+
+
+vi /usr/local/lib/python3.4/dist-packages/netmiko/cisco_base_connection.py
+Cropped for brevity
+<>
+    def _autodetect_fs(self, cmd='dir', pattern=r'Directory of (.*)/'):
+        """Autodetect the file system on the remote device. Used by SCP operations."""
+        output = self.send_command_expect(cmd)
+        match = re.search(pattern, output)
+        if match:
+            file_system = match.group(1)
+            # Test file_system
+            cmd = "dir {}".format(file_system)
+            output = self.send_command_expect(cmd)
+            if '% Invalid' not in output:
+                return file_system
+# Committed out lines to get script working with python3 ios c7200 image in gns3
+# 
+#        raise ValueError("An error occurred in dynamically determining remote file "
+#                         "system: {} {}".format(cmd, output))
+
+class CiscoSSHConnection(CiscoBaseConnection):
+    pass
+    
+When I run my script now it works.
+
+root@debian:/home/todd/gns3# python3 napalm_script1.py 
+{'candidate': '',
+ 'running': 'Building configuration...\n'
+            '\n'
+            'Current configuration : 2401 bytes\n'
+            '!\n'
+            '! Last configuration change at 02:49:06 UTC Mon Sep 4 2017 by '
+            'automate\n'
+            '!\n'
+            'version 15.2\n'
+            'service timestamps debug datetime msec\n'
+            'service timestamps log datetime msec\n'
+            '!\n'
+            'hostname R1\n'
+            '!\n'
+            'boot-start-marker\n'
+            'boot-end-marker\n'
+            '!\n'
+            '!\n'
+            'enable password cisco\n'
+            '!\n'
+            'no aaa new-model\n'
+            'no ip icmp rate-limit unreachable\n'
+            '!\n'
+            '!\n'
+            '!\n'
+            '!\n'
+            '!\n'
+            '!\n'
+            'no ip domain lookup\n'
+            'ip domain name testlab.com\n'
+            'ip cef\n'
+            'ipv6 unicast-routing\n'
+            'ipv6 cef\n'
+            '!\n'
+            '!\n'
+            'multilink bundle-name authenticated\n'
+            '!\n'
+            '!\n'
+            '!\n'
+            '!\n'
+            '!\n'
+            '!\n'
+            '!\n'
+            'username admin secret 5 $1$IH2G$sl6kmggginxxroV9D.CoS.\n'
+            'username automate privilege 15 password 0 automation\n'
+            '!\n'
+            '!\n'
+            '!\n'
+            '!\n'
+            '!\n'
+            'ip tcp synwait-time 5\n'
+            'ip ssh version 2\n'
+            '! \n'
+            '!\n'
+            '!\n'
+            '!\n'
+            '!\n'
+            '!\n'
+            '!\n'
+            '!\n'
+            '!\n'
+            'interface Loopback0\n'
+            ' description this is a test\n'
+            ' no ip address\n'
+            ' ipv6 address autoconfig\n'
+            ' ipv6 enable\n'
+            ' ospfv3 1 ipv6 area 0\n'
+            '!\n'
+            'interface Loopback1\n'
+            ' description this is a test\n'
+            ' no ip address\n'
+            '!\n'
+            'interface Loopback2\n'
+            ' description netmiko test script\n'
+            ' no ip address\n'
+            '!\n'
+            'interface Loopback25\n'
+            " description config'd from curl\n"
+            ' no ip address\n'
+            '!\n'
+            'interface Loopback26\n'
+            ' description testicles\n'
+            ' no ip address\n'
+            '!\n'
+            'interface FastEthernet0/0\n'
+            ' description configured by netmiko\n'
+            ' ip address 192.168.10.1 255.255.255.0\n'
+            ' duplex full\n'
+            '!\n'
+            'interface FastEthernet1/0\n'
+            ' description config_by_netmiko\n'
+            ' no ip address\n'
+            ' speed auto\n'
+            ' duplex auto\n'
+            ' ipv6 address 64::/64 eui-64\n'
+            ' ipv6 enable\n'
+            ' ospfv3 1 network broadcast\n'
+            ' ospfv3 1 ipv6 area 0\n'
+            '!\n'
+            'interface FastEthernet1/1\n'
+            ' no ip address\n'
+            ' shutdown\n'
+            ' speed auto\n'
+            ' duplex auto\n'
+            '!\n'
+            'interface Serial2/0\n'
+            ' no ip address\n'
+            ' shutdown\n'
+            ' serial restart-delay 0\n'
+            '!\n'
+            'interface Serial2/1\n'
+            ' no ip address\n'
+            ' shutdown\n'
+            ' serial restart-delay 0\n'
+            '!\n'
+            'interface Serial2/2\n'
+            ' no ip address\n'
+            ' shutdown\n'
+            ' serial restart-delay 0\n'
+            '!\n'
+            'interface Serial2/3\n'
+            ' no ip address\n'
+            ' shutdown\n'
+            ' serial restart-delay 0\n'
+            '!\n'
+            'router ospfv3 1\n'
+            ' !\n'
+            ' address-family ipv6 unicast\n'
+            ' exit-address-family\n'
+            '!\n'
+            'router ospf 1\n'
+            ' network 0.0.0.0 255.255.255.255 area 0\n'
+            '!\n'
+            'ip forward-protocol nd\n'
+            '!\n'
+            '!\n'
+            'ip http server\n'
+            'ip http authentication local\n'
+            'no ip http secure-server\n'
+            '!\n'
+            'ip access-list extended test\n'
+            'ip access-list extended test_acl\n'
+            ' permit tcp any any log\n'
+            ' permit udp any any log\n'
+            ' permit tcp any any eq bgp\n'
+            ' permit icmp any any\n'
+            '!\n'
+            '!\n'
+            '!\n'
+            '!\n'
+            'control-plane\n'
+            '!\n'
+            '!\n'
+            'line con 0\n'
+            ' exec-timeout 0 0\n'
+            ' privilege level 15\n'
+            ' logging synchronous\n'
+            ' stopbits 1\n'
+            'line aux 0\n'
+            ' exec-timeout 0 0\n'
+            ' privilege level 15\n'
+            ' logging synchronous\n'
+            ' stopbits 1\n'
+            'line vty 0 4\n'
+            ' password cisco\n'
+            ' login local\n'
+            ' transport input telnet ssh\n'
+            'line vty 5 15\n'
+            ' password cisco\n'
+            ' login local\n'
+            ' transport input telnet ssh\n'
+            '!\n'
+            '!\n'
+            'end',
+ 'startup': 'Using 1717 out of 522232 bytes\n'
+            '!\n'
+            '! Last configuration change at 09:43:59 UTC Wed Aug 30 2017 by '
+            'automate\n'
+            '!\n'
+            'version 15.2\n'
+            'service timestamps debug datetime msec\n'
+            'service timestamps log datetime msec\n'
+            '!\n'
+            'hostname R1\n'
+            '!\n'
+            'boot-start-marker\n'
+            'boot-end-marker\n'
+            '!\n'
+            '!\n'
+            'enable password cisco\n'
+            '!\n'
+            'no aaa new-model\n'
+            'no ip icmp rate-limit unreachable\n'
+            '!\n'
+            '!\n'
+            '!\n'
+            '!\n'
+            '!\n'
+            '!\n'
+            'no ip domain lookup\n'
+            'ip domain name testlab.com\n'
+            'ip cef\n'
+            'no ipv6 cef\n'
+            '!\n'
+            '!\n'
+            'multilink bundle-name authenticated\n'
+            '!\n'
+            '!\n'
+            '!\n'
+            '!\n'
+            '!\n'
+            '!\n'
+            '!\n'
+            'username admin secret 5 $1$IH2G$sl6kmggginxxroV9D.CoS.\n'
+            'username automate privilege 15 password 0 automation\n'
+            '!\n'
+            '!\n'
+            '!\n'
+            '!\n'
+            '!\n'
+            'ip tcp synwait-time 5\n'
+            'ip ssh version 2\n'
+            '! \n'
+            '!\n'
+            '!\n'
+            '!\n'
+            '!\n'
+            '!\n'
+            '!\n'
+            '!\n'
+            '!\n'
+            'interface Loopback0\n'
+            ' description configured by netmiko\n'
+            ' no ip address\n'
+            '!\n'
+            'interface FastEthernet0/0\n'
+            ' description configured by netmiko\n'
+            ' ip address 192.168.10.1 255.255.255.0\n'
+            ' duplex full\n'
+            '!\n'
+            'interface FastEthernet1/0\n'
+            ' description configured by netmiko\n'
+            ' no ip address\n'
+            ' speed auto\n'
+            ' duplex auto\n'
+            '!\n'
+            'interface FastEthernet1/1\n'
+            ' no ip address\n'
+            ' shutdown\n'
+            ' speed auto\n'
+            ' duplex auto\n'
+            '!\n'
+            'interface Serial2/0\n'
+            ' no ip address\n'
+            ' shutdown\n'
+            ' serial restart-delay 0\n'
+            '!\n'
+            'interface Serial2/1\n'
+            ' no ip address\n'
+            ' shutdown\n'
+            ' serial restart-delay 0\n'
+            '!\n'
+            'interface Serial2/2\n'
+            ' no ip address\n'
+            ' shutdown\n'
+            ' serial restart-delay 0\n'
+            '!\n'
+            'interface Serial2/3\n'
+            ' no ip address\n'
+            ' shutdown\n'
+            ' serial restart-delay 0\n'
+            '!\n'
+            'router ospf 1\n'
+            ' network 0.0.0.0 255.255.255.255 area 0\n'
+            '!\n'
+            'ip forward-protocol nd\n'
+            '!\n'
+            '!\n'
+            'ip http server\n'
+            'no ip http secure-server\n'
+            '!\n'
+            '!\n'
+            '!\n'
+            '!\n'
+            'control-plane\n'
+            '!\n'
+            '!\n'
+            'line con 0\n'
+            ' exec-timeout 0 0\n'
+            ' privilege level 15\n'
+            ' logging synchronous\n'
+            ' stopbits 1\n'
+            'line aux 0\n'
+            ' exec-timeout 0 0\n'
+            ' privilege level 15\n'
+            ' logging synchronous\n'
+            ' stopbits 1\n'
+            'line vty 0 4\n'
+            ' password cisco\n'
+            ' login local\n'
+            ' transport input telnet ssh\n'
+            'line vty 5 15\n'
+            ' password cisco\n'
+            ' login local\n'
+            ' transport input telnet ssh\n'
+            '!\n'
+            '!\n'
+            'end'}
+{'FastEthernet0/0': {'description': 'configured by netmiko',
+                     'is_enabled': True,
+                     'is_up': True,
+                     'last_flapped': -1.0,
+                     'mac_address': 'CA:01:1B:CC:00:00',
+                     'speed': 100},
+ 'FastEthernet1/0': {'description': 'config_by_netmiko',
+                     'is_enabled': True,
+                     'is_up': True,
+                     'last_flapped': -1.0,
+                     'mac_address': 'CA:01:1B:CC:00:1C',
+                     'speed': 100},
+ 'FastEthernet1/1': {'description': '',
+                     'is_enabled': False,
+                     'is_up': False,
+                     'last_flapped': -1.0,
+                     'mac_address': 'CA:01:1B:CC:00:1D',
+                     'speed': 100},
+ 'Loopback0': {'description': 'this is a test',
+               'is_enabled': True,
+               'is_up': True,
+               'last_flapped': -1.0,
+               'mac_address': '',
+               'speed': 8000},
+ 'Loopback1': {'description': 'this is a test',
+               'is_enabled': True,
+               'is_up': True,
+               'last_flapped': -1.0,
+               'mac_address': '',
+               'speed': 8000},
+ 'Loopback2': {'description': 'netmiko test script',
+               'is_enabled': True,
+               'is_up': True,
+               'last_flapped': -1.0,
+               'mac_address': '',
+               'speed': 8000},
+ 'Loopback25': {'description': "config'd from curl",
+                'is_enabled': True,
+                'is_up': True,
+                'last_flapped': -1.0,
+                'mac_address': '',
+                'speed': 8000},
+ 'Loopback26': {'description': 'testicles',
+                'is_enabled': True,
+                'is_up': True,
+                'last_flapped': -1.0,
+                'mac_address': '',
+                'speed': 8000},
+ 'Serial2/0': {'description': '',
+               'is_enabled': False,
+               'is_up': False,
+               'last_flapped': -1.0,
+               'mac_address': '',
+               'speed': 2},
+ 'Serial2/1': {'description': '',
+               'is_enabled': False,
+               'is_up': False,
+               'last_flapped': -1.0,
+               'mac_address': '',
+               'speed': 2},
+ 'Serial2/2': {'description': '',
+               'is_enabled': False,
+               'is_up': False,
+               'last_flapped': -1.0,
+               'mac_address': '',
+               'speed': 2},
+ 'Serial2/3': {'description': '',
+               'is_enabled': False,
+               'is_up': False,
+               'last_flapped': -1.0,
+               'mac_address': '',
+               'speed': 2}}
+{'fqdn': 'R1.testlab.com',
+ 'hostname': 'R1',
+ 'interface_list': ['FastEthernet0/0',
+                    'FastEthernet1/0',
+                    'FastEthernet1/1',
+                    'Serial2/0',
+                    'Serial2/1',
+                    'Serial2/2',
+                    'Serial2/3',
+                    'Loopback0',
+                    'Loopback1',
+                    'Loopback2',
+                    'Loopback25',
+                    'Loopback26'],
+ 'model': '7206VXR',
+ 'os_version': '7200 Software (C7200-ADVENTERPRISEK9-M), Version 15.2(4)S7, '
+               'RELEASE SOFTWARE (fc4)',
+ 'serial_number': '4279256517',
+ 'uptime': 416820,
+ 'vendor': 'Cisco'}
+
+
