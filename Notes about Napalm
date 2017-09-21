@@ -17,7 +17,7 @@ ValueError: An error occurred in dynamically determining remote file system: dir
 ^C
 
 
-In an effort to get this working with my version of ios on GNS3  I commmented out the Exception ValueError,
+To get this working with my version of ios on GNS3  I commmented out the Exception ValueError,
 The problem cleared up and now I can write a napalm script.
 
 
