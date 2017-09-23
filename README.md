@@ -12,6 +12,8 @@ Testing Netmiko module
 
 Napalm for cisco ios
 - Tested with python3.4 napalm_base and napalm_ios
+- Decided that the ios image I am running in GNS3 is problematic with Napalm
+- Can run show command scripts / Cannot run configuration scripts due to compatibility issues
 
 Testing Telnetlib module
 - Use python3 telnetlib module
