@@ -4,9 +4,6 @@ import napalm_ios
 from pprint import pprint
 
 def main():
-#   Uncomment the line below for python2
-#    ips = raw_input("Routers to run through: ")
-#   Uncomment the line below for python3
     ips = input("Routers to run through (Use a space between each router): ")
     ipadd = ips.split()
     for ip in ipadd:
