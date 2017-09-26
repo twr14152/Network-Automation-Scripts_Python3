@@ -11,7 +11,6 @@ def main():
         driver = get_network_driver('ios')
         rtr = driver(ip, 'automate', 'automation') 
         rtr.open()
-        #ios_output = rtr.get_config()
         pprint(rtr.get_config())
         interfaces = rtr.get_interfaces()
         pprint(interfaces)
