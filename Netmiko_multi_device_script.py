@@ -7,7 +7,7 @@ from paramiko.ssh_exception import SSHException
 from netmiko.ssh_exception import AuthenticationException
  
 username = input('Enter your SSH username: ')
-password = getpass()
+password = getpass('Enter password: ')
 
 if len(username) < 1 : username = "automate"
 if len(password) < 1 : password = "automation" 
