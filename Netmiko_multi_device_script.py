@@ -39,7 +39,7 @@ with open('devices_file') as f:
 print("----The devices being configured----")
 print(devices_list)
 
-# Updated /etc/hosts to use dns names
+# Updated /etc/hosts to use dns names rather than host ips
  
 for hostname in devices_list:
     print ('Connecting to device" ' + hostname)
@@ -67,9 +67,8 @@ for hostname in devices_list:
         continue
     except Exception as unknown_error:
         print('Some other error: ' + str(unknown_error))
-        continue
-
-
+        continue    
+        
     print("connecting to", hostname)
     if hostname  == 'r1':
         print("hostname == r1:", hostname == 'r1')
