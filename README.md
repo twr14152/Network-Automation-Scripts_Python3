@@ -1,6 +1,6 @@
 # Network-Automation-Scripts using Python3
 # Modules: Netmiko, Napalm, Telnetlib
-Network automation using various python modules
+Network automation using various python libraries
 
 Testing Netmiko module
 - Added script that can handle multiple device with multiple unique configuration files
