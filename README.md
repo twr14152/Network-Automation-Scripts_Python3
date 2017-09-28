@@ -3,6 +3,8 @@
 Network automation using various python modules
 
 Testing Netmiko module
+- Added script that can handle multiple device with multiple unique configuration files
+    - netmiko_multi_device_script.py
 - Added multiprocessing Pools to scripts to speed them up
     - netmiko_script5.py
     - netmiko_show_cmds.py
