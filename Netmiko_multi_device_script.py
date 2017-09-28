@@ -6,7 +6,7 @@ from netmiko.ssh_exception import NetMikoTimeoutException
 from paramiko.ssh_exception import SSHException
 from netmiko.ssh_exception import AuthenticationException
  
-username = input('Enter your SSH username: ')
+username = input('Enter username: ')
 password = getpass('Enter password: ')
 
 if len(username) < 1 : username = "automate"
@@ -69,7 +69,6 @@ for hostname in devices_list:
         print('Some other error: ' + str(unknown_error))
         continue    
         
-    print("connecting to", hostname)
     if hostname  == 'r1':
         print("hostname == r1:", hostname == 'r1')
         output = net_connect.send_config_set(commands_list_r1)
@@ -98,6 +97,8 @@ for hostname in devices_list:
         print ("hostname == r7: ", hostname == 'r7')
         output = net_connect.send_config_set(commands_list_r7)
         print(output)
+
+
 
 
 
