@@ -4,12 +4,15 @@ from netmiko import ConnectHandler
 from multiprocessing import Pool
 from time import time
 
+# Login info
 username = input('Enter username: ')
 password = getpass('Enter password: ')
 
+# Useful in a lab setting not production
 if len(username) < 1 : username = "automate"
 if len(password) < 1 : password = "automation"
 
+# Command files    
 with open('commands_file_r1') as f:
     commands_list_r1 = f.read().splitlines()
 
@@ -31,6 +34,7 @@ with open('commands_file_r6') as f:
 with open('commands_file_r7') as f:
     commands_list_r7 = f.read().splitlines()
 
+# Target hosts
 with open('devices_file') as f:
     devices_list = f.read().splitlines()
 
@@ -50,8 +54,10 @@ def run_script(hostname):
         'username': username,
         'password': password
     }
-
+    # Command to connect to hosts
     net_connect = ConnectHandler(**ios_device)
+
+    # Logic used to connect host to configuration file
     if hostname  == 'r1':
         print("hostname == r1:", hostname == 'r1')
         output = net_connect.send_config_set(commands_list_r1)
@@ -80,9 +86,10 @@ def run_script(hostname):
         print ("hostname == r7: ", hostname == 'r7')
         output = net_connect.send_config_set(commands_list_r7)
         print(output)
-    
+   # Used to determine how long it takes for the script to run/complete 
     print('\n---- Elapsed time=', time()-starting_time)
 
+#Used to set up MP Pools to increase performance
 if __name__ == "__main__":
     with Pool(7) as p:
         print(p.map(run_script, devices_list))
