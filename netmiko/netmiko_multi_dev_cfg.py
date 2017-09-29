@@ -39,7 +39,7 @@ print(devices_list)
 
 starting_time = time()
 
-# Updated /etc/hosts to use dns names rather than host ips
+# Updated /etc/hosts to use host names rather than host ips
 
 def run_script(hostname):
     print ('Connecting to device: ' + hostname)
