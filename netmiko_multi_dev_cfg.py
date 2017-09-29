@@ -87,3 +87,4 @@ def run_script(hostname):
 if __name__ == "__main__":
     with Pool(7) as p:
         print(p.map(run_script, devices_list))
+
