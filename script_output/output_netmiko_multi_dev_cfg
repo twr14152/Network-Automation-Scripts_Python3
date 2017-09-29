@@ -4,28 +4,19 @@ Enter password:
 ----The devices being configured----
 ['r4', 'r2', 'r3', 'r1', 'r5', 'r6', 'r7']
 Connecting to device: r4
+Connecting to device: r2
 Connecting to device: r3
 Connecting to device: r1
 Connecting to device: r5
 Connecting to device: r6
 Connecting to device: r7
-Connecting to device: r2
 hostname == r2: True
 hostname == r5: True
-hostname == r7:  True
-hostname == r4: True
 hostname == r1: True
 hostname == r3:  True
+hostname == r7:  True
+hostname == r4: True
 hostname == r6:  True
-config term
-Enter configuration commands, one per line.  End with CNTL/Z.
-r7(config)#int loopback 0
-r7(config-if)# ip address 7.7.7.7 255.255.255.255
-r7(config-if)# description automated configuration
-r7(config-if)#end
-r7#
-
----- Elapsed time= 10.071817398071289
 config term
 Enter configuration commands, one per line.  End with CNTL/Z.
 R2(config)#int loopback 0
@@ -34,25 +25,7 @@ R2(config-if)# description automated configuration
 R2(config-if)#end
 R2#
 
----- Elapsed time= 10.110649824142456
-config term
-Enter configuration commands, one per line.  End with CNTL/Z.
-R1(config)#int loopback 0
-R1(config-if)# ip address 1.1.1.1 255.255.255.255
-R1(config-if)# description automated configuration
-R1(config-if)#end
-R1#
-
----- Elapsed time= 10.348405361175537
-config term
-Enter configuration commands, one per line.  End with CNTL/Z.
-R4(config)#int loopback 0
-R4(config-if)# ip address 4.4.4.4 255.255.255.255
-R4(config-if)# description automated configuration
-R4(config-if)#end
-R4#
-
----- Elapsed time= 10.35799264907837
+---- Elapsed time= 10.415027141571045
 config term
 Enter configuration commands, one per line.  End with CNTL/Z.
 r5(config)#int loopback 0
@@ -61,7 +34,7 @@ r5(config-if)# description automated configuration
 r5(config-if)#end
 r5#
 
----- Elapsed time= 10.379409790039062
+---- Elapsed time= 10.665486097335815
 config term
 Enter configuration commands, one per line.  End with CNTL/Z.
 R3(config)#int loopback 0
@@ -70,14 +43,61 @@ R3(config-if)# description automated configuration
 R3(config-if)#end
 R3#
 
----- Elapsed time= 10.48049783706665
+---- Elapsed time= 10.851855039596558
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#int loopback 0
+R1(config-if)# ip address 1.1.1.1 255.255.255.255
+R1(config-if)# description automated configuration
+R1(config-if)#end
+R1#
+
+---- Elapsed time= 10.866304636001587
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+R4(config)#int loopback 0
+R4(config-if)# ip address 4.4.4.4 255.255.255.255
+R4(config-if)# description automated configuration
+R4(config-if)#end
+R4#
+
+---- Elapsed time= 10.902701616287231
 config term
 Enter configuration commands, one per line.  End with CNTL/Z.
 r6(config)#int loopback 0
 r6(config-if)# ip address 6.6.6.6 255.255.255.255
 r6(config-if)# description automated configuration
-r6(config-if)#end
+r6(config-if)#
+r6(config-if)#int tun0
+r6(config-if)# ip address 157.130.0.6 255.255.255.254
+r6(config-if)# tunnel source 6.6.6.6
+r6(config-if)# tunnel destination 7.7.7.7
+r6(config-if)# 
+r6(config-if)#router bgp 65006
+r6(config-router)# neighbor 157.130.0.7 remote-as 65007
+r6(config-router)#
+r6(config-router)#end
 r6#
 
----- Elapsed time= 10.68241024017334
+---- Elapsed time= 15.61635708808899
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+r7(config)#int loopback 0
+r7(config-if)# ip address 7.7.7.7 255.255.255.255
+r7(config-if)# description automated configuration
+r7(config-if)#
+r7(config-if)#
+r7(config-if)#
+r7(config-if)#int tun0
+r7(config-if)# ip address 157.130.0.7 255.255.255.254
+r7(config-if)# tunnel
+r7(config-if)# tunnel source 7.7.7.7
+r7(config-if)# tunnel destination 6.6.6.6
+r7(config-if)#
+r7(config-if)#router bgp 65007
+r7(config-router)#   neighbor 157.130.0.6 remote-as 65006
+r7(config-router)#end
+r7#
+
+---- Elapsed time= 15.997164726257324
 [None, None, None, None, None, None, None]
