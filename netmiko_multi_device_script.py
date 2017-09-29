@@ -43,7 +43,7 @@ starting_time = time()
 # Updated /etc/hosts to use dns names rather than host ips
 
 def run_script(hostname):
-    print ('Connecting to device" ' + hostname)
+    print ('Connecting to device: ' + hostname)
     ip_address_of_device = hostname
     ios_device = {
         'device_type': 'cisco_ios',
