@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 from getpass import getpass
 from netmiko import ConnectHandler
 from multiprocessing import Pool
