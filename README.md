@@ -1,5 +1,5 @@
 # Network-Automation-Scripts using Python3
-# Modules: Netmiko, Napalm, Telnetlib
+# Libraries: Netmiko, Napalm, Telnetlib
 Network automation using various python libraries
 
 Testing Netmiko module
