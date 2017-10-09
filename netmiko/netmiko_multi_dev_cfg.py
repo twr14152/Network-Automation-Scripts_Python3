@@ -36,10 +36,10 @@ with open('commands_file_r7') as f:
 
 # Target hosts
 with open('devices_file') as f:
-    devices_list = f.read().splitlines()
+    host_file = f.read().splitlines()
 
 print("----The devices being configured----")
-print(devices_list)
+print(host_file)
 
 starting_time = time()
 
@@ -47,10 +47,9 @@ starting_time = time()
 
 def run_script(hostname):
     print ('Connecting to device: ' + hostname)
-    ip_address_of_device = hostname
     ios_device = {
         'device_type': 'cisco_ios',
-        'ip': ip_address_of_device,
+        'ip': hostname,
         'username': username,
         'password': password
     }
@@ -92,4 +91,4 @@ def run_script(hostname):
 #Used to set up MP Pools to increase performance
 if __name__ == "__main__":
     with Pool(7) as p:
-        print(p.map(run_script, devices_list))
+        print(p.map(run_script, host_file))
