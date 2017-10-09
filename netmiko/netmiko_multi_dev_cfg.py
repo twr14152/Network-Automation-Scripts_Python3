@@ -35,7 +35,7 @@ with open('commands_file_r7') as f:
     commands_list_r7 = f.read().splitlines()
 
 # Target hosts
-with open('devices_file') as f:
+with open('host_file') as f:
     host_file = f.read().splitlines()
 
 print("----The devices being configured----")
