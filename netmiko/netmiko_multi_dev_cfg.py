@@ -87,8 +87,10 @@ def run_script(hostname):
         print(output)
    # Used to determine how long it takes for the script to run/complete 
     print('\n---- Elapsed time=', time()-starting_time)
-
+    
 #Used to set up MP Pools to increase performance
+#Specify number of process in the pool to run at same time
+#There is no recommendation really trial error as to the right number 
 if __name__ == "__main__":
     with Pool(7) as p:
         print(p.map(run_script, host_file))
