@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 #This script will allow up to update a group of hosts with common config shared by all
-#Enable Multiprocessing
+#Enable Multiprocessing 
 from multiprocessing import Pool
 #getpass will not display password
 from getpass import getpass
@@ -47,6 +47,6 @@ def run_script(host_ip):
     print('\n---- Elapsed time=', time()-starting_time)
 
 if __name__ == "__main__":
-    # Pool(5) means 5 process will be run at a time, more hosts will go in the next group
+    # Pool(5) means 5 process / devices will be run at a time, until youve gone through the device list
     with Pool(5) as p:
         print(p.map(run_script, hosts))
