@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+# --------------------------------------------------------------
+# This script will allow you to configure multiple devices with
+# different configurations on each
+# --------------------------------------------------------------
 from getpass import getpass
 from netmiko import ConnectHandler
 from multiprocessing import Pool
