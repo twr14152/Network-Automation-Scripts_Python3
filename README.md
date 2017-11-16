@@ -2,6 +2,10 @@
 # Libraries: Netmiko, Napalm, Telnetlib
 Network automation using various python libraries
 
+Arista pyeapi
+ - test script
+ - hidden host config file - needs to be located in ~/.eapi.conf
+
 Testing Netmiko module
 - Added script that can handle multiple device with multiple unique configuration files
 - Added multiprocessing to speed up
