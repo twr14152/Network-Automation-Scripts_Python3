@@ -1,8 +1,8 @@
 # Network-Automation-Scripts using Python3
-# Libraries: Netmiko, Napalm, Telnetlib
+# Libraries: Pyeapi, Netmiko, Napalm, Telnetlib
 Network automation using various python libraries
 
-Arista pyeapi
+Python client for eapi (pyeapi)
  - test script
  - hidden host config file - needs to be located in ~/.eapi.conf
 
