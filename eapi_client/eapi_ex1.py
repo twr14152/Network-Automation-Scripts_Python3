@@ -1,4 +1,4 @@
-#Simple Eapi test script
+#Eapi test script
 import pyeapi
 from pprint import pprint as pp
 
