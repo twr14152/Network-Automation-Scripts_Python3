@@ -17,7 +17,8 @@ for host in devices:
     print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
     print("Post-Change State:", host)
     print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
-    host.config(['interface loopback 0', 'ip address 1.1.1.{} 255.255.255.255'.format(value), 'description test', 'router ospf 1', 'network 0.0.0.0 255.255.255.255 area 0'])
+    host.config(['interface loopback 0', 'ip address 1.1.1.{} 255.255.255.255'.format(value), 
+                 'description test', 'router ospf 1', 'network 0.0.0.0 255.255.255.255 area 0'])
     pp(host.enable(['show running-config']))
     
 
