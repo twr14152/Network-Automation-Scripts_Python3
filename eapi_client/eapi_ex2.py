@@ -10,6 +10,7 @@ value = 0
 
 for host in devices:
     value += 1
+    print(str(value))
     print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
     print("Pre-change State: ", host)
     print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
@@ -17,7 +18,7 @@ for host in devices:
     print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
     print("Post-Change State:", host)
     print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
-    host.config(['interface loopback 0', 'ip address 1.1.1.{} 255.255.255.255'.format(value), 'description test'])
-    pp(host.enable('show running-config'))
+    host.config(['interface loopback 0', 'ip address 1.1.1.{} 255.255.255.255'.format(value), 'description test', 'router ospf 1', 'network 0.0.0.0 255.255.255.255 area 0'])
+    pp(host.enable(['show running-config', 'show ip route']))
     
 
