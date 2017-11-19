@@ -18,6 +18,9 @@ Testing Netmiko module
 - netmiko_script#.py
 - capture output of scripts
 
+Napalm for eos
+- Tested with ipython(python3.6) - results
+
 Napalm for cisco ios
 - Tested with python3.4 napalm_base and napalm_ios
 - Believe the ios image I am running in GNS3 is problematic with Napalm. 
