@@ -19,7 +19,7 @@ Testing Netmiko module
 - capture output of scripts
 
 Napalm for eos
-- Tested with ipython(python3.6) - results
+- Tested with ipython(python3.6) -> EOS_lab_Napalm_test_results
 
 Napalm for cisco ios
 - Tested with python3.4 napalm_base and napalm_ios
