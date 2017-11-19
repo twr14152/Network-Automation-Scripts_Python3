@@ -1,0 +1,278 @@
+In [29]: from napalm import get_network_driver
+
+In [30]: driver = get_network_driver("eos")
+
+In [31]: from pprint import pprint 
+
+In [32]: sw1 = driver('192.168.1.201', 'todd', 'todd')
+
+In [33]: sw2 = driver('192.168.1.202', 'todd', 'todd')
+
+In [34]: sw1.open()
+
+In [35]: sw2.open()
+
+In [36]: devices = [sw1, sw2]
+
+In [37]: for i in devices:
+    ...:     pprint(i.get_facts())
+    ...:     pprint(i.get_arp_table())
+    ...:     pprint(i.get_config())
+    ...:     pprint(i.get_environment())
+    ...:     pprint(i.get_interfaces_ip())
+    ...:     pprint(i.get_lldp_neighbors_detail())
+    ...:     
+{'fqdn': 'sw1',
+ 'hostname': 'sw1',
+ 'interface_list': ['Ethernet1', 'Loopback0', 'Management1'],
+ 'model': 'vEOS',
+ 'os_version': '4.18.1F-4591672.4181F',
+ 'serial_number': '',
+ 'uptime': 228369,
+ 'vendor': 'Arista'}
+[{'age': 0.0,
+  'interface': 'Ethernet1',
+  'ip': '10.0.0.2',
+  'mac': '08:00:27:00:F2:FD'},
+ {'age': 0.0,
+  'interface': 'Management1',
+  'ip': '192.168.1.170',
+  'mac': '80:E6:50:0E:45:0E'}]
+{'candidate': '',
+ 'running': '! Command: show running-config\n'
+            '! device: sw1 (vEOS, EOS-4.18.1F)\n'
+            '!\n'
+            '! boot system flash:/vEOS-lab.swi\n'
+            '!\n'
+            'transceiver qsfp default-mode 4x10G\n'
+            '!\n'
+            'hostname sw1\n'
+            '!\n'
+            'spanning-tree mode mstp\n'
+            '!\n'
+            'no aaa root\n'
+            '!\n'
+            'username todd secret sha512 '
+            '$6$UgKPm8OOg/1skdop$G8a8w8ozLyMhp5KqSJ4BXzYj9SzGg17lo8cac.rEgdX9j9TMkXQN7VsKL/riAJ66YYzdEPdJsv/6k/ReyNy4C1\n'
+            '!\n'
+            'interface Ethernet1\n'
+            '   no switchport\n'
+            '   ip address 10.0.0.1/24\n'
+            '!\n'
+            'interface Loopback0\n'
+            '   description test\n'
+            '   ip address 1.1.1.1/32\n'
+            '!\n'
+            'interface Management1\n'
+            '   ip address 192.168.1.201/24\n'
+            '!\n'
+            'ip access-list eapiExample\n'
+            '   10 permit ip any any\n'
+            '!\n'
+            'ip routing\n'
+            '!\n'
+            'router ospf 1\n'
+            '   network 0.0.0.0/0 area 0.0.0.0\n'
+            '   max-lsa 12000\n'
+            '!\n'
+            'management api http-commands\n'
+            '   protocol http\n'
+            '   no shutdown\n'
+            '!\n'
+            'end\n',
+ 'startup': '! Command: show startup-config\n'
+            '! Startup-config last modified at  Fri Nov 17 00:46:22 2017 by '
+            'todd\n'
+            '! device: sw1 (vEOS, EOS-4.18.1F)\n'
+            '!\n'
+            '! boot system flash:/vEOS-lab.swi\n'
+            '!\n'
+            'transceiver qsfp default-mode 4x10G\n'
+            '!\n'
+            'hostname sw1\n'
+            '!\n'
+            'spanning-tree mode mstp\n'
+            '!\n'
+            'no aaa root\n'
+            '!\n'
+            'username todd secret sha512 '
+            '$6$UgKPm8OOg/1skdop$G8a8w8ozLyMhp5KqSJ4BXzYj9SzGg17lo8cac.rEgdX9j9TMkXQN7VsKL/riAJ66YYzdEPdJsv/6k/ReyNy4C1\n'
+            '!\n'
+            'interface Ethernet1\n'
+            '   no switchport\n'
+            '   ip address 10.0.0.1/24\n'
+            '!\n'
+            'interface Loopback0\n'
+            '   description test\n'
+            '   ip address 1.1.1.1/32\n'
+            '!\n'
+            'interface Management1\n'
+            '   ip address 192.168.1.201/24\n'
+            '!\n'
+            'ip access-list eapiExample\n'
+            '   10 permit ip any any\n'
+            '!\n'
+            'ip routing\n'
+            '!\n'
+            'router ospf 1\n'
+            '   network 0.0.0.0/0 area 0.0.0.0\n'
+            '   max-lsa 12000\n'
+            '!\n'
+            'management api http-commands\n'
+            '   protocol http\n'
+            '   no shutdown\n'
+            '!\n'
+            'end\n'}
+{'cpu': {0: {'%usage': 2.9}},
+ 'fans': {},
+ 'memory': {'available_ram': 116360, 'used_ram': 2007336},
+ 'power': {},
+ 'temperature': {}}
+{'Ethernet1': {'ipv4': {'10.0.0.1': {'prefix_length': 24}}, 'ipv6': {}},
+ 'Loopback0': {'ipv4': {'1.1.1.1': {'prefix_length': 32}}, 'ipv6': {}},
+ 'Management1': {'ipv4': {'192.168.1.201': {'prefix_length': 24}}, 'ipv6': {}}}
+{'Ethernet1': [{'parent_interface': 'Ethernet1',
+                'remote_chassis_id': '08:00:27:00:F2:FD',
+                'remote_port': '"Ethernet1"',
+                'remote_port_description': '',
+                'remote_system_capab': 'bridge, router',
+                'remote_system_description': 'Arista Networks EOS version '
+                                             '4.18.1F running on an Arista '
+                                             'Networks vEOS',
+                'remote_system_enable_capab': 'bridge, router',
+                'remote_system_name': 'sw2'}],
+ 'Management1': [{'parent_interface': 'Management1',
+                  'remote_chassis_id': '08:00:27:00:F2:FD',
+                  'remote_port': '"Management1"',
+                  'remote_port_description': '',
+                  'remote_system_capab': 'bridge, router',
+                  'remote_system_description': 'Arista Networks EOS version '
+                                               '4.18.1F running on an Arista '
+                                               'Networks vEOS',
+                  'remote_system_enable_capab': 'bridge, router',
+                  'remote_system_name': 'sw2'}]}
+{'fqdn': 'sw2',
+ 'hostname': 'sw2',
+ 'interface_list': ['Ethernet1', 'Loopback0', 'Management1'],
+ 'model': 'vEOS',
+ 'os_version': '4.18.1F-4591672.4181F',
+ 'serial_number': '',
+ 'uptime': 228357,
+ 'vendor': 'Arista'}
+[{'age': 0.0,
+  'interface': 'Ethernet1',
+  'ip': '10.0.0.1',
+  'mac': '08:00:27:8F:C5:AB'},
+ {'age': 0.0,
+  'interface': 'Management1',
+  'ip': '192.168.1.170',
+  'mac': '80:E6:50:0E:45:0E'}]
+{'candidate': '',
+ 'running': '! Command: show running-config\n'
+            '! device: sw2 (vEOS, EOS-4.18.1F)\n'
+            '!\n'
+            '! boot system flash:/vEOS-lab.swi\n'
+            '!\n'
+            'transceiver qsfp default-mode 4x10G\n'
+            '!\n'
+            'hostname sw2\n'
+            '!\n'
+            'spanning-tree mode mstp\n'
+            '!\n'
+            'no aaa root\n'
+            '!\n'
+            'username todd secret sha512 '
+            '$6$UgKPm8OOg/1skdop$G8a8w8ozLyMhp5KqSJ4BXzYj9SzGg17lo8cac.rEgdX9j9TMkXQN7VsKL/riAJ66YYzdEPdJsv/6k/ReyNy4C1\n'
+            '!\n'
+            'interface Ethernet1\n'
+            '   no switchport\n'
+            '   ip address 10.0.0.2/24\n'
+            '!\n'
+            'interface Loopback0\n'
+            '   description test\n'
+            '   ip address 1.1.1.2/32\n'
+            '!\n'
+            'interface Management1\n'
+            '   ip address 192.168.1.202/24\n'
+            '!\n'
+            'ip routing\n'
+            '!\n'
+            'router ospf 1\n'
+            '   network 0.0.0.0/0 area 0.0.0.0\n'
+            '   max-lsa 12000\n'
+            '!\n'
+            'management api http-commands\n'
+            '   protocol http\n'
+            '   no shutdown\n'
+            '!\n'
+            'end\n',
+ 'startup': '! Command: show startup-config\n'
+            '! Startup-config last modified at  Fri Nov 17 00:46:30 2017 by '
+            'todd\n'
+            '! device: sw2 (vEOS, EOS-4.18.1F)\n'
+            '!\n'
+            '! boot system flash:/vEOS-lab.swi\n'
+            '!\n'
+            'transceiver qsfp default-mode 4x10G\n'
+            '!\n'
+            'hostname sw2\n'
+            '!\n'
+            'spanning-tree mode mstp\n'
+            '!\n'
+            'no aaa root\n'
+            '!\n'
+            'username todd secret sha512 '
+            '$6$UgKPm8OOg/1skdop$G8a8w8ozLyMhp5KqSJ4BXzYj9SzGg17lo8cac.rEgdX9j9TMkXQN7VsKL/riAJ66YYzdEPdJsv/6k/ReyNy4C1\n'
+            '!\n'
+            'interface Ethernet1\n'
+            '   no switchport\n'
+            '   ip address 10.0.0.2/24\n'
+            '!\n'
+            'interface Loopback0\n'
+            '   description test\n'
+            '   ip address 1.1.1.2/32\n'
+            '!\n'
+            'interface Management1\n'
+            '   ip address 192.168.1.202/24\n'
+            '!\n'
+            'ip routing\n'
+            '!\n'
+            'router ospf 1\n'
+            '   network 0.0.0.0/0 area 0.0.0.0\n'
+            '   max-lsa 12000\n'
+            '!\n'
+            'management api http-commands\n'
+            '   protocol http\n'
+            '   no shutdown\n'
+            '!\n'
+            'end\n'}
+{'cpu': {0: {'%usage': 5.5}},
+ 'fans': {},
+ 'memory': {'available_ram': 74344, 'used_ram': 2049352},
+ 'power': {},
+ 'temperature': {}}
+{'Ethernet1': {'ipv4': {'10.0.0.2': {'prefix_length': 24}}, 'ipv6': {}},
+ 'Loopback0': {'ipv4': {'1.1.1.2': {'prefix_length': 32}}, 'ipv6': {}},
+ 'Management1': {'ipv4': {'192.168.1.202': {'prefix_length': 24}}, 'ipv6': {}}}
+{'Ethernet1': [{'parent_interface': 'Ethernet1',
+                'remote_chassis_id': '08:00:27:8F:C5:AB',
+                'remote_port': '"Ethernet1"',
+                'remote_port_description': '',
+                'remote_system_capab': 'bridge, router',
+                'remote_system_description': 'Arista Networks EOS version '
+                                             '4.18.1F running on an Arista '
+                                             'Networks vEOS',
+                'remote_system_enable_capab': 'bridge, router',
+                'remote_system_name': 'sw1'}],
+ 'Management1': [{'parent_interface': 'Management1',
+                  'remote_chassis_id': '08:00:27:8F:C5:AB',
+                  'remote_port': '"Management1"',
+                  'remote_port_description': '',
+                  'remote_system_capab': 'bridge, router',
+                  'remote_system_description': 'Arista Networks EOS version '
+                                               '4.18.1F running on an Arista '
+                                               'Networks vEOS',
+                  'remote_system_enable_capab': 'bridge, router',
+                  'remote_system_name': 'sw1'}]}
+
+In [38]: 
