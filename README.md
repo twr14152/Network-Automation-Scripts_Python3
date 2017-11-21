@@ -4,7 +4,7 @@ Network automation scripts I've written using various python libraries
 
 Python client for eapi (pyeapi) for Arista devices
  - config script "eapi_config_ex1.py" and validation script "eapi_validation_ex1.py"
- - hidden host config file - needs to be located in ~/.eapi.conf
+ - hidden host config file, needs to be located in ~/.eapi.conf
  - created two sample scripts
 
 Testing Netmiko module
