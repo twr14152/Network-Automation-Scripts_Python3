@@ -24,6 +24,7 @@ for ip in hosts:
     print("Connected to host", ip)
     for show_commands in cmds:
         output = net_connect.send_command(show_commands)
+        print("Command issued:",show_commands)
         print(output)
         print("++++++++++++++++++++++++++++++++++++++++++++++")
     print("End of output for show command on device ", ip)
