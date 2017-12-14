@@ -8,7 +8,7 @@ Python client for eapi (pyeapi) for Arista devices
  - created two sample scripts
 
 Testing Netmiko module
-- Created a very basic ssh script useful for discovery
+- Created a very basic ssh script useful for discovery + updated with error handling
 - Created script that can handle multiple device with multiple unique configuration files
 - Added multiprocessing to speed up
     - netmiko_multi_dev_cfg.py
