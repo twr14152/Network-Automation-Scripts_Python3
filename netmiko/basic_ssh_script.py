@@ -14,7 +14,9 @@ if len(passwd) < 1: passwd = "<default>"
 
 hosts = host.split()
 cmds = cmd.split(",")
-  
+
+err_host = []
+
 for ip in hosts:
     hp_rtr = {
         "device_type": "hp_procurve",
@@ -28,6 +30,8 @@ for ip in hosts:
         print("************************************")
         print("Unable to log into this device:", ip)
         print(unknown_error)
+        err_host.append(ip)
+        print("Errors logging into:", err_host)        
         print("************************************")
         continue
 
@@ -38,3 +42,6 @@ for ip in hosts:
         print(output)
         print("+++++++++++++++++++++++++++++++++++++++++++++++")
     print("End of configs for device", ip)
+    print("************************************")
+    print("Errors logging into:" , err_host)
+
