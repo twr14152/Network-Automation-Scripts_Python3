@@ -7,6 +7,8 @@ passwd = getpass("Password: ")
 cmd = input("Enter show commands separated by ',': ")
 host = input("Enter the host IPs separate with space: ")
 
+#host = """<host_list>"""
+
 if len(uname) < 1: uname = "<default>"
 if len(passwd) < 1: passwd = "<default>"
 
