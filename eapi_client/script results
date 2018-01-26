@@ -1,3 +1,5 @@
+This script is now named multi_dev_cfg_script.py
+
 (automation-env) Todds-MBP:AR_EAPI toddriemenschneider$ python3 multi_device_script.py 
 Enter commands for veos1 seperate with ",": interface Ethernet3, no switchport, no shutdown, interface Ethernet3, ip address 10.2.0.1/24, router bgp 65001, network 1.1.1.1 mask 255.255.255.255, neighbor 10.2.0.2 remote-as 65002, neighbor 10.2.0.3 remote-as 65003, interface loopback0, ip address 1.1.1.1/32
 Enter commands for veos2 seperate with ",": interface Ethernet3, no switchport, interface Ethernet3, ip address 10.2.0.2/24, router bgp 65002, network 2.2.2.2 mask 255.255.255.255, neighbor 10.2.0.1 remote-as 65001, neighbor 10.2.0.3 remote-as 65003, interface loopback0, ip address 2.2.2.2/32
