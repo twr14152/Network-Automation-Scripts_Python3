@@ -8,7 +8,7 @@ count = int(devs_to_cfg)
 commands = {}
 err_host = []
 
-for i  in range(count):
+for i in range(count):
     hosts = input("Enter host device: ")
     cmds = input('Enter commands for device seperate with ",": ') 
     cmd_items = cmds.split(',')
