@@ -3,7 +3,7 @@
 Network automation scripts I've written using various python libraries
 
 Python client for eapi (pyeapi) for Arista devices
- - Interactive config script for multiple devices (multi_dev_cfg_script.py, multi_dev_cfg_script2.py )
+ - Interactive config script for multiple devices (multi_dev_cfg_script2.py )
  - hidden host config file, needs to be located in ~/.eapi.conf
  - created two sample scripts
 
