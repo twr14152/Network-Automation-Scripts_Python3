@@ -2,6 +2,7 @@
 import netmiko
 from pprint import pprint as pp
 
+
 devs_to_cfg = input("Number of devices to configure: " )
 count = int(devs_to_cfg)
 
@@ -43,7 +44,8 @@ for k,v  in commands.items():
         output = net_connect.send_config_set(v)
         pp(output)
         print("Post-change state: ", k)
-        output2 = net_connect.send_config_set(['show running-config'])
+        output2 = net_connect.send_command('show running-config')
+        pp(output2)
     except Exception as cmd_error:
         print("Command not working, make sure syntax is correct")
         print("Problem with commands on: ", k)
