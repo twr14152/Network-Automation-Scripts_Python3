@@ -2,7 +2,6 @@
 import netmiko
 from pprint import pprint as pp
 
-
 devs_to_cfg = input("Number of devices to configure: " )
 count = int(devs_to_cfg)
 
