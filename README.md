@@ -8,7 +8,7 @@ Python client for eapi (pyeapi) for Arista devices
  - created two sample scripts
 
 Testing Netmiko module
-- Created new netmiko script that provide you a sandbox to say how many devices, what devices, and what to configure on each
+- Created new script that provide you a sandbox to say how many devices, what devices, and what to configure on each
     - ssh_sandbox.py
 - Created a very basic ssh script useful for discovery + updated with error handling
 - Created script that can handle multiple device with multiple unique configuration files
