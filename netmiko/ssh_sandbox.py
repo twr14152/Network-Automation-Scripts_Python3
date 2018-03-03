@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+#(c) 2017 Todd Riemenschneider
 import netmiko
 from pprint import pprint as pp
 
