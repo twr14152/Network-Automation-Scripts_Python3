@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 # --------------------------------------------------------------
+#(c) 2017 Todd Riemenschneider
 # This script will allow you to configure multiple devices with
 # different configurations on each
 # --------------------------------------------------------------
