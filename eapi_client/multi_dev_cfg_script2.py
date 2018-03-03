@@ -1,4 +1,3 @@
-
 #(c) 2017 Todd Riemenschneider
 import pyeapi
 from pprint import pprint as pp
