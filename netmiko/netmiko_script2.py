@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+#(c) 2017 Todd Riemenschneider
 
 #getpass will not display password
 from getpass import getpass
