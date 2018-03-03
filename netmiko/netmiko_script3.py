@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#
+#(c) 2017 Todd Riemenschneider
 #This script will allow up to update a group of hosts with common config shared by all
 #
 #getpass will not display password
