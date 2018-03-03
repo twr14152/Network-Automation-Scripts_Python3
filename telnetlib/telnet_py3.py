@@ -2,6 +2,7 @@
 #Make sure transport input telnet is enabled on router validate
 #This scripts will run commands you choose on the remote devices using telnet as transport
 #The results will be print to screen and captured in files named ("router_" + HOST)
+#(c) 2017 Todd Riemenschneider
 
 from getpass import getpass
 import telnetlib
