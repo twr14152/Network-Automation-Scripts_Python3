@@ -17,13 +17,13 @@ from time import time
 #create variables for configs and hosts
 uname = input("Username: ")
 passwd = getpass("Password: ")
-cmd = input("Enter config commands seperated by ',': ")
+cmd = input("Enter show commands seperated by ',': ")
 host = input("Enter the host IPs seperate with space: ")
 
 #This will allow you to just press enter
 #This sets default values Not recommanded in any place but a lab
-if len(uname) < 1 : uname = "automate"
-if len(passwd) < 1 : passwd = "automation"
+if len(uname) < 1 : uname = "admin"
+if len(passwd) < 1 : passwd = "automate"
 
 #This will put hosts and commands entered into list format
 hosts = host.split()
