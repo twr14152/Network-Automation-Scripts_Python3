@@ -1,5 +1,4 @@
 from netmiko import Netmiko
-from getpass import getpass
 from jinja2 import Environment, FileSystemLoader
 from pprint import pprint
 import time
@@ -14,9 +13,9 @@ my_device = {
     "device_type": "cisco_ios"
 }
 
-net_conn = Netmiko(**my_device)
+net_conn_r4 = Netmiko(**my_device)
 
-print(net_conn.find_prompt())
+print(net_conn_r4.find_prompt())
 
 r4_bgp_nei_dict = {
     "asn": "4",
@@ -28,6 +27,8 @@ r4_bgp_nei_dict = {
     }
 
 '''
+This is just being used for reference to help you build your dictionary
+
 router bgp {{ bgp.asn }}
  bgp log-neighbor-changes
  network {{ bgp.loop0_ip }} mask 255.255.255.255
@@ -48,10 +49,10 @@ output = template.render(bgp=r4_bgp_nei_dict)
 print(output)
 print(type(output))
 
-pprint(net_conn.send_config_set(output))
-show_run_r4 = net_conn.send_command("show run | beg router bgp")
-show_ip_bgp_summ_r4 = net_conn.send_command("show ip bgp summ")
+pprint(net_conn_r4.send_config_set(output))
 
+
+print("****" * 25)
 
 ENV = Environment(loader=FileSystemLoader('.'))
 template = ENV.get_template("ebgp_neighbor_template.j2")
@@ -63,9 +64,9 @@ my_device = {
     "device_type": "cisco_ios"
 }
 
-net_conn = Netmiko(**my_device)
+net_conn_r5 = Netmiko(**my_device)
 
-print(net_conn.find_prompt())
+print(net_conn_r5.find_prompt())
 
 
 r5_bgp_nei_dict = {
@@ -78,6 +79,8 @@ r5_bgp_nei_dict = {
     }
 
 '''
+This is just begin used for reference to help you build your dictionary
+
 router bgp {{ bgp.asn }}
  bgp log-neighbor-changes
  network {{ bgp.loop0_ip }} mask 255.255.255.255
@@ -98,27 +101,30 @@ output = template.render(bgp=r5_bgp_nei_dict)
 print(output)
 print(type(output))
 
-pprint(net_conn.send_config_set(output))
+pprint(net_conn_r5.send_config_set(output))
 
-print("*" * 50)
-print("Configuration verification step")
+print("****" * 25)
+
+
+print("****" * 25)
+print("Configuration verification step for r4")
 print("Waiting 10 secs for bgp to come up")
 time.sleep(10)
 
-show_ip_bgp_summ_r4 = net_conn.send_command("show ip bgp summ")
-show_ip_rt_r4 = net_conn.send_command("show ip route")
+show_ip_bgp_summ_r4 = net_conn_r4.send_command("show ip bgp summ")
+show_ip_rt_r4 = net_conn_r4.send_command("show ip route")
 
 pprint(show_ip_bgp_summ_r4)
 pprint(show_ip_rt_r4)
 
-print("*" * 50)
-print("Configuration verification step")
+print("****" * 25)
+print("Configuration verification step for r5")
 print("Waiting 5 secs for bgp to come up")
 time.sleep(5)
 
 
-show_ip_bgp_summ_r5 = net_conn.send_command("show ip bgp summ")
-show_ip_rt_r5 = net_conn.send_command("show ip route")
+show_ip_bgp_summ_r5 = net_conn_r5.send_command("show ip bgp summ")
+show_ip_rt_r5 = net_conn_r5.send_command("show ip route")
 
 pprint(show_ip_bgp_summ_r5)
 pprint(show_ip_rt_r5)
