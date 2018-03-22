@@ -1,0 +1,8 @@
+router bgp {{ bgp.asn }}
+ bgp log-neighbor-changes
+ network {{ bgp.loop0_ip }} mask 255.255.255.255
+ neighbor {{ bgp.neighbor_address }} remote-as {{ bgp.peer_asn }}
+ neighbor {{ bgp.neighbor_address }} description ebgp-to-{{ bgp.remote_router_name }}
+ neighbor {{ bgp.neighbor_address }} password {{ bgp.password }}
+ neighbor {{ bgp.neighbor_address }} timers 1 3
+ neighbor {{ bgp.neighbor_address }} advertisement-interval 1
