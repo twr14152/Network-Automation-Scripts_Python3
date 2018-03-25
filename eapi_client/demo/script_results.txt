@@ -1,0 +1,409 @@
+In [1]: run script1.py
+[{'messages': ['PING cisco.com (72.163.4.185) 72(100) bytes of data.\n'
+               '80 bytes from redirect-ns.cisco.com (72.163.4.185): icmp_seq=1 '
+               'ttl=244 time=48.0 ms\n'
+               '80 bytes from redirect-ns.cisco.com (72.163.4.185): icmp_seq=2 '
+               'ttl=244 time=88.0 ms\n'
+               '80 bytes from redirect-ns.cisco.com (72.163.4.185): icmp_seq=3 '
+               'ttl=244 time=96.0 ms\n'
+               '80 bytes from redirect-ns.cisco.com (72.163.4.185): icmp_seq=4 '
+               'ttl=244 time=108 ms\n'
+               '80 bytes from redirect-ns.cisco.com (72.163.4.185): icmp_seq=5 '
+               'ttl=244 time=116 ms\n'
+               '\n'
+               '--- cisco.com ping statistics ---\n'
+               '5 packets transmitted, 5 received, 0% packet loss, time 220ms\n'
+               'rtt min/avg/max/mdev = 48.003/91.205/116.008/23.654 ms, pipe '
+               '2, ipg/ewma 55.003/71.010 ms\n']}]
+[{'messages': ['PING cisco.com (72.163.4.185) 72(100) bytes of data.\n'
+               '80 bytes from redirect-ns.cisco.com (72.163.4.185): icmp_seq=1 '
+               'ttl=244 time=72.0 ms\n'
+               '80 bytes from redirect-ns.cisco.com (72.163.4.185): icmp_seq=2 '
+               'ttl=244 time=52.0 ms\n'
+               '80 bytes from redirect-ns.cisco.com (72.163.4.185): icmp_seq=3 '
+               'ttl=244 time=44.0 ms\n'
+               '80 bytes from redirect-ns.cisco.com (72.163.4.185): icmp_seq=4 '
+               'ttl=244 time=44.0 ms\n'
+               '80 bytes from redirect-ns.cisco.com (72.163.4.185): icmp_seq=5 '
+               'ttl=244 time=44.0 ms\n'
+               '\n'
+               '--- cisco.com ping statistics ---\n'
+               '5 packets transmitted, 5 received, 0% packet loss, time 280ms\n'
+               'rtt min/avg/max/mdev = 44.002/51.203/72.005/10.853 ms, '
+               'ipg/ewma 70.004/61.087 ms\n']}]
+[{'architecture': 'i386',
+  'bootupTimestamp': 1521997302.05,
+  'hardwareRevision': '',
+  'internalBuildId': 'dde6b814-58d2-4687-94be-d62cd4e16a4b',
+  'internalVersion': '4.20.2F-Ravello-7334013.4202FRavello',
+  'isIntlVersion': False,
+  'memFree': 1211952,
+  'memTotal': 2017316,
+  'modelName': 'vEOS',
+  'serialNumber': '',
+  'systemMacAddress': '08:00:27:13:5b:07',
+  'version': '4.20.2F-Ravello'},
+ {'cmds': {'! boot system flash:vEOS-lab.swi': None,
+           'hostname veos5': None,
+           'interface Ethernet1': {'cmds': {'ip address 10.0.0.1/24': None,
+                                            'no switchport': None},
+                                   'comments': []},
+           'interface Ethernet2': {'cmds': {}, 'comments': []},
+           'interface Ethernet3': {'cmds': {}, 'comments': []},
+           'interface Loopback1': {'cmds': {'ip address 1.1.1.1/32': None},
+                                   'comments': []},
+           'interface Management1': {'cmds': {'ip address dhcp': None},
+                                     'comments': []},
+           'ip name-server vrf default 8.8.8.8': None,
+           'ip route 0.0.0.0/0 192.168.1.1': None,
+           'ip routing': None,
+           'management api http-commands': {'cmds': {'no shutdown': None},
+                                            'comments': []},
+           'no aaa root': None,
+           'router ospf 1': {'cmds': {'max-lsa 12000': None,
+                                      'network 1.1.1.1/32 area 0.0.0.0': None,
+                                      'network 10.0.0.0/24 area 0.0.0.0': None,
+                                      'router-id 1.1.1.1': None},
+                             'comments': []},
+           'spanning-tree mode mstp': None,
+           'transceiver qsfp default-mode 4x10G': None,
+           'username admin privilege 15 role network-admin secret sha512 $6$WwA33AKLtZiTeynF$7ROI1OHk7czjy4coJf/.7XdylT3zz4dca5z3XFVG55iVBu.fedJ1eEFphbap6RDKEihDxVmIZbQ6uQ.DfzPWU/': None},
+  'comments': [],
+  'header': ['! device: veos5 (vEOS, EOS-4.20.2F-Ravello)\n!\n']},
+ {'bytesIn': 11943,
+  'bytesOut': 43329,
+  'commandCount': 178,
+  'corsOrigins': [],
+  'dscpValue': 0,
+  'enabled': True,
+  'executionTime': 39.98414823300391,
+  'fipsEnabled': False,
+  'hitCount': 70,
+  'httpServer': {'configured': False, 'port': 80, 'running': False},
+  'httpsServer': {'configured': True, 'port': 443, 'running': True},
+  'iframeAncestors': [],
+  'lastHitTime': 1522011880.7733386,
+  'localHttpServer': {'configured': False, 'port': 8080, 'running': False},
+  'logLevel': 'none',
+  'requestCount': 52,
+  'tlsProtocol': ['1.0', '1.1', '1.2'],
+  'unixSocketServer': {'configured': False, 'running': False},
+  'urls': ['Ethernet1   : https://10.0.0.1:443',
+           'Loopback1   : https://1.1.1.1:443',
+           'Management1 : https://192.168.1.134:443'],
+  'users': {'admin': {'bytesIn': 11943,
+                      'bytesOut': 43329,
+                      'lastHitTime': 1522011880.7734635,
+                      'requestCount': 52}},
+  'vrf': 'default',
+  'vrfs': ['default']}]
+[{'architecture': 'i386',
+  'bootupTimestamp': 1521997305.83,
+  'hardwareRevision': '',
+  'internalBuildId': 'dde6b814-58d2-4687-94be-d62cd4e16a4b',
+  'internalVersion': '4.20.2F-Ravello-7334013.4202FRavello',
+  'isIntlVersion': False,
+  'memFree': 1214272,
+  'memTotal': 2017316,
+  'modelName': 'vEOS',
+  'serialNumber': '',
+  'systemMacAddress': '08:00:27:2a:b4:c3',
+  'version': '4.20.2F-Ravello'},
+ {'cmds': {'! boot system flash:vEOS-lab.swi': None,
+           'hostname veos6': None,
+           'interface Ethernet1': {'cmds': {'ip address 10.0.0.2/24': None,
+                                            'no switchport': None},
+                                   'comments': []},
+           'interface Ethernet2': {'cmds': {}, 'comments': []},
+           'interface Ethernet3': {'cmds': {}, 'comments': []},
+           'interface Loopback1': {'cmds': {'ip address 2.2.2.2/32': None},
+                                   'comments': []},
+           'interface Management1': {'cmds': {'ip address dhcp': None},
+                                     'comments': []},
+           'ip name-server vrf default 8.8.8.8': None,
+           'ip route 0.0.0.0/0 192.168.1.1': None,
+           'ip routing': None,
+           'management api http-commands': {'cmds': {'no shutdown': None},
+                                            'comments': []},
+           'no aaa root': None,
+           'router ospf 1': {'cmds': {'max-lsa 12000': None,
+                                      'network 10.0.0.0/24 area 0.0.0.0': None,
+                                      'network 2.2.2.2/32 area 0.0.0.0': None,
+                                      'router-id 2.2.2.2': None},
+                             'comments': []},
+           'spanning-tree mode mstp': None,
+           'transceiver qsfp default-mode 4x10G': None,
+           'username admin privilege 15 role network-admin secret sha512 $6$jivU3kvBBHm5JmxJ$gueBUcu2drveYzv4RFmoWYPvD7Sec05quPfnQFhjVGDIOTyen5dACG5SQLMBi6.BX2nXb84qkYhyKgwJCNntY.': None},
+  'comments': [],
+  'header': ['! device: veos6 (vEOS, EOS-4.20.2F-Ravello)\n!\n']},
+ {'bytesIn': 9498,
+  'bytesOut': 38607,
+  'commandCount': 171,
+  'corsOrigins': [],
+  'dscpValue': 0,
+  'enabled': True,
+  'executionTime': 33.72941579400003,
+  'fipsEnabled': False,
+  'hitCount': 53,
+  'httpServer': {'configured': False, 'port': 80, 'running': False},
+  'httpsServer': {'configured': True, 'port': 443, 'running': True},
+  'iframeAncestors': [],
+  'lastHitTime': 1522011889.972881,
+  'localHttpServer': {'configured': False, 'port': 8080, 'running': False},
+  'logLevel': 'none',
+  'requestCount': 48,
+  'tlsProtocol': ['1.0', '1.1', '1.2'],
+  'unixSocketServer': {'configured': False, 'running': False},
+  'urls': ['Ethernet1   : https://10.0.0.2:443',
+           'Loopback1   : https://2.2.2.2:443',
+           'Management1 : https://192.168.1.140:443'],
+  'users': {'admin': {'bytesIn': 9498,
+                      'bytesOut': 38607,
+                      'lastHitTime': 1522011889.9731016,
+                      'requestCount': 48}},
+  'vrf': 'default',
+  'vrfs': ['default']}]
+#############################################
+Printing results of ping to loopbacks advertised via ospf
+[{'messages': ['PING 1.1.1.1 (1.1.1.1) 72(100) bytes of data.\n'
+               '80 bytes from 1.1.1.1: icmp_seq=1 ttl=64 time=0.000 ms\n'
+               '80 bytes from 1.1.1.1: icmp_seq=2 ttl=64 time=0.000 ms\n'
+               '80 bytes from 1.1.1.1: icmp_seq=3 ttl=64 time=0.000 ms\n'
+               '80 bytes from 1.1.1.1: icmp_seq=4 ttl=64 time=0.000 ms\n'
+               '80 bytes from 1.1.1.1: icmp_seq=5 ttl=64 time=0.000 ms\n'
+               '\n'
+               '--- 1.1.1.1 ping statistics ---\n'
+               '5 packets transmitted, 5 received, 0% packet loss, time '
+               '4016ms\n'
+               'rtt min/avg/max/mdev = 0.000/0.000/0.000/0.000 ms, ipg/ewma '
+               '1004.062/0.000 ms\n']},
+ {'messages': ['PING 2.2.2.2 (2.2.2.2) 72(100) bytes of data.\n'
+               '80 bytes from 2.2.2.2: icmp_seq=1 ttl=64 time=12.0 ms\n'
+               '80 bytes from 2.2.2.2: icmp_seq=2 ttl=64 time=12.0 ms\n'
+               '80 bytes from 2.2.2.2: icmp_seq=3 ttl=64 time=12.0 ms\n'
+               '80 bytes from 2.2.2.2: icmp_seq=4 ttl=64 time=12.0 ms\n'
+               '80 bytes from 2.2.2.2: icmp_seq=5 ttl=64 time=8.00 ms\n'
+               '\n'
+               '--- 2.2.2.2 ping statistics ---\n'
+               '5 packets transmitted, 5 received, 0% packet loss, time 48ms\n'
+               'rtt min/avg/max/mdev = 8.000/11.200/12.001/1.604 ms, ipg/ewma '
+               '12.000/11.500 ms\n']}]
+[{'cmds': {'! boot system flash:vEOS-lab.swi': None,
+           'hostname veos5': None,
+           'interface Ethernet1': {'cmds': {'ip address 10.0.0.1/24': None,
+                                            'no switchport': None},
+                                   'comments': []},
+           'interface Ethernet2': {'cmds': {}, 'comments': []},
+           'interface Ethernet3': {'cmds': {}, 'comments': []},
+           'interface Loopback1': {'cmds': {'ip address 1.1.1.1/32': None},
+                                   'comments': []},
+           'interface Management1': {'cmds': {'ip address dhcp': None},
+                                     'comments': []},
+           'ip name-server vrf default 8.8.8.8': None,
+           'ip route 0.0.0.0/0 192.168.1.1': None,
+           'ip routing': None,
+           'management api http-commands': {'cmds': {'no shutdown': None},
+                                            'comments': []},
+           'no aaa root': None,
+           'router ospf 1': {'cmds': {'max-lsa 12000': None,
+                                      'network 1.1.1.1/32 area 0.0.0.0': None,
+                                      'network 10.0.0.0/24 area 0.0.0.0': None,
+                                      'router-id 1.1.1.1': None},
+                             'comments': []},
+           'spanning-tree mode mstp': None,
+           'transceiver qsfp default-mode 4x10G': None,
+           'username admin privilege 15 role network-admin secret sha512 $6$WwA33AKLtZiTeynF$7ROI1OHk7czjy4coJf/.7XdylT3zz4dca5z3XFVG55iVBu.fedJ1eEFphbap6RDKEihDxVmIZbQ6uQ.DfzPWU/': None},
+  'comments': [],
+  'header': ['! device: veos5 (vEOS, EOS-4.20.2F-Ravello)\n!\n']}]
+#############################################
+Printing results of ping to loopbacks advertised via ospf
+[{'messages': ['PING 1.1.1.1 (1.1.1.1) 72(100) bytes of data.\n'
+               '80 bytes from 1.1.1.1: icmp_seq=1 ttl=64 time=20.0 ms\n'
+               '80 bytes from 1.1.1.1: icmp_seq=2 ttl=64 time=12.0 ms\n'
+               '80 bytes from 1.1.1.1: icmp_seq=3 ttl=64 time=8.00 ms\n'
+               '80 bytes from 1.1.1.1: icmp_seq=4 ttl=64 time=12.0 ms\n'
+               '80 bytes from 1.1.1.1: icmp_seq=5 ttl=64 time=8.00 ms\n'
+               '\n'
+               '--- 1.1.1.1 ping statistics ---\n'
+               '5 packets transmitted, 5 received, 0% packet loss, time 76ms\n'
+               'rtt min/avg/max/mdev = 8.000/12.000/20.001/4.383 ms, ipg/ewma '
+               '19.001/15.807 ms\n']},
+ {'messages': ['PING 2.2.2.2 (2.2.2.2) 72(100) bytes of data.\n'
+               '80 bytes from 2.2.2.2: icmp_seq=1 ttl=64 time=0.000 ms\n'
+               '80 bytes from 2.2.2.2: icmp_seq=2 ttl=64 time=0.000 ms\n'
+               '80 bytes from 2.2.2.2: icmp_seq=3 ttl=64 time=0.000 ms\n'
+               '80 bytes from 2.2.2.2: icmp_seq=4 ttl=64 time=0.000 ms\n'
+               '80 bytes from 2.2.2.2: icmp_seq=5 ttl=64 time=0.000 ms\n'
+               '\n'
+               '--- 2.2.2.2 ping statistics ---\n'
+               '5 packets transmitted, 5 received, 0% packet loss, time '
+               '4016ms\n'
+               'rtt min/avg/max/mdev = 0.000/0.000/0.000/0.000 ms, ipg/ewma '
+               '1004.062/0.000 ms\n']}]
+[{'cmds': {'! boot system flash:vEOS-lab.swi': None,
+           'hostname veos6': None,
+           'interface Ethernet1': {'cmds': {'ip address 10.0.0.2/24': None,
+                                            'no switchport': None},
+                                   'comments': []},
+           'interface Ethernet2': {'cmds': {}, 'comments': []},
+           'interface Ethernet3': {'cmds': {}, 'comments': []},
+           'interface Loopback1': {'cmds': {'ip address 2.2.2.2/32': None},
+                                   'comments': []},
+           'interface Management1': {'cmds': {'ip address dhcp': None},
+                                     'comments': []},
+           'ip name-server vrf default 8.8.8.8': None,
+           'ip route 0.0.0.0/0 192.168.1.1': None,
+           'ip routing': None,
+           'management api http-commands': {'cmds': {'no shutdown': None},
+                                            'comments': []},
+           'no aaa root': None,
+           'router ospf 1': {'cmds': {'max-lsa 12000': None,
+                                      'network 10.0.0.0/24 area 0.0.0.0': None,
+                                      'network 2.2.2.2/32 area 0.0.0.0': None,
+                                      'router-id 2.2.2.2': None},
+                             'comments': []},
+           'spanning-tree mode mstp': None,
+           'transceiver qsfp default-mode 4x10G': None,
+           'username admin privilege 15 role network-admin secret sha512 $6$jivU3kvBBHm5JmxJ$gueBUcu2drveYzv4RFmoWYPvD7Sec05quPfnQFhjVGDIOTyen5dACG5SQLMBi6.BX2nXb84qkYhyKgwJCNntY.': None},
+  'comments': [],
+  'header': ['! device: veos6 (vEOS, EOS-4.20.2F-Ravello)\n!\n']}]
+
+In [2]: 
+
+In [3]: run script2.py
+[{'vrfs': {'default': {'allRoutesProgrammedHardware': True,
+                       'allRoutesProgrammedKernel': True,
+                       'defaultRouteState': 'reachable',
+                       'routes': {'0.0.0.0/0': {'directlyConnected': False,
+                                                'hardwareProgrammed': True,
+                                                'kernelProgrammed': True,
+                                                'metric': 0,
+                                                'preference': 1,
+                                                'routeAction': 'forward',
+                                                'routeType': 'static',
+                                                'vias': [{'interface': 'Management1',
+                                                          'nexthopAddr': '192.168.1.1'}]},
+                                  '1.1.1.1/32': {'directlyConnected': True,
+                                                 'hardwareProgrammed': True,
+                                                 'kernelProgrammed': True,
+                                                 'routeAction': 'forward',
+                                                 'routeType': 'connected',
+                                                 'vias': [{'interface': 'Loopback1'}]},
+                                  '10.0.0.0/24': {'directlyConnected': True,
+                                                  'hardwareProgrammed': True,
+                                                  'kernelProgrammed': True,
+                                                  'routeAction': 'forward',
+                                                  'routeType': 'connected',
+                                                  'vias': [{'interface': 'Ethernet1'}]},
+                                  '192.168.1.0/24': {'directlyConnected': True,
+                                                     'hardwareProgrammed': True,
+                                                     'kernelProgrammed': True,
+                                                     'routeAction': 'forward',
+                                                     'routeType': 'connected',
+                                                     'vias': [{'interface': 'Management1'}]},
+                                  '2.2.2.2/32': {'directlyConnected': False,
+                                                 'hardwareProgrammed': True,
+                                                 'kernelProgrammed': True,
+                                                 'metric': 20,
+                                                 'preference': 110,
+                                                 'routeAction': 'forward',
+                                                 'routeType': 'OSPF',
+                                                 'vias': [{'interface': 'Ethernet1',
+                                                           'nexthopAddr': '10.0.0.2'}]}},
+                       'routingDisabled': False}}},
+ {'vrfs': {'default': {'instList': {'1': {'ospfNeighborEntries': [{'adjacencyState': 'full',
+                                                                   'details': {'areaId': '0.0.0.0',
+                                                                               'backupDesignatedRouter': '10.0.0.1',
+                                                                               'bfdRequestSent': False,
+                                                                               'bfdState': 'adminDown',
+                                                                               'designatedRouter': '10.0.0.2',
+                                                                               'grHelperTimer': None,
+                                                                               'grLastRestartTime': None,
+                                                                               'grNumAttempts': 0,
+                                                                               'inactivityDefers': 0,
+                                                                               'numberOfStateChanges': 7,
+                                                                               'retransmissionCount': 1,
+                                                                               'stateTime': 1521999936.423188},
+                                                                   'drState': 'DR',
+                                                                   'inactivity': 1522011795.423188,
+                                                                   'interfaceAddress': '10.0.0.2',
+                                                                   'interfaceName': 'Ethernet1',
+                                                                   'options': {'demandCircuitsSupport': False,
+                                                                               'doNotUseInRouteCalc': False,
+                                                                               'externalRoutingCapability': True,
+                                                                               'linkLocalSignaling': False,
+                                                                               'multicastCapability': False,
+                                                                               'multitopologyCapability': False,
+                                                                               'nssaCapability': False,
+                                                                               'opaqueLsaSupport': False},
+                                                                   'priority': 1,
+                                                                   'routerId': '2.2.2.2'}]}}}}}]
+[{'vrfs': {'default': {'allRoutesProgrammedHardware': True,
+                       'allRoutesProgrammedKernel': True,
+                       'defaultRouteState': 'reachable',
+                       'routes': {'0.0.0.0/0': {'directlyConnected': False,
+                                                'hardwareProgrammed': True,
+                                                'kernelProgrammed': True,
+                                                'metric': 0,
+                                                'preference': 1,
+                                                'routeAction': 'forward',
+                                                'routeType': 'static',
+                                                'vias': [{'interface': 'Management1',
+                                                          'nexthopAddr': '192.168.1.1'}]},
+                                  '1.1.1.1/32': {'directlyConnected': False,
+                                                 'hardwareProgrammed': True,
+                                                 'kernelProgrammed': True,
+                                                 'metric': 20,
+                                                 'preference': 110,
+                                                 'routeAction': 'forward',
+                                                 'routeType': 'OSPF',
+                                                 'vias': [{'interface': 'Ethernet1',
+                                                           'nexthopAddr': '10.0.0.1'}]},
+                                  '10.0.0.0/24': {'directlyConnected': True,
+                                                  'hardwareProgrammed': True,
+                                                  'kernelProgrammed': True,
+                                                  'routeAction': 'forward',
+                                                  'routeType': 'connected',
+                                                  'vias': [{'interface': 'Ethernet1'}]},
+                                  '192.168.1.0/24': {'directlyConnected': True,
+                                                     'hardwareProgrammed': True,
+                                                     'kernelProgrammed': True,
+                                                     'routeAction': 'forward',
+                                                     'routeType': 'connected',
+                                                     'vias': [{'interface': 'Management1'}]},
+                                  '2.2.2.2/32': {'directlyConnected': True,
+                                                 'hardwareProgrammed': True,
+                                                 'kernelProgrammed': True,
+                                                 'routeAction': 'forward',
+                                                 'routeType': 'connected',
+                                                 'vias': [{'interface': 'Loopback1'}]}},
+                       'routingDisabled': False}}},
+ {'vrfs': {'default': {'instList': {'1': {'ospfNeighborEntries': [{'adjacencyState': 'full',
+                                                                   'details': {'areaId': '0.0.0.0',
+                                                                               'backupDesignatedRouter': '10.0.0.1',
+                                                                               'bfdRequestSent': False,
+                                                                               'bfdState': 'adminDown',
+                                                                               'designatedRouter': '10.0.0.2',
+                                                                               'grHelperTimer': None,
+                                                                               'grLastRestartTime': None,
+                                                                               'grNumAttempts': 0,
+                                                                               'inactivityDefers': 0,
+                                                                               'numberOfStateChanges': 6,
+                                                                               'retransmissionCount': 1,
+                                                                               'stateTime': 1521999938.271491},
+                                                                   'drState': 'BDR',
+                                                                   'inactivity': 1522011795.271491,
+                                                                   'interfaceAddress': '10.0.0.1',
+                                                                   'interfaceName': 'Ethernet1',
+                                                                   'options': {'demandCircuitsSupport': False,
+                                                                               'doNotUseInRouteCalc': False,
+                                                                               'externalRoutingCapability': True,
+                                                                               'linkLocalSignaling': False,
+                                                                               'multicastCapability': False,
+                                                                               'multitopologyCapability': False,
+                                                                               'nssaCapability': False,
+                                                                               'opaqueLsaSupport': False},
+                                                                   'priority': 1,
+                                                                   'routerId': '1.1.1.1'}]}}}}}]
+
+In [4]: 
