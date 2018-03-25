@@ -56,7 +56,9 @@ pingHost = ["ping 1.1.1.1", "ping 2.2.2.2"]
 print("#" * 45)
 print("Printing results of ping to loopbacks advertised via ospf")
 pp(node1.run_commands(pingHost))
+pp(node1.run_commands("show running-config"))
 
 print("#" * 45)
 print("Printing results of ping to loopbacks advertised via ospf")
 pp(node2.run_commands(pingHost))
+pp(node2.run_commands("show running-config"))
