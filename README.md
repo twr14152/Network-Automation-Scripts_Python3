@@ -9,6 +9,7 @@ Python client for eapi (pyeapi) for Arista devices
  - created two sample scripts
 
 Testing Netmiko module
+- Added example of how to use jinja templates with netmiko
 - Created new script that provide you a sandbox to say how many devices, what devices, and what to configure on each
     - ssh_sandbox.py
 - Created a very basic ssh script useful for discovery + updated with error handling
