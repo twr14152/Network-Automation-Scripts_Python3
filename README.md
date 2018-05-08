@@ -10,9 +10,9 @@ Python client for eapi (pyeapi) for Arista devices
 
 Testing Netmiko module
 - Added 3 examples of how to use jinja templates with netmiko
+ - conf_bgp_r4_r5_using_class_def.py - uses class object to populate template
+ - conf_bgp_r4_r5_using_dict.py - uses dictionaries to populate template
  - 
- -
- -
 - Created new script that provide you a sandbox to say how many devices, what devices, and what to configure on each
     - ssh_sandbox.py
 - Created a very basic ssh script useful for discovery + updated with error handling
