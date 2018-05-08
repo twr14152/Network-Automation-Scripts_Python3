@@ -2,6 +2,9 @@
 # Libraries: Pyeapi, Netmiko, Napalm, Telnetlib
 Network automation scripts I've written using various python libraries
 
+I've created some examples using Jinja2 templates in the Netmiko Folder
+ - 
+
 Python client for eapi (pyeapi) for Arista devices
  - Posted configs and validation from demo
  - Interactive config script for multiple devices (multi_dev_cfg_script2.py )
