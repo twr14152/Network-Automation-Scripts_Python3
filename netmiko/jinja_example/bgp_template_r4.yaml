@@ -1,0 +1,7 @@
+---
+  asn: 4
+  loop0_ip: 4.4.4.4
+  neighbor_address: 10.0.4.5
+  peer_asn: 5
+  remote_router_name: r5
+  password: real_secure_pass
