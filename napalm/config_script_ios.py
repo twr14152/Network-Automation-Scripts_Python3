@@ -10,11 +10,12 @@ def run_script(router):
     rtr = driver(router, 'admin', 'automate')
     rtr.open()
     print("Connected to: ", (rtr.hostname))
-    #pp(rtr.device.send_command('show run'))
     pp(rtr.device.send_config_from_file('/home/todd/automation/napalm_stuff/ACL.cfg'))
-
+    pp(rtr.device.send_config_from_file('/home/todd/automation/napalm_stuff/global_config.cfg'))
+    #pp(rtr.device.send_command('show run'))
 
 if __name__ == "__main__":
     with Pool(5) as p:
         print(p.map(run_script, routers))
     
+
