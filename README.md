@@ -31,6 +31,9 @@ Napalm for eos
 - napalm_eos_script1.py
 
 Napalm for cisco ios
+- created a config_scripts directory added new script
+  - script_config_ios.py
+- added new get_facts and get config script to directory
 - Tested with python3.4 napalm_base and napalm_ios
 - Believe the ios image I am running in GNS3 is problematic with Napalm. 
     - C7200-ADVENTERPRISEK9-M, Version 15.2(4)S7
