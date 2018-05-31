@@ -1,4 +1,3 @@
-import json
 from napalm import get_network_driver
 from pprint import pprint as pp
 from multiprocessing import Pool
@@ -12,10 +11,14 @@ def run_script(router):
     print("Connected to: ", (rtr.hostname))
     pp(rtr.device.send_config_from_file('/home/todd/automation/napalm_stuff/ACL.cfg'))
     pp(rtr.device.send_config_from_file('/home/todd/automation/napalm_stuff/global_config.cfg'))
-    #pp(rtr.device.send_command('show run'))
+    pp(rtr.device.send_command('write memory'))
 
 if __name__ == "__main__":
     with Pool(5) as p:
         print(p.map(run_script, routers))
+    
+
+
+
     
 
