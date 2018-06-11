@@ -30,7 +30,7 @@ def run_script(host):
         error_list.append(host)
 
     try:
-        with open('config_'+ host, 'w') as conf:
+        with open('config_'+ host + '.json', 'w', encoding='utf-8') as conf:
             rtr_configs = rtr.get_config()
             print(host , "startup and running config saved")
             json.dump(rtr_configs, conf, sort_keys = True, indent=4 , separators=(',', ': '))
@@ -49,6 +49,6 @@ if __name__ == "__main__":
         print("*********************************************************************")
         print("This script will save the startup and running configs in json format")
         print("*********************************************************************")
-        print(p.map(run_script, host_list)) 
+        print(p.map(run_script, host_list))
 
 
