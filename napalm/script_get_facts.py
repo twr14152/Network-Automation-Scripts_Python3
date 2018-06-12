@@ -1,22 +1,20 @@
 import json
 from napalm import get_network_driver
-driver = get_network_driver('ios')
 from multiprocessing import Pool
 from pprint import pprint as pp
 
 #router = input("Enter router seperated by spaces:  ")
-
 #host_list = router.split()
-
-# or 
 
 with open('host_file') as f:
     host_list = f.read().splitlines()
 
-un = "cisco"
-pw = "cisco"
+un = "admin"
+pw = "automate"
 
 error_list = []
+
+driver = get_network_driver('ios')
 
 def run_script(host):
     rtr = driver(host, un, pw)
@@ -28,8 +26,11 @@ def run_script(host):
         error_list.append(host)
 
     try:
-        pp(rtr.get_facts())
-        pp("*" * 52)
+        with open('device_facts_'+ host + '.json', 'w', encoding='utf-8') as device:
+            rtr_facts = rtr.get_facts()
+            pp(rtr.get_facts())
+            json.dump(rtr_facts, device, sort_keys = True, indent=4 , separators=(',', ': '))
+            pp("*" * 52)
     except:
         pass
 
