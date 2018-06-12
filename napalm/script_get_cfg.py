@@ -1,14 +1,9 @@
 from napalm import get_network_driver
-driver = get_network_driver('ios')
 from multiprocessing import Pool
 import json
 
 #router = input("Enter router seperated by spaces:  ")
-
 #host_list = router.split()
-
-# or 
-
 
 with open('/home/todd/automation/napalm_stuff/host_file') as f:
     host_list = f.read().splitlines()
@@ -19,6 +14,7 @@ pw = "automate"
 error_list = []
 cmd_fail = []
 
+driver = get_network_driver('ios')
 
 def run_script(host):
     rtr = driver(host, un, pw)
@@ -49,6 +45,7 @@ if __name__ == "__main__":
         print("*********************************************************************")
         print("This script will save the startup and running configs in json format")
         print("*********************************************************************")
-        print(p.map(run_script, host_list))
+        print(p.map(run_script, host_list)) 
+
 
 
