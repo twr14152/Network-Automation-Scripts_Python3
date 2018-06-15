@@ -31,8 +31,8 @@ Napalm for eos
 - napalm_eos_script1.py
 
 Napalm for cisco ios
-- napalm script to discover ios devices and create device files in json format for upload to snow
-    - rest call to snow to post discovery data
+- napalm script to discover ios devices and create device files in json format for upload to snow 
+    - rest call to snow to post discovery data - post_svc_now_rest_api.py
 - created a config_scripts directory added new script
   - script_config_ios.py
 - added new get_facts and get config script to directory
