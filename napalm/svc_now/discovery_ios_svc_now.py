@@ -3,9 +3,6 @@ from napalm import get_network_driver
 from multiprocessing import Pool
 from pprint import pprint as pp
 
-#router = input("Enter router seperated by spaces:  ")
-#host_list = router.split()
-
 with open('host_file') as f:
     host_list = f.read().splitlines()
 
@@ -28,17 +25,12 @@ def run_script(host):
     try:
         with open('snow_device_facts_'+ host + '.json', 'w', encoding='utf-8') as device:
             rtr_facts = rtr.get_facts()
-            rtr_facts2 = rtr.get_facts()
-            rtr_facts['name'] = rtr_facts.pop('hostname')
-            rtr_facts2['manufacturer'] = rtr_facts2.pop('vendor')
-            rtr_facts['model_number'] = rtr_facts.pop('model')
-            rtr_facts2['model_id'] = rtr_facts2.pop('model')
             rtr_facts["ip_address"] = host
-            rtr_facts2["firmware_version"] = rtr_facts2.pop("os_version")
+            rtr_interface_ips = rtr.get_interfaces_ip()
             rtr_interfaces = rtr.get_interfaces()
             rtr_snmp = rtr.get_snmp_information()
-            rtr_all = {**rtr_facts, **rtr_facts2, **rtr_snmp, **rtr_interfaces}
-            pp("*" * 70)
+            rtr_all = {**rtr_facts, **rtr_interface_ips, **rtr_snmp, **rtr_interfaces}
+            pp(rtr_all)
             json.dump(rtr_all, device, sort_keys = True, indent=4 , separators=(',', ': '))
     except:
         pass
