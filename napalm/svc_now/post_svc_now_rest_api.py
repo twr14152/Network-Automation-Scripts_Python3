@@ -2,7 +2,6 @@ import requests
 from getpass import getpass
 from pprint import pprint as pp
 
-
 user = ''
 pwd = getpass("enter password: " )
 
