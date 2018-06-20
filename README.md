@@ -1,6 +1,9 @@
 # Network-Automation-Scripts using Python3
-# Libraries: Pyeapi, Netmiko, Napalm, Telnetlib
+# Libraries: Pyeapi, Netmiko, Napalm, Telnetlib, Restconf
 Network automation scripts I've written using various python libraries
+
+Restconf
+- restconf_ex1.py
 
 Python client for eapi (pyeapi) for Arista devices
  - Posted configs and validation from demo
