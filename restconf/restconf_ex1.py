@@ -1,7 +1,6 @@
 # This is an example of restconf script hitting cisco devnet lab device (CSR1000V)
 
 import requests
-import sys
 
 # disable warnings from SSL/TLS certificates
 requests.packages.urllib3.disable_warnings()
