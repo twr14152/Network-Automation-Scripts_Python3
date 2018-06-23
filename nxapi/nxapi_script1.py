@@ -1,3 +1,8 @@
+"""
+File - nxapi_script1.py
+Author - Todd Riemenschneider
+Date - 06.23.2018
+"""
 # Requests library is necessary to interface with nxapi
 import requests
 # Json is the data format we are using to communicate over http/https
@@ -50,7 +55,8 @@ for command in cmds:
     payload.append(payload_dict)
     pp(command)
 
-# This applied the commands to the target device to execute
+# This applied the commands to the target device to execute, also the verify=False is necessary to work in lab
+# SSL set up is ok for lab, you would potentially want the verify process in production
 response = requests.post(url,data=json.dumps(payload), headers=myheaders,auth=(UN,PW),verify=False).json()
 pp(response)
 
