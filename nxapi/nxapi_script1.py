@@ -1,13 +1,13 @@
 import requests
 import json
-import getpass
+from getpass import getpass
 from pprint import pprint as pp
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
-UN = 'admin'
-PW = 'Admin_1234!'
+UN = input("Username: ")
+PW = getpass("Password: ")
 
 commands = input('Commands seperate with ",":  ')
 cmds = commands.split(',')
