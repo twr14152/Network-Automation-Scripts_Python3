@@ -1,11 +1,19 @@
 # Network-Automation-Scripts using Python3
 # Libraries: Pyeapi, Netmiko, Napalm, Telnetlib, Restconf, Nxapi
-Network automation scripts I've written using various python libraries
+This repository hold various automation scripts I've written over the years. 
+My goal has been to use this as a repository for knowledge retention as well knowlege sharing.
+I plan to continue to grow this respository as long as I'm still doing stuff in the network automation space.
+
+This has been a iterative learning process for me and I will be archiving or deleting scripts that no longer have value
 
 Nxapi
-- nxapi_script_ex1.py
+- Found this api documentation to be lacking
+- Script examples I found were rigid and not very flexible
+- Created a script to allow user to enter any commands (config/show) w/o having to rewrite their script.
+  - nxapi_script_ex1.py
 
 Restconf
+- Still learning this api
 - restconf_ex1.py
 
 Python client for eapi (pyeapi) for Arista devices
