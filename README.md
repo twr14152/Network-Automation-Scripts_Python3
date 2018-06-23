@@ -1,6 +1,9 @@
 # Network-Automation-Scripts using Python3
-# Libraries: Pyeapi, Netmiko, Napalm, Telnetlib, Restconf
+# Libraries: Pyeapi, Netmiko, Napalm, Telnetlib, Restconf, Nxapi
 Network automation scripts I've written using various python libraries
+
+Nxapi
+- nxapi_script_ex1.py
 
 Restconf
 - restconf_ex1.py
