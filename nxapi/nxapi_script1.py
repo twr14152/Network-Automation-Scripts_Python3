@@ -1,7 +1,7 @@
 """
-File - nxapi_script1.py
-Author - Todd Riemenschneider
-Date - 06.23.2018
+File: nxapi_script1.py
+Author: Todd Riemenschneider
+Date: 06.22.2018
 """
 # Requests library is necessary to interface with nxapi
 import requests
