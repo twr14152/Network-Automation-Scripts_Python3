@@ -12,7 +12,7 @@ PW = getpass("Password: ")
 commands = input('Commands seperate with ",":  ')
 cmds = commands.split(',')
 
-url='https://64.103.37.14/ins'
+url='https://<hostname or ip>/ins'
 print(url)
 
 myheaders={'content-type':'application/json-rpc'}
