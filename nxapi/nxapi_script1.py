@@ -1,7 +1,7 @@
 """
-File: nxapi_script1.py
-Author: Todd Riemenschneider
-Date: 06.22.2018
+File - nxapi_script1.py
+Author - Todd Riemenschneider
+Date - 06.23.2018
 """
 # Requests library is necessary to interface with nxapi
 import requests
@@ -18,6 +18,10 @@ requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 UN = input("Username: ")
 PW = getpass("Password: ")
+target = input("target host ip or dns name: ")
+
+if len(target) <= 0:
+    target = '64.103.37.14'
 
 # This is where you enter your commands
 commands = input('Commands seperate with ",":  ')
@@ -25,7 +29,7 @@ commands = input('Commands seperate with ",":  ')
 cmds = commands.split(',')
 
 # This is the target hosts your connecting to
-url='https://<hostname or ip>/ins'
+url='https://' + target + '/ins'
 print(url)
 
 # This lets the target host know what type of data to expect
