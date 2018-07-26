@@ -16,7 +16,7 @@ Restconf
 - Still learning this api
 - restconf_ex1.py
 
-Python client for eapi (pyeapi) for Arista devices
+Pyeapi - Python client for Aristas eAPI
  - Posted configs and validation from demo
  - Interactive config script for multiple devices (multi_dev_cfg_script2.py )
  - hidden host config file, needs to be located in ~/.eapi.conf
