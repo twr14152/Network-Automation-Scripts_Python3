@@ -22,7 +22,10 @@ Pyeapi - Python client for Aristas eAPI
  - hidden host config file, needs to be located in ~/.eapi.conf
  - created two sample scripts
 
-Testing Netmiko module
+Netmiko testing
+- Network-Automation-Scripts_Python3/netmiko/NetworkDiscovery/two_files/
+  - discovery_script - w/error handling and logging
+  - host_file.txt
 - Added 3 examples of how to use jinja templates with netmiko
  - conf_bgp_r4_r5_using_class_obj. - uses class object to populate template
  - conf_bgp_r4_r5_using_dict.py - uses dictionaries to populate template
