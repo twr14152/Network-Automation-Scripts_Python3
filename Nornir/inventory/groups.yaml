@@ -1,0 +1,5 @@
+---
+ceos_lab:
+    nornir_username: arista                                            
+    nornir_password: arista
+    nornir_nos: eos
