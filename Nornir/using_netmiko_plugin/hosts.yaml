@@ -1,0 +1,60 @@
+---
+r1:
+  site: core
+  groups:
+    - routers
+  nornir_host: 1.1.1.1
+
+r2:
+  site: core
+  groups:
+    - routers
+  nornir_host: 2.2.2.2
+
+r3:
+  site: distribution
+  groups:
+    - routers
+  nornir_host: 3.3.3.3
+
+r4:
+  site: distribution
+  groups:
+    - routers
+  nornir_host: 4.4.4.4
+
+r5:
+  site: distribution
+  groups:
+    - routers
+  nornir_host: 5.5.5.5
+
+r6:
+  site: distribution
+  groups:
+    - routers
+  nornir_host: 6.6.6.6
+
+r7:
+  site: access
+  groups:
+    - routers
+  nornir_host: 7.7.7.7
+
+r8:
+  site: access
+  groups:
+    - routers
+  nornir_host: 8.8.8.8
+
+r9:
+  site: access
+  groups:
+    - routers
+  nornir_host: 9.9.9.9
+
+r10:
+  site: access
+  groups:
+    - routers
+  nornir_host: 10.10.10.10
