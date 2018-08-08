@@ -8,7 +8,7 @@ This has been a iterative learning process for me and I will be archiving or del
 
 Nornir - TestDrive
 - Cisco IOS - GNS3 lab - nornir/using_netmiko_plugin/script1.py
-- Arists Ceos lab - nornir/using_napalm_plugin/script1.py 
+- Arista Ceos lab - nornir/using_napalm_plugin/script1.py 
 
 
 Nxapi
