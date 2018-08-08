@@ -1,0 +1,7 @@
+---
+routers:
+    nornir_ssh_port: 22
+    nornir_username: admin
+    nornir_password: automate
+    nornir_nos: cisco_ios
+ 
