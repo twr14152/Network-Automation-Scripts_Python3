@@ -1,0 +1,106 @@
+todd@ubuntu:~/automation/nornir_stuff$ python3 config_example.py 
+Pick group of devices to configure core, distribution, access: access
+Enter configuration lines seperated by ',': interface loopback101, description access_layer_device 
+['interface loopback101', ' description access_layer_device']
+netmiko_send_config*************************************************************
+* r10 ** changed : True ********************************************************
+vvvv netmiko_send_config ** changed : True vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv INFO
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+r10(config)#interface loopback101
+r10(config-if)# description access_layer_device
+r10(config-if)#end
+r10#
+^^^^ END netmiko_send_config ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* r7 ** changed : True *********************************************************
+vvvv netmiko_send_config ** changed : True vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv INFO
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+r7(config)#interface loopback101
+r7(config-if)# description access_layer_device
+r7(config-if)#end
+r7#
+^^^^ END netmiko_send_config ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* r8 ** changed : True *********************************************************
+vvvv netmiko_send_config ** changed : True vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv INFO
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+r8(config)#interface loopback101
+r8(config-if)# description access_layer_device
+r8(config-if)#end
+r8#
+^^^^ END netmiko_send_config ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* r9 ** changed : True *********************************************************
+vvvv netmiko_send_config ** changed : True vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv INFO
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+r9(config)#interface loopback101
+r9(config-if)# description access_layer_device
+r9(config-if)#end
+r9#
+^^^^ END netmiko_send_config ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+todd@ubuntu:~/automation/nornir_stuff$ python3 config_example.py 
+Pick group of devices to configure core, distribution, access: distribution
+Enter configuration lines seperated by ',': interface loopback 101, description distribution_layer_device
+['interface loopback 101', ' description distribution_layer_device']
+netmiko_send_config*************************************************************
+* r3 ** changed : True *********************************************************
+vvvv netmiko_send_config ** changed : True vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv INFO
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+r3(config)#interface loopback 101
+r3(config-if)# description distribution_layer_device
+r3(config-if)#end
+r3#
+^^^^ END netmiko_send_config ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* r4 ** changed : True *********************************************************
+vvvv netmiko_send_config ** changed : True vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv INFO
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+r4(config)#interface loopback 101
+r4(config-if)# description distribution_layer_device
+r4(config-if)#end
+r4#
+^^^^ END netmiko_send_config ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* r5 ** changed : True *********************************************************
+vvvv netmiko_send_config ** changed : True vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv INFO
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+r5(config)#interface loopback 101
+r5(config-if)# description distribution_layer_device
+r5(config-if)#end
+r5#
+^^^^ END netmiko_send_config ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* r6 ** changed : True *********************************************************
+vvvv netmiko_send_config ** changed : True vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv INFO
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+r6(config)#interface loopback 101
+r6(config-if)# description distribution_layer_device
+r6(config-if)#end
+r6#
+^^^^ END netmiko_send_config ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+todd@ubuntu:~/automation/nornir_stuff$ python3 config_example.py 
+Pick group of devices to configure core, distribution, access: core
+Enter configuration lines seperated by ',': interface loopback 101, description core_layer_device
+['interface loopback 101', ' description core_layer_device']
+netmiko_send_config*************************************************************
+* r1 ** changed : True *********************************************************
+vvvv netmiko_send_config ** changed : True vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv INFO
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+r1(config)#interface loopback 101
+r1(config-if)# description core_layer_device
+r1(config-if)#end
+r1#
+^^^^ END netmiko_send_config ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* r2 ** changed : True *********************************************************
+vvvv netmiko_send_config ** changed : True vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv INFO
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+r2(config)#interface loopback 101
+r2(config-if)# description core_layer_device
+r2(config-if)#end
+r2#
+^^^^ END netmiko_send_config ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+todd@ubuntu:~/automation/nornir_stuff$ 
