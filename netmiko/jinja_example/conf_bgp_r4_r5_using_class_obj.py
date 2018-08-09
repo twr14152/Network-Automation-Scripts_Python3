@@ -19,7 +19,7 @@ class bgp_conf(object):
         self.password = password
 
 '''
-This is just begin used for reference to help you build your class definition
+This is just being used for reference to help you build your class definition
 
 router bgp {{ bgp.asn }}
  bgp log-neighbor-changes
