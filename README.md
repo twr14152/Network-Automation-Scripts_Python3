@@ -57,9 +57,8 @@ Napalm for cisco ios
     - discovery_ios_svc_now.py
     - post_svc_now_rest_api.py
 - created a config_scripts directory added new script
-  - script_config_ios.py
+    - script_config_ios.py
 - added new get_facts and get config script to directory
-- 
 - Testing with python3 napalm_base and napalm_ios
 - In my gns3 environment I'm using the following code
     - C7200-ADVENTERPRISEK9-M, Version 15.2(4)S7
