@@ -7,8 +7,8 @@ I plan to continue to grow this respository as long as I'm still doing stuff in 
 This has been a iterative learning process for me and I will be archiving or deleting scripts that no longer have value
 
 Nornir - TestDrive
-- Cisco IOS - GNS3 lab - nornir/using_netmiko_plugin/script1.py
-- Arista Ceos lab - nornir/using_napalm_plugin/script1.py 
+- Cisco IOS - GNS3 lab - nornir/using_netmiko_plugin
+- Arista Ceos lab - nornir/using_napalm_plugin 
 
 
 Nxapi
