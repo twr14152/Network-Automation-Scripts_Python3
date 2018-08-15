@@ -1,0 +1,87 @@
+Todds-MacBook-Pro-3:napalm_stuff toddriemenschneider$ python3 napalm_cfg_merge.py 
+{'hostname': 'localhost', 'fqdn': 'localhost', 'vendor': 'Arista', 'model': 'cEOSSim', 'serial_number': 'N/A', 'os_version': '4.20.5F-8127914.4205F', 'uptime': 502251, 'interface_list': ['Ethernet1', 'Ethernet2']}
+@@ -2,6 +2,7 @@
+ !
+ transceiver qsfp default-mode 4x10G
+ !
++hostname CEOS1
+ ip name-server vrf default 8.8.8.8
+ !
+ spanning-tree mode mstp
+@@ -11,15 +12,27 @@
+ username arista privilege 15 secret sha512 $6$KHx4c.OLx8V1Zkua$SVxRaZZ8TXoJ5VO7WBODbv2k3l8hfgWDxpHmv73Tk7bVbObadcBURxymQQAOkYqtqBHMsVEh6JBHiBuyG5sag/
+ !
+ interface Ethernet1
+-   shutdown
++   no switchport
++   ip address 10.0.0.1/24
+ !
+ interface Ethernet2
++!
++interface Loopback0
++   ip address 1.1.1.1/32
+ !
+ ip route 0.0.0.0/0 192.168.1.1
+ !
+ ip routing
+ !
++router ospf 1
++   network 0.0.0.0/0 area 0.0.0.0
++   max-lsa 12000
++!
+ management api http-commands
+    no shutdown
+ !
++router bgp 65000
++   neighbor 2.2.2.2 remote-as 65000
++   neighbor 2.2.2.2 maximum-routes 12000 
++!
+ end
+
+Would you like to commit these changes? [yN]: y
+Committing ...
+eos1 done.
+{'hostname': 'localhost', 'fqdn': 'localhost', 'vendor': 'Arista', 'model': 'cEOSSim', 'serial_number': 'N/A', 'os_version': '4.20.5F-8127914.4205F', 'uptime': 502256, 'interface_list': ['Ethernet1', 'Ethernet2']}
+@@ -2,6 +2,7 @@
+ !
+ transceiver qsfp default-mode 4x10G
+ !
++hostname CEOS2
+ ip name-server vrf default 8.8.8.8
+ !
+ spanning-tree mode mstp
+@@ -11,16 +12,28 @@
+ username arista privilege 15 secret sha512 $6$ud66axefD4jmS.Yf$zFaSScqJwDknP/gMkXmpC2pGamemMGpR05aml.cPkaujzCpXuuxfTOmU7W5ZDS66sJwwaH7PblqPtKHBXA3pl/
+ !
+ interface Ethernet1
+-   shutdown
++   no switchport
++   ip address 10.0.0.2/24
+ !
+ interface Ethernet2
++!
++interface Loopback0
++   ip address 2.2.2.2/32
+ !
+ ip route 0.0.0.0/0 192.168.1.1
+ !
+ ip routing
+ !
++router ospf 1
++   network 0.0.0.0/0 area 0.0.0.0
++   max-lsa 12000
++!
+ management api http-commands
+    protocol https port 8443
+    no shutdown
+ !
++router bgp 65000
++   neighbor 1.1.1.1 remote-as 65000
++   neighbor 1.1.1.1 maximum-routes 12000 
++!
+ end
+
+Would you like to commit these changes? [yN]: y
+Committing ...
+eos2 done.
+Todds-MacBook-Pro-3:napalm_stuff toddriemenschneider$ 
