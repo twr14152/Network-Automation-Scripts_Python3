@@ -1,0 +1,21 @@
+router ospf 1
+ network 0.0.0.0 255.255.255.255 area 0
+
+
+interface loopback0
+ ip address 2.2.2.2/32
+
+
+interface ethernet 1
+ no switchport
+ ip address 10.0.0.2/24
+ no shutdown
+
+hostname CEOS2
+
+router bgp 65000
+      neighbor 1.1.1.1 remote-as 65000
+      neighbor 1.1.1.1 maximum-routes 12000
+
+
+ip routing
