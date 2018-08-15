@@ -1,109 +1,5 @@
-
-todd@ubuntu:~/automation/nornir_stuff$ python3 nornir_script1.py 
-Enter commands: show ip arp, show ip int brief, show ver | inc IOS
-netmiko_send_command************************************************************
-* r1 ** changed : False ********************************************************
-vvvv netmiko_send_command ** changed : False vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv INFO
-Protocol  Address          Age (min)  Hardware Addr   Type   Interface
-Internet  157.130.0.0             -   ca01.02ec.0000  ARPA   FastEthernet0/0
-Internet  157.130.0.1            32   ca03.02ef.0000  ARPA   FastEthernet0/0
-Internet  157.130.0.2             -   ca01.02ec.001c  ARPA   FastEthernet1/0
-Internet  157.130.0.3            32   ca04.02f0.0000  ARPA   FastEthernet1/0
-Internet  157.130.0.4             -   ca01.02ec.0038  ARPA   FastEthernet2/0
-Internet  157.130.0.5            32   ca02.02ed.0038  ARPA   FastEthernet2/0
-Internet  157.130.0.6             -   ca01.02ec.0039  ARPA   FastEthernet2/1
-Internet  157.130.0.7            32   ca02.02ed.0039  ARPA   FastEthernet2/1
-^^^^ END netmiko_send_command ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* r10 ** changed : False *******************************************************
-vvvv netmiko_send_command ** changed : False vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv INFO
-Protocol  Address          Age (min)  Hardware Addr   Type   Interface
-Internet  10.0.3.1                -   ca0a.02f7.0038  ARPA   FastEthernet2/0
-Internet  157.130.1.10           30   ca05.02f1.001d  ARPA   FastEthernet1/0
-Internet  157.130.1.11            -   ca0a.02f7.001c  ARPA   FastEthernet1/0
-Internet  157.130.1.14           30   ca06.02f2.001c  ARPA   FastEthernet0/0
-Internet  157.130.1.15            -   ca0a.02f7.0000  ARPA   FastEthernet0/0
-^^^^ END netmiko_send_command ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* r2 ** changed : False ********************************************************
-vvvv netmiko_send_command ** changed : False vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv INFO
-Protocol  Address          Age (min)  Hardware Addr   Type   Interface
-Internet  157.130.0.4            32   ca01.02ec.0038  ARPA   FastEthernet2/0
-Internet  157.130.0.5             -   ca02.02ed.0038  ARPA   FastEthernet2/0
-Internet  157.130.0.6            32   ca01.02ec.0039  ARPA   FastEthernet2/1
-Internet  157.130.0.7             -   ca02.02ed.0039  ARPA   FastEthernet2/1
-Internet  157.130.1.0             -   ca02.02ed.0000  ARPA   FastEthernet0/0
-Internet  157.130.1.1            32   ca06.02f2.0000  ARPA   FastEthernet0/0
-Internet  157.130.1.2             -   ca02.02ed.001c  ARPA   FastEthernet1/0
-Internet  157.130.1.3            32   ca05.02f1.0000  ARPA   FastEthernet1/0
-^^^^ END netmiko_send_command ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* r3 ** changed : False ********************************************************
-vvvv netmiko_send_command ** changed : False vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv INFO
-Protocol  Address          Age (min)  Hardware Addr   Type   Interface
-Internet  157.130.0.0            32   ca01.02ec.0000  ARPA   FastEthernet0/0
-Internet  157.130.0.1             -   ca03.02ef.0000  ARPA   FastEthernet0/0
-Internet  157.130.0.8             -   ca03.02ef.001c  ARPA   FastEthernet1/0
-Internet  157.130.0.9            32   ca07.02f3.0000  ARPA   FastEthernet1/0
-Internet  157.130.0.10            -   ca03.02ef.001d  ARPA   FastEthernet1/1
-Internet  157.130.0.11           32   ca08.02f4.001c  ARPA   FastEthernet1/1
-^^^^ END netmiko_send_command ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* r4 ** changed : False ********************************************************
-vvvv netmiko_send_command ** changed : False vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv INFO
-Protocol  Address          Age (min)  Hardware Addr   Type   Interface
-Internet  157.130.0.2            32   ca01.02ec.001c  ARPA   FastEthernet0/0
-Internet  157.130.0.3             -   ca04.02f0.0000  ARPA   FastEthernet0/0
-Internet  157.130.0.12            -   ca04.02f0.001d  ARPA   FastEthernet1/1
-Internet  157.130.0.13           32   ca07.02f3.001c  ARPA   FastEthernet1/1
-Internet  157.130.0.14            -   ca04.02f0.001c  ARPA   FastEthernet1/0
-Internet  157.130.0.15           32   ca08.02f4.0000  ARPA   FastEthernet1/0
-^^^^ END netmiko_send_command ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* r5 ** changed : False ********************************************************
-vvvv netmiko_send_command ** changed : False vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv INFO
-Protocol  Address          Age (min)  Hardware Addr   Type   Interface
-Internet  157.130.1.2            31   ca02.02ed.001c  ARPA   FastEthernet0/0
-Internet  157.130.1.3             -   ca05.02f1.0000  ARPA   FastEthernet0/0
-Internet  157.130.1.8             -   ca05.02f1.001c  ARPA   FastEthernet1/0
-Internet  157.130.1.9            31   ca09.02f5.0000  ARPA   FastEthernet1/0
-Internet  157.130.1.10            -   ca05.02f1.001d  ARPA   FastEthernet1/1
-Internet  157.130.1.11           31   ca0a.02f7.001c  ARPA   FastEthernet1/1
-^^^^ END netmiko_send_command ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* r6 ** changed : False ********************************************************
-vvvv netmiko_send_command ** changed : False vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv INFO
-Protocol  Address          Age (min)  Hardware Addr   Type   Interface
-Internet  157.130.1.0            31   ca02.02ed.0000  ARPA   FastEthernet0/0
-Internet  157.130.1.1             -   ca06.02f2.0000  ARPA   FastEthernet0/0
-Internet  157.130.1.12            -   ca06.02f2.001d  ARPA   FastEthernet1/1
-Internet  157.130.1.13           31   ca09.02f5.001c  ARPA   FastEthernet1/1
-Internet  157.130.1.14            -   ca06.02f2.001c  ARPA   FastEthernet1/0
-Internet  157.130.1.15           31   ca0a.02f7.0000  ARPA   FastEthernet1/0
-^^^^ END netmiko_send_command ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* r7 ** changed : False ********************************************************
-vvvv netmiko_send_command ** changed : False vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv INFO
-Protocol  Address          Age (min)  Hardware Addr   Type   Interface
-Internet  10.0.0.1                -   ca07.02f3.001d  ARPA   FastEthernet1/1
-Internet  10.0.0.254             23   0800.2775.4605  ARPA   FastEthernet1/1
-Internet  157.130.0.8            30   ca03.02ef.001c  ARPA   FastEthernet0/0
-Internet  157.130.0.9             -   ca07.02f3.0000  ARPA   FastEthernet0/0
-Internet  157.130.0.12           30   ca04.02f0.001d  ARPA   FastEthernet1/0
-Internet  157.130.0.13            -   ca07.02f3.001c  ARPA   FastEthernet1/0
-^^^^ END netmiko_send_command ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* r8 ** changed : False ********************************************************
-vvvv netmiko_send_command ** changed : False vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv INFO
-Protocol  Address          Age (min)  Hardware Addr   Type   Interface
-Internet  10.0.1.1                -   ca08.02f4.001d  ARPA   FastEthernet1/1
-Internet  157.130.0.7             -   ca08.02f4.0039  ARPA   FastEthernet2/1
-Internet  157.130.0.10           30   ca03.02ef.001d  ARPA   FastEthernet1/0
-Internet  157.130.0.11            -   ca08.02f4.001c  ARPA   FastEthernet1/0
-Internet  157.130.0.14           30   ca04.02f0.001c  ARPA   FastEthernet0/0
-Internet  157.130.0.15            -   ca08.02f4.0000  ARPA   FastEthernet0/0
-^^^^ END netmiko_send_command ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* r9 ** changed : False ********************************************************
-vvvv netmiko_send_command ** changed : False vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv INFO
-Protocol  Address          Age (min)  Hardware Addr   Type   Interface
-Internet  10.0.2.1                -   ca09.02f5.001d  ARPA   FastEthernet1/1
-Internet  157.130.1.8            30   ca05.02f1.001c  ARPA   FastEthernet0/0
-Internet  157.130.1.9             -   ca09.02f5.0000  ARPA   FastEthernet0/0
-Internet  157.130.1.12           30   ca06.02f2.001d  ARPA   FastEthernet1/0
-Internet  157.130.1.13            -   ca09.02f5.001c  ARPA   FastEthernet1/0
-^^^^ END netmiko_send_command ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+todd@ubuntu:~/automation/nornir_stuff/netmiko_plugin$ python3 show_cmds_example.py 
+Enter commands: show ip int brief, show version | inc Ver
 netmiko_send_command************************************************************
 * r1 ** changed : False ********************************************************
 vvvv netmiko_send_command ** changed : False vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv INFO
@@ -209,41 +105,61 @@ netmiko_send_command************************************************************
 * r1 ** changed : False ********************************************************
 vvvv netmiko_send_command ** changed : False vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv INFO
 Cisco IOS Software, 7200 Software (C7200-ADVENTERPRISEK9-M), Version 15.2(4)S7, RELEASE SOFTWARE (fc4)
+BOOTLDR: 7200 Software (C7200-ADVENTERPRISEK9-M), Version 15.2(4)S7, RELEASE SOFTWARE (fc4)
+6 slot VXR midplane, Version 2.1
 ^^^^ END netmiko_send_command ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * r10 ** changed : False *******************************************************
 vvvv netmiko_send_command ** changed : False vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv INFO
 Cisco IOS Software, 7200 Software (C7200-ADVENTERPRISEK9-M), Version 15.2(4)S7, RELEASE SOFTWARE (fc4)
+BOOTLDR: 7200 Software (C7200-ADVENTERPRISEK9-M), Version 15.2(4)S7, RELEASE SOFTWARE (fc4)
+6 slot VXR midplane, Version 2.1
 ^^^^ END netmiko_send_command ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * r2 ** changed : False ********************************************************
 vvvv netmiko_send_command ** changed : False vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv INFO
 Cisco IOS Software, 7200 Software (C7200-ADVENTERPRISEK9-M), Version 15.2(4)S7, RELEASE SOFTWARE (fc4)
+BOOTLDR: 7200 Software (C7200-ADVENTERPRISEK9-M), Version 15.2(4)S7, RELEASE SOFTWARE (fc4)
+6 slot VXR midplane, Version 2.1
 ^^^^ END netmiko_send_command ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * r3 ** changed : False ********************************************************
 vvvv netmiko_send_command ** changed : False vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv INFO
 Cisco IOS Software, 7200 Software (C7200-ADVENTERPRISEK9-M), Version 15.2(4)S7, RELEASE SOFTWARE (fc4)
+BOOTLDR: 7200 Software (C7200-ADVENTERPRISEK9-M), Version 15.2(4)S7, RELEASE SOFTWARE (fc4)
+6 slot VXR midplane, Version 2.1
 ^^^^ END netmiko_send_command ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * r4 ** changed : False ********************************************************
 vvvv netmiko_send_command ** changed : False vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv INFO
 Cisco IOS Software, 7200 Software (C7200-ADVENTERPRISEK9-M), Version 15.2(4)S7, RELEASE SOFTWARE (fc4)
+BOOTLDR: 7200 Software (C7200-ADVENTERPRISEK9-M), Version 15.2(4)S7, RELEASE SOFTWARE (fc4)
+6 slot VXR midplane, Version 2.1
 ^^^^ END netmiko_send_command ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * r5 ** changed : False ********************************************************
 vvvv netmiko_send_command ** changed : False vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv INFO
 Cisco IOS Software, 7200 Software (C7200-ADVENTERPRISEK9-M), Version 15.2(4)S7, RELEASE SOFTWARE (fc4)
+BOOTLDR: 7200 Software (C7200-ADVENTERPRISEK9-M), Version 15.2(4)S7, RELEASE SOFTWARE (fc4)
+6 slot VXR midplane, Version 2.1
 ^^^^ END netmiko_send_command ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * r6 ** changed : False ********************************************************
 vvvv netmiko_send_command ** changed : False vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv INFO
 Cisco IOS Software, 7200 Software (C7200-ADVENTERPRISEK9-M), Version 15.2(4)S7, RELEASE SOFTWARE (fc4)
+BOOTLDR: 7200 Software (C7200-ADVENTERPRISEK9-M), Version 15.2(4)S7, RELEASE SOFTWARE (fc4)
+6 slot VXR midplane, Version 2.1
 ^^^^ END netmiko_send_command ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * r7 ** changed : False ********************************************************
 vvvv netmiko_send_command ** changed : False vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv INFO
 Cisco IOS Software, 7200 Software (C7200-ADVENTERPRISEK9-M), Version 15.2(4)S7, RELEASE SOFTWARE (fc4)
+BOOTLDR: 7200 Software (C7200-ADVENTERPRISEK9-M), Version 15.2(4)S7, RELEASE SOFTWARE (fc4)
+6 slot VXR midplane, Version 2.1
 ^^^^ END netmiko_send_command ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * r8 ** changed : False ********************************************************
 vvvv netmiko_send_command ** changed : False vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv INFO
 Cisco IOS Software, 7200 Software (C7200-ADVENTERPRISEK9-M), Version 15.2(4)S7, RELEASE SOFTWARE (fc4)
+BOOTLDR: 7200 Software (C7200-ADVENTERPRISEK9-M), Version 15.2(4)S7, RELEASE SOFTWARE (fc4)
+6 slot VXR midplane, Version 2.1
 ^^^^ END netmiko_send_command ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * r9 ** changed : False ********************************************************
 vvvv netmiko_send_command ** changed : False vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv INFO
 Cisco IOS Software, 7200 Software (C7200-ADVENTERPRISEK9-M), Version 15.2(4)S7, RELEASE SOFTWARE (fc4)
+BOOTLDR: 7200 Software (C7200-ADVENTERPRISEK9-M), Version 15.2(4)S7, RELEASE SOFTWARE (fc4)
+6 slot VXR midplane, Version 2.1
 ^^^^ END netmiko_send_command ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-todd@ubuntu:~/automation/nornir_stuff$ 
+todd@ubuntu:~/automation/nornir_stuff/netmiko_plugin$
