@@ -1,0 +1,6 @@
+Todds-MacBook-Pro-3:netmiko_vagrant toddriemenschneider$ ./netmiko_scp_script.py 
+{'file_exists': True, 'file_transferred': True, 'file_verified': True}
+Hit enter to continue: 
+{'file_exists': True, 'file_transferred': True, 'file_verified': True}
+Hit enter to continue: 
+Todds-MacBook-Pro-3:netmiko_vagrant toddriemenschneider$
