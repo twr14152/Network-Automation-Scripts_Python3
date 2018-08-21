@@ -50,8 +50,9 @@ Netmiko testing
 - capture output of scripts
 
 Napalm for eos
+- /config_scripts/conf_merge 
 - /config_scripts
-- /config_scripts
+- 
 - Tested with ipython(python3.6) -> EOS_lab_Napalm_test_results
 - napalm_eos_script1.py
 
