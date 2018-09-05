@@ -7,7 +7,7 @@ nr = InitNornir(config_file="config.yaml")
 lab_hosts = nr.filter(site="lab", role="spline")
 
 result = lab_hosts.run(task=networking.napalm_get,
-                       getters=["facts", "config", "interfaces"])
+                       getters=["facts", "config", "interfaces_ip"])
 
 print_result(result)
 
