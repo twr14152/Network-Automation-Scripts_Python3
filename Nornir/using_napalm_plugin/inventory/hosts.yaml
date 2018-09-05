@@ -1,0 +1,25 @@
+---
+eos1:
+    nornir_host: 127.0.0.1
+    nornir_network_api_port: 12443
+    nornir_username: arista
+    nornir_password: arista
+    site: lab
+    role: spline
+    groups:
+        - lab
+    nornir_nos: eos
+    type: network_device
+
+eos2:
+    nornir_host: 127.0.0.1
+    nornir_network_api_port: 13443
+    nornir_username: arista
+    nornir_password: arista
+    site: lab
+    role: spline
+    groups:
+        - lab
+    nornir_nos: eos
+    type: network_device
+
