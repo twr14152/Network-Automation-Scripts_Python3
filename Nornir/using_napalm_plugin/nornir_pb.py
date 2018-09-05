@@ -1,5 +1,4 @@
 from nornir.core import InitNornir                                            
-from nornir.plugins.tasks import commands
 from nornir.plugins.functions.text import print_result
 from nornir.plugins.tasks import networking
 
