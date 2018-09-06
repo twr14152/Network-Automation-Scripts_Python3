@@ -1,0 +1,6 @@
+set system host-name v-junos                                                                                                                                                                  
+set interfaces et-0/0/0 description Layne_Staley
+set interfaces xe-0/0/1 description Mike_Patton
+set interfaces xe-0/0/2 description Travis_Bracht
+set interfaces xe-0/0/3 description Johnathon_Davis
+
