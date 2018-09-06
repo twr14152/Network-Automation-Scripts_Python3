@@ -30,6 +30,7 @@ Pyeapi - Python client for Aristas eAPI
 Netmiko testing
 - sample script to connect to juniper device
   - juniper_script1.py
+  - juniper_conf_from_file.py
 - scp - file transfers to veos devices hosted using vagrant
 - Network-Automation-Scripts_Python3/netmiko/NetworkDiscovery/two_files/
   - discovery_script.py - w/error handling and logging
