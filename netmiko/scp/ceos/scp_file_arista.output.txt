@@ -1,0 +1,26 @@
+Todds-MBP-3:netmiko_stuff toddriemenschneider$ python3 scp_file_arista.py 
+
+{'file_exists': True, 'file_transferred': True, 'file_verified': True}
+Hit enter to continue: 
+
+{'file_exists': True, 'file_transferred': True, 'file_verified': True}
+Hit enter to continue: 
+Todds-MBP-3:netmiko_stuff toddriemenschneider$
+ssh -p 2023 arista@127.0.0.1
+Password: 
+Last login: Mon Sep 10 15:16:15 2018 from 172.17.0.1
+localhost#dir
+Directory of flash:/
+
+       -rw-          77           Sep 10 14:14  SsuRestore.log
+       drwx        4096           Sep 10 14:14  debug
+       drwx        4096           Sep 10 14:15  persist
+       drwx        4096           Sep 10 14:15  schedule
+       -rw-         478           Sep 10 15:15  startup-config
+       -rw-          40           Sep 10 15:16  test_file.txt
+       -rw-          13           Apr 16 22:57  zerotouch-config
+
+62725623808 bytes total (56898256896 bytes free)
+localhost#more test_file.txt
+This is an scp file transfer test file!
+localhost#exit
