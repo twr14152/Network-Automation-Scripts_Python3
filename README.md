@@ -31,7 +31,9 @@ Netmiko testing
 - sample script to connect to juniper device
   - juniper_script1.py
   - juniper_conf_from_file.py
-- scp - file transfers to veos devices hosted using vagrant
+- scp 
+  - file transfers to veos devices hosted using vagrant
+  - file transfers to multiple devices using containerized eos or ceos 
 - Network-Automation-Scripts_Python3/netmiko/NetworkDiscovery/two_files/
   - discovery_script.py - w/error handling and logging
   - host_file.txt
