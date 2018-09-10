@@ -27,8 +27,6 @@ direction = 'put'
 for net_device in (eos1, eos2):
     file_system = net_device.pop('file_system')
     ssh_conn = ConnectHandler(**net_device)
-    enable_pw = ssh_conn.enable()
-    print(enable_pw)
     transfer_dict = file_transfer(ssh_conn,
                                   source_file=source_file,
                                   dest_file=dest_file,
