@@ -14,6 +14,7 @@ Netconf
 - Tested on Cisco DevNet Gear
 - Still learning not much here
 - netconf_ex1.py
+- netconf_get_conf.py
 
 Nxapi
 - Found this api documentation to be lacking
