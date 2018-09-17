@@ -12,6 +12,7 @@ Nornir - TestDrive
 
 Netconf
 - Tested on Cisco DevNet Gear
+- Still learning not much here
 - netconf_ex1.py
 
 Nxapi
