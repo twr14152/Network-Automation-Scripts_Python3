@@ -1,5 +1,5 @@
 # Network-Automation-Scripts using Python3
-# Libraries: Pyeapi, Netmiko, Napalm, Telnetlib, Restconf, Nxapi, Nornir
+# Libraries: Pyeapi, Netmiko, Napalm, Telnetlib, Restconf, Nxapi, Nornir, Netconf
 This repository hold various automation scripts I've written over the years. 
 My goal has been to use this as a repository for knowledge retention as well knowlege sharing.
 I plan to continue to grow this respository as long as I'm still doing stuff in the network automation space.
