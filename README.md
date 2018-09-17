@@ -10,6 +10,9 @@ Nornir - TestDrive
 - Cisco IOS - GNS3 lab - nornir/using_netmiko_plugin
 - Arista Ceos lab - nornir/using_napalm_plugin 
 
+Netconf
+- Tested on Cisco DevNet Gear
+- netconf_ex1.py
 
 Nxapi
 - Found this api documentation to be lacking
