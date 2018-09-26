@@ -4,7 +4,7 @@ This repository hold various automation scripts I've written over the years.
 My goal has been to use this as a repository for knowledge retention as well knowlege sharing.
 I plan to continue to grow this respository as long as I'm still doing stuff in the network automation space.
 
-This has been a iterative learning process for me and I will be archiving or deleting scripts that no longer have value
+This has been a iterative learning process for me and I will be archiving or deleting scripts that no longer have value.
 
 Nornir - TestDrive
 - Cisco IOS - GNS3 lab - nornir/using_netmiko_plugin
