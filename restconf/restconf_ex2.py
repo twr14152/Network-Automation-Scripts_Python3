@@ -14,7 +14,6 @@ PASS = 'D_Vay!_10&'
 # create a main() method
 def main():
     """Main method that retrieves the Interface details from Cat9300 via RESTCONF."""
-
     # url string to issue GET request
     # get interfaces info
     url = "https://{h}/restconf/data/ietf-interfaces:interfaces".format(h=HOST)
@@ -26,7 +25,6 @@ def main():
     # the response variable will store the data in a json format
     response = requests.get(url, auth=(USER, PASS),
                             headers=headers, verify=False).json()
-
     # pretty print is used make reading the json output easier
     pp(response)
 
