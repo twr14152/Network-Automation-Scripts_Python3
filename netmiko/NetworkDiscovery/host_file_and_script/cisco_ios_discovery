@@ -45,17 +45,17 @@ def run_script(host_ip):
         "password": passwd,
         }
     nl = "\n"
-    #connect to the device via ssh
     try: 
+        #connect to the device via ssh
         net_connect = ConnectHandler(**ios_rtr)
         host_name = net_connect.find_prompt()
-        # This is the first command issued
         print("Connected to host:", host_ip)
         host_id = "Connected to host: " + host_ip
         print('\n---- Elapsed time=', time()-starting_time)
         for cmd in cmds:
             cmd_output = net_connect.send_command(cmd, use_textfsm=False)
-            print(cmd_output)
+            # Uncomment below to see all commands being run
+            #print(cmd_output)
             with open(host_ip + "_cmds_file.txt", 'a') as file:
                 file.write(host_id)
                 file.write(nl)
