@@ -39,8 +39,8 @@ Netmiko testing
 - scp 
   - file transfers to veos devices hosted using vagrant
   - file transfers to multiple devices using containerized eos or ceos 
-- Network-Automation-Scripts_Python3/netmiko/NetworkDiscovery/two_files/
-  - discovery_script.py - w/error handling and logging
+- Network-Automation-Scripts_Python3/netmiko/NetworkDiscovery/host_file_and_script/
+  - ios_discovery_script.py - w/error handling and logging
   - host_file.txt
 - Added 3 examples of how to use jinja templates with netmiko
  - conf_bgp_r4_r5_using_class_obj. - uses class object to populate template
