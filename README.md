@@ -10,29 +10,29 @@ This has been a iterative learning process for me and I will be archiving or del
 - Cisco IOS - GNS3 lab - nornir/using_netmiko_plugin
 - Arista Ceos lab - nornir/using_napalm_plugin 
 
-Netconf
+### Netconf ###
 - Tested on Cisco DevNet Gear
 - Still learning not much here
 - netconf_ex1.py
 - netconf_get_conf.py
 
-Nxapi
+### Nxapi ###
 - Found this api documentation to be lacking
 - Script examples I found were rigid and not very flexible
 - Created a script to allow user to enter any commands (config/show) w/o having to rewrite their script.
   - nxapi_script_ex1.py
 
-Restconf
+### Restconf ###
 - Still learning this api
 - restconf_ex1.py
 
-Pyeapi - Python client for Aristas eAPI
+### Pyeapi - Python client for Aristas eAPI 
  - Posted configs and validation from demo
  - Interactive config script for multiple devices (multi_dev_cfg_script2.py )
  - hidden host config file, needs to be located in ~/.eapi.conf
  - created two sample scripts
 
-Netmiko testing
+### Netmiko testing
 - sample script to connect to juniper device
   - juniper_script1.py
   - juniper_conf_from_file.py
@@ -40,7 +40,7 @@ Netmiko testing
   - file transfers to veos devices hosted using vagrant
   - file transfers to multiple devices using containerized eos or ceos 
 - Network-Automation-Scripts_Python3/netmiko/NetworkDiscovery/host_file_and_script/
-  - ios_discovery_script.py - w/error handling and logging
+  - ios_discovery_script.py
   - host_file.txt
 - Added 3 examples of how to use jinja templates with netmiko
  - conf_bgp_r4_r5_using_class_obj. - uses class object to populate template
@@ -59,14 +59,14 @@ Netmiko testing
 - netmiko_script#.py
 - capture output of scripts
 
-Napalm for eos
+### Napalm for eos
 - /config_scripts/conf_merge 
 - /config_scripts
 - 
 - Tested with ipython(python3.6) -> EOS_lab_Napalm_test_results
 - napalm_eos_script1.py
 
-Napalm for cisco ios
+### Napalm for cisco ios
 - napalm discovery script and post script
     - discovery_ios_svc_now.py
     - post_svc_now_rest_api.py
@@ -79,7 +79,7 @@ Napalm for cisco ios
     - IOS provides access to a subset of napalms features
     - EOS has been a more feature rich testbed with napalm
 
-Testing Telnetlib module
+### Telnetlib module
 - Use python3 telnetlib module
 - capture output of scripts
 
