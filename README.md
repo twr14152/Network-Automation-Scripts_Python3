@@ -6,23 +6,23 @@ I plan to continue to grow this respository as long as I'm still doing stuff in 
 
 This has been a iterative learning process for me and I will be archiving or deleting scripts that no longer have value.
 
-### Nornir - TestDrive ###
+### Nornir - TestDrive 
 - Cisco IOS - GNS3 lab - nornir/using_netmiko_plugin
 - Arista Ceos lab - nornir/using_napalm_plugin 
 
-### Netconf ###
+### Netconf
 - Tested on Cisco DevNet Gear
 - Still learning not much here
 - netconf_ex1.py
 - netconf_get_conf.py
 
-### Nxapi ###
+### Nxapi 
 - Found this api documentation to be lacking
 - Script examples I found were rigid and not very flexible
 - Created a script to allow user to enter any commands (config/show) w/o having to rewrite their script.
   - nxapi_script_ex1.py
 
-### Restconf ###
+### Restconf 
 - Still learning this api
 - restconf_ex1.py
 
