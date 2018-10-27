@@ -27,10 +27,11 @@ if len(passwd) < 1 : passwd = "automate"
 with open('host_file.txt') as f:
     hosts = f.read().splitlines()
 
-cmds = ['show running-config', 'show version', 'show ip interface description',
+cmds = ['show running-config', 'show version', 'show inventory', 'show interface description',
         'show ip arp', 'show ip route summary', 'show vlan brief', 'show vtp status',
         'show cdp neighbor', 'show lldp neighbor', 'show ip bgp summ', 'show ip ospf nei',
-        'show ip eigrp nei']
+        'show ip eigrp nei', 'show interface status', 'show trunk', 'show int trunk', 'show etherchannel summ',
+        'show mac address-table', 'show ip route 0.0.0.0', 'show spanning-tree brief']
 
 
 starting_time = time()
@@ -54,6 +55,7 @@ def run_script(host_ip):
         print('\n---- Elapsed time=', time()-starting_time)
         for cmd in cmds:
             cmd_output = net_connect.send_command(cmd, use_textfsm=False)
+            print(cmd_output)
             with open(host_ip + "_cmds_file.txt", 'a') as file:
                 file.write(host_id)
                 file.write(nl)
@@ -86,4 +88,3 @@ if __name__ == "__main__":
     # Pool(5) means 5 process will be run at a time, more hosts will go in the next group
     with Pool(5) as p:
         print(p.map(run_script, hosts))
-
