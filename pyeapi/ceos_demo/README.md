@@ -1,6 +1,6 @@
-###CEOS DEMO
+# CEOS DEMO
 
-# Configure the ceos devices
+- Configure the ceos devices
 
 ```
 Todds-MBP:arista_ceos_stuff toddriemenschneider$ python3 script1.py 
@@ -284,7 +284,7 @@ Running-Config ceos2
                'ipg/ewma 134.231/101.809 ms\n']}]
 ```               
                
-# Show command validation               
+- Show command validation               
                
 ```               
 Todds-MBP:arista_ceos_stuff toddriemenschneider$ python3 script2.py 
@@ -398,7 +398,7 @@ Todds-MBP:arista_ceos_stuff toddriemenschneider$
 
 
 
-# Running and startup config diff
+-  Running and startup config camparison script (Not quite a config diff)
 
 
 ```
