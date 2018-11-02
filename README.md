@@ -62,7 +62,6 @@ This has been a iterative learning process for me and I will be archiving or del
 ### Napalm for eos
 - /config_scripts/conf_merge 
 - /config_scripts
-- 
 - Tested with ipython(python3.6) -> EOS_lab_Napalm_test_results
 - napalm_eos_script1.py
 
