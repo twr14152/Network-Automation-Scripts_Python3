@@ -57,11 +57,15 @@ pingHost = ["ping 1.1.1.1", "ping 2.2.2.2"]
 print("#" * 45)
 print("Printing results of ping to loopbacks advertised via ospf")
 pp(node1.run_commands(pingHost))
+
+print("Running-Config ceos1")
 pp(node1.get_config())
 
 print("#" * 45)
 print("Printing results of ping to loopbacks advertised via ospf")
 pp(node2.run_commands(pingHost))
+
+print("Running-Config ceos2")
 pp(node2.get_config())
 
 pp(node1.run_commands("ping 8.8.8.8"))
