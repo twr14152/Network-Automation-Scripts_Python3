@@ -1,4 +1,9 @@
-Todds-MBP:arista_ceos_stuff toddriemenschneider$ python script1.py 
+#CEOS DEMO
+
+## Configure the ceos devices
+
+```
+Todds-MBP:arista_ceos_stuff toddriemenschneider$ python3 script1.py 
 [{'architecture': 'i386',
   'bootupTimestamp': 1541170802.35,
   'cEosToolsVersion': '1.0',
@@ -6,7 +11,7 @@ Todds-MBP:arista_ceos_stuff toddriemenschneider$ python script1.py
   'internalBuildId': '4d6b4859-39b5-4581-993b-f84ac0736664',
   'internalVersion': '4.20.5F-8127914.4205F',
   'isIntlVersion': False,
-  'memFree': 736344,
+  'memFree': 733736,
   'memTotal': 2046932,
   'modelName': 'cEOSSim',
   'serialNumber': 'N/A',
@@ -36,30 +41,30 @@ Todds-MBP:arista_ceos_stuff toddriemenschneider$ python script1.py
            'username arista privilege 15 secret sha512 $6$kz6Isvzir9f844fZ$BaPsDgJocIxmho3.N9FaPlkX4Mf5rMkwNd5Oq/TorAF01EMotGYFptjjXwYgrr3jY0u7Y.QmC7pZ2QW0TMNRJ0': None},
   'comments': [],
   'header': ['! device: ceos1 (cEOSSim, EOS-4.20.5F)\n!\n']},
- {'bytesIn': 28507,
-  'bytesOut': 184378,
-  'commandCount': 533,
+ {'bytesIn': 31189,
+  'bytesOut': 195399,
+  'commandCount': 583,
   'corsOrigins': [],
   'dscpValue': 0,
   'enabled': True,
-  'executionTime': 34.02460553900346,
+  'executionTime': 36.19167950200426,
   'fipsEnabled': False,
-  'hitCount': 160,
+  'hitCount': 175,
   'httpServer': {'configured': False, 'port': 80, 'running': False},
   'httpsServer': {'configured': True, 'port': 443, 'running': True},
   'iframeAncestors': [],
-  'lastHitTime': 1541184067.9587402,
+  'lastHitTime': 1541184385.6256552,
   'localHttpServer': {'configured': False, 'port': 8080, 'running': False},
   'logLevel': 'none',
-  'requestCount': 157,
+  'requestCount': 172,
   'tlsProtocol': ['1.0', '1.1', '1.2'],
   'unixSocketServer': {'configured': False, 'running': False},
   'urls': ['Ethernet1   : https://10.0.0.1:443',
            'Loopback1   : https://1.1.1.1:443'],
-  'users': {'arista': {'bytesIn': 28507,
-                       'bytesOut': 184378,
-                       'lastHitTime': 1541184067.9589388,
-                       'requestCount': 157}},
+  'users': {'arista': {'bytesIn': 31189,
+                       'bytesOut': 195399,
+                       'lastHitTime': 1541184385.6260946,
+                       'requestCount': 172}},
   'vrf': 'default',
   'vrfs': ['default']}]
 [{'architecture': 'i386',
@@ -69,7 +74,7 @@ Todds-MBP:arista_ceos_stuff toddriemenschneider$ python script1.py
   'internalBuildId': '4d6b4859-39b5-4581-993b-f84ac0736664',
   'internalVersion': '4.20.5F-8127914.4205F',
   'isIntlVersion': False,
-  'memFree': 736228,
+  'memFree': 731864,
   'memTotal': 2046932,
   'modelName': 'cEOSSim',
   'serialNumber': 'N/A',
@@ -100,56 +105,56 @@ Todds-MBP:arista_ceos_stuff toddriemenschneider$ python script1.py
            'username arista privilege 15 secret sha512 $6$vzylRMR/wLVjNXt0$om9qYPMJa4YU53KToYV4qDZyQTm38Nfssj1IFKNzLyS2N4KXLZBRCgZRRDRCHWRo5fZtKnY9P3T5ebN6LPVb/1': None},
   'comments': [],
   'header': ['! device: ceos2 (cEOSSim, EOS-4.20.5F)\n!\n']},
- {'bytesIn': 26575,
-  'bytesOut': 146396,
-  'commandCount': 512,
+ {'bytesIn': 29257,
+  'bytesOut': 157609,
+  'commandCount': 562,
   'corsOrigins': [],
   'dscpValue': 0,
   'enabled': True,
-  'executionTime': 25.745122649981568,
+  'executionTime': 28.07780302898027,
   'fipsEnabled': False,
-  'hitCount': 147,
+  'hitCount': 162,
   'httpServer': {'configured': False, 'port': 80, 'running': False},
   'httpsServer': {'configured': True, 'port': 8443, 'running': True},
   'iframeAncestors': [],
-  'lastHitTime': 1541184068.0408185,
+  'lastHitTime': 1541184385.7127335,
   'localHttpServer': {'configured': False, 'port': 8080, 'running': False},
   'logLevel': 'none',
-  'requestCount': 147,
+  'requestCount': 162,
   'tlsProtocol': ['1.0', '1.1', '1.2'],
   'unixSocketServer': {'configured': False, 'running': False},
   'urls': ['Ethernet1   : https://10.0.0.2:8443',
            'Loopback1   : https://2.2.2.2:8443'],
-  'users': {'arista': {'bytesIn': 26575,
-                       'bytesOut': 146396,
-                       'lastHitTime': 1541184068.0409994,
-                       'requestCount': 147}},
+  'users': {'arista': {'bytesIn': 29257,
+                       'bytesOut': 157609,
+                       'lastHitTime': 1541184385.7128985,
+                       'requestCount': 162}},
   'vrf': 'default',
   'vrfs': ['default']}]
 #############################################
 Printing results of ping to loopbacks advertised via ospf
 [{'messages': ['PING 1.1.1.1 (1.1.1.1) 72(100) bytes of data.\n'
                '80 bytes from 1.1.1.1: icmp_seq=1 ttl=64 time=0.074 ms\n'
-               '80 bytes from 1.1.1.1: icmp_seq=2 ttl=64 time=0.048 ms\n'
+               '80 bytes from 1.1.1.1: icmp_seq=2 ttl=64 time=0.047 ms\n'
                '80 bytes from 1.1.1.1: icmp_seq=3 ttl=64 time=0.045 ms\n'
                '80 bytes from 1.1.1.1: icmp_seq=4 ttl=64 time=0.046 ms\n'
-               '80 bytes from 1.1.1.1: icmp_seq=5 ttl=64 time=0.034 ms\n'
+               '80 bytes from 1.1.1.1: icmp_seq=5 ttl=64 time=0.045 ms\n'
                '\n'
                '--- 1.1.1.1 ping statistics ---\n'
                '5 packets transmitted, 5 received, 0% packet loss, time 0ms\n'
-               'rtt min/avg/max/mdev = 0.034/0.049/0.074/0.014 ms, ipg/ewma '
-               '0.112/0.061 ms\n']},
+               'rtt min/avg/max/mdev = 0.045/0.051/0.074/0.013 ms, ipg/ewma '
+               '0.110/0.062 ms\n']},
  {'messages': ['PING 2.2.2.2 (2.2.2.2) 72(100) bytes of data.\n'
-               '80 bytes from 2.2.2.2: icmp_seq=1 ttl=64 time=12.0 ms\n'
-               '80 bytes from 2.2.2.2: icmp_seq=2 ttl=64 time=9.73 ms\n'
-               '80 bytes from 2.2.2.2: icmp_seq=3 ttl=64 time=9.59 ms\n'
-               '80 bytes from 2.2.2.2: icmp_seq=4 ttl=64 time=9.55 ms\n'
-               '80 bytes from 2.2.2.2: icmp_seq=5 ttl=64 time=9.56 ms\n'
+               '80 bytes from 2.2.2.2: icmp_seq=1 ttl=64 time=10.1 ms\n'
+               '80 bytes from 2.2.2.2: icmp_seq=2 ttl=64 time=9.89 ms\n'
+               '80 bytes from 2.2.2.2: icmp_seq=3 ttl=64 time=12.9 ms\n'
+               '80 bytes from 2.2.2.2: icmp_seq=4 ttl=64 time=11.9 ms\n'
+               '80 bytes from 2.2.2.2: icmp_seq=5 ttl=64 time=9.46 ms\n'
                '\n'
                '--- 2.2.2.2 ping statistics ---\n'
-               '5 packets transmitted, 5 received, 0% packet loss, time 46ms\n'
-               'rtt min/avg/max/mdev = 9.556/10.091/12.002/0.959 ms, ipg/ewma '
-               '11.534/11.009 ms\n']}]
+               '5 packets transmitted, 5 received, 0% packet loss, time 42ms\n'
+               'rtt min/avg/max/mdev = 9.466/10.877/12.954/1.345 ms, pipe 2, '
+               'ipg/ewma 10.744/10.482 ms\n']}]
 Running-Config ceos1
 ['! Command: show running-config',
  '! device: ceos1 (cEOSSim, EOS-4.20.5F)',
@@ -193,27 +198,27 @@ Running-Config ceos1
 #############################################
 Printing results of ping to loopbacks advertised via ospf
 [{'messages': ['PING 1.1.1.1 (1.1.1.1) 72(100) bytes of data.\n'
-               '80 bytes from 1.1.1.1: icmp_seq=1 ttl=64 time=8.60 ms\n'
-               '80 bytes from 1.1.1.1: icmp_seq=2 ttl=64 time=11.8 ms\n'
-               '80 bytes from 1.1.1.1: icmp_seq=3 ttl=64 time=20.9 ms\n'
-               '80 bytes from 1.1.1.1: icmp_seq=4 ttl=64 time=18.9 ms\n'
-               '80 bytes from 1.1.1.1: icmp_seq=5 ttl=64 time=18.9 ms\n'
+               '80 bytes from 1.1.1.1: icmp_seq=1 ttl=64 time=10.9 ms\n'
+               '80 bytes from 1.1.1.1: icmp_seq=2 ttl=64 time=18.1 ms\n'
+               '80 bytes from 1.1.1.1: icmp_seq=3 ttl=64 time=20.4 ms\n'
+               '80 bytes from 1.1.1.1: icmp_seq=4 ttl=64 time=23.8 ms\n'
+               '80 bytes from 1.1.1.1: icmp_seq=5 ttl=64 time=28.9 ms\n'
                '\n'
                '--- 1.1.1.1 ping statistics ---\n'
-               '5 packets transmitted, 5 received, 0% packet loss, time 66ms\n'
-               'rtt min/avg/max/mdev = 8.605/15.856/20.958/4.779 ms, pipe 2, '
-               'ipg/ewma 16.698/12.482 ms\n']},
+               '5 packets transmitted, 5 received, 0% packet loss, time 54ms\n'
+               'rtt min/avg/max/mdev = 10.982/20.469/28.958/5.976 ms, pipe 2, '
+               'ipg/ewma 13.732/16.138 ms\n']},
  {'messages': ['PING 2.2.2.2 (2.2.2.2) 72(100) bytes of data.\n'
-               '80 bytes from 2.2.2.2: icmp_seq=1 ttl=64 time=0.075 ms\n'
+               '80 bytes from 2.2.2.2: icmp_seq=1 ttl=64 time=0.077 ms\n'
                '80 bytes from 2.2.2.2: icmp_seq=2 ttl=64 time=0.047 ms\n'
-               '80 bytes from 2.2.2.2: icmp_seq=3 ttl=64 time=0.045 ms\n'
+               '80 bytes from 2.2.2.2: icmp_seq=3 ttl=64 time=0.046 ms\n'
                '80 bytes from 2.2.2.2: icmp_seq=4 ttl=64 time=0.045 ms\n'
-               '80 bytes from 2.2.2.2: icmp_seq=5 ttl=64 time=0.063 ms\n'
+               '80 bytes from 2.2.2.2: icmp_seq=5 ttl=64 time=0.054 ms\n'
                '\n'
                '--- 2.2.2.2 ping statistics ---\n'
                '5 packets transmitted, 5 received, 0% packet loss, time 0ms\n'
-               'rtt min/avg/max/mdev = 0.045/0.055/0.075/0.012 ms, ipg/ewma '
-               '0.117/0.065 ms\n']}]
+               'rtt min/avg/max/mdev = 0.045/0.053/0.077/0.015 ms, ipg/ewma '
+               '0.155/0.065 ms\n']}]
 Running-Config ceos2
 ['! Command: show running-config',
  '! device: ceos2 (cEOSSim, EOS-4.20.5F)',
@@ -256,34 +261,33 @@ Running-Config ceos2
  'end',
  '']
 [{'messages': ['PING 8.8.8.8 (8.8.8.8) 72(100) bytes of data.\n'
-               '80 bytes from 8.8.8.8: icmp_seq=1 ttl=37 time=26.6 ms\n'
-               '80 bytes from 8.8.8.8: icmp_seq=2 ttl=37 time=33.2 ms\n'
-               '80 bytes from 8.8.8.8: icmp_seq=3 ttl=37 time=24.2 ms\n'
-               '80 bytes from 8.8.8.8: icmp_seq=4 ttl=37 time=24.3 ms\n'
-               '80 bytes from 8.8.8.8: icmp_seq=5 ttl=37 time=27.5 ms\n'
+               '80 bytes from 8.8.8.8: icmp_seq=1 ttl=37 time=31.5 ms\n'
+               '80 bytes from 8.8.8.8: icmp_seq=2 ttl=37 time=27.8 ms\n'
+               '80 bytes from 8.8.8.8: icmp_seq=3 ttl=37 time=27.7 ms\n'
+               '80 bytes from 8.8.8.8: icmp_seq=4 ttl=37 time=26.8 ms\n'
+               '80 bytes from 8.8.8.8: icmp_seq=5 ttl=37 time=26.4 ms\n'
                '\n'
                '--- 8.8.8.8 ping statistics ---\n'
-               '5 packets transmitted, 5 received, 0% packet loss, time 108ms\n'
-               'rtt min/avg/max/mdev = 24.298/27.224/33.212/3.267 ms, pipe 2, '
-               'ipg/ewma 27.208/26.861 ms\n']}]
+               '5 packets transmitted, 5 received, 0% packet loss, time 124ms\n'
+               'rtt min/avg/max/mdev = 26.442/28.097/31.505/1.794 ms, ipg/ewma '
+               '31.007/29.706 ms\n']}]
 [{'messages': ['PING 8.8.8.8 (8.8.8.8) 72(100) bytes of data.\n'
-               '80 bytes from 8.8.8.8: icmp_seq=1 ttl=37 time=30.3 ms\n'
-               '80 bytes from 8.8.8.8: icmp_seq=2 ttl=37 time=30.1 ms\n'
-               '80 bytes from 8.8.8.8: icmp_seq=3 ttl=37 time=29.6 ms\n'
-               '80 bytes from 8.8.8.8: icmp_seq=4 ttl=37 time=83.1 ms\n'
-               '80 bytes from 8.8.8.8: icmp_seq=5 ttl=37 time=53.4 ms\n'
+               '80 bytes from 8.8.8.8: icmp_seq=1 ttl=37 time=152 ms\n'
+               '80 bytes from 8.8.8.8: icmp_seq=2 ttl=37 time=36.6 ms\n'
+               '80 bytes from 8.8.8.8: icmp_seq=3 ttl=37 time=26.9 ms\n'
+               '80 bytes from 8.8.8.8: icmp_seq=4 ttl=37 time=31.2 ms\n'
+               '80 bytes from 8.8.8.8: icmp_seq=5 ttl=37 time=28.0 ms\n'
                '\n'
                '--- 8.8.8.8 ping statistics ---\n'
-               '5 packets transmitted, 5 received, 0% packet loss, time 121ms\n'
-               'rtt min/avg/max/mdev = 29.638/45.335/83.111/20.947 ms, pipe 2, '
-               'ipg/ewma 30.271/38.944 ms\n']}]
-Todds-MBP:arista_ceos_stuff toddriemenschneider$ 
-Todds-MBP:arista_ceos_stuff toddriemenschneider$ 
-Todds-MBP:arista_ceos_stuff toddriemenschneider$ 
-Todds-MBP:arista_ceos_stuff toddriemenschneider$ 
-Todds-MBP:arista_ceos_stuff toddriemenschneider$ 
-Todds-MBP:arista_ceos_stuff toddriemenschneider$ 
-Todds-MBP:arista_ceos_stuff toddriemenschneider$ python script2.py 
+               '5 packets transmitted, 5 received, 0% packet loss, time 536ms\n'
+               'rtt min/avg/max/mdev = 26.955/55.015/152.247/48.732 ms, '
+               'ipg/ewma 134.231/101.809 ms\n']}]
+```               
+               
+## Show command validation               
+               
+```               
+Todds-MBP:arista_ceos_stuff toddriemenschneider$ python3 script2.py 
 [{'vrfs': {'default': {'allRoutesProgrammedHardware': True,
                        'allRoutesProgrammedKernel': True,
                        'defaultRouteState': 'notSet',
@@ -321,9 +325,9 @@ Todds-MBP:arista_ceos_stuff toddriemenschneider$ python script2.py
                                                                                'inactivityDefers': 0,
                                                                                'numberOfStateChanges': 7,
                                                                                'retransmissionCount': 1,
-                                                                               'stateTime': 1541177644.441476},
+                                                                               'stateTime': 1541177643.571044},
                                                                    'drState': 'DR',
-                                                                   'inactivity': 1541184117.441374,
+                                                                   'inactivity': 1541184436.570939,
                                                                    'interfaceAddress': '10.0.0.2',
                                                                    'interfaceName': 'Ethernet1',
                                                                    'options': {'demandCircuitsSupport': False,
@@ -373,9 +377,9 @@ Todds-MBP:arista_ceos_stuff toddriemenschneider$ python script2.py
                                                                                'inactivityDefers': 0,
                                                                                'numberOfStateChanges': 6,
                                                                                'retransmissionCount': 1,
-                                                                               'stateTime': 1541177644.559491},
+                                                                               'stateTime': 1541177643.691679},
                                                                    'drState': 'BDR',
-                                                                   'inactivity': 1541184112.55938,
+                                                                   'inactivity': 1541184431.691581,
                                                                    'interfaceAddress': '10.0.0.1',
                                                                    'interfaceName': 'Ethernet1',
                                                                    'options': {'demandCircuitsSupport': False,
@@ -390,11 +394,115 @@ Todds-MBP:arista_ceos_stuff toddriemenschneider$ python script2.py
                                                                    'routerId': '1.1.1.1'}]}}}}}]
 Todds-MBP:arista_ceos_stuff toddriemenschneider$ 
 Todds-MBP:arista_ceos_stuff toddriemenschneider$ 
+```
+
+
+
+## Running and startup config diff
+
+
+```
+Todds-MBP:arista_ceos_stuff toddriemenschneider$ python3 script3.py 
+'****************************************'
+'The Running-Config'
+['! Command: show running-config',
+ '! device: ceos1 (cEOSSim, EOS-4.20.5F)',
+ '!',
+ 'transceiver qsfp default-mode 4x10G',
+ '!',
+ 'hostname ceos1',
+ 'ip domain lookup source-interface Loopback1',
+ 'ip name-server vrf default 8.8.8.8',
+ '!',
+ 'spanning-tree mode mstp',
+ '!',
+ 'no aaa root',
+ '!',
+ 'username arista privilege 15 secret sha512 '
+ '$6$kz6Isvzir9f844fZ$BaPsDgJocIxmho3.N9FaPlkX4Mf5rMkwNd5Oq/TorAF01EMotGYFptjjXwYgrr3jY0u7Y.QmC7pZ2QW0TMNRJ0',
+ '!',
+ 'interface Ethernet1',
+ '   no switchport',
+ '   ip address 10.0.0.1/24',
+ '!',
+ 'interface Ethernet2',
+ '!',
+ 'interface Loopback1',
+ '   description router-id',
+ '   ip address 1.1.1.1/32',
+ '!',
+ 'ip routing',
+ '!',
+ 'router ospf 1',
+ '   router-id 1.1.1.1',
+ '   network 1.1.1.1/32 area 0.0.0.0',
+ '   network 10.0.0.0/24 area 0.0.0.0',
+ '   max-lsa 12000',
+ '!',
+ 'management api http-commands',
+ '   no shutdown',
+ '!',
+ 'end',
+ '']
+'++++++++++++++++++++++++++++++++++++++++'
+'The Startup-Config'
+''
+'************************************************************************************************************************'
+'The Running-Config'
+['! Command: show running-config',
+ '! device: ceos2 (cEOSSim, EOS-4.20.5F)',
+ '!',
+ 'transceiver qsfp default-mode 4x10G',
+ '!',
+ 'hostname ceos2',
+ 'ip domain lookup source-interface Loopback1',
+ 'ip name-server vrf default 8.8.8.8',
+ '!',
+ 'spanning-tree mode mstp',
+ '!',
+ 'no aaa root',
+ '!',
+ 'username arista privilege 15 secret sha512 '
+ '$6$vzylRMR/wLVjNXt0$om9qYPMJa4YU53KToYV4qDZyQTm38Nfssj1IFKNzLyS2N4KXLZBRCgZRRDRCHWRo5fZtKnY9P3T5ebN6LPVb/1',
+ '!',
+ 'interface Ethernet1',
+ '   no switchport',
+ '   ip address 10.0.0.2/24',
+ '!',
+ 'interface Ethernet2',
+ '!',
+ 'interface Loopback1',
+ '   description router-id',
+ '   ip address 2.2.2.2/32',
+ '!',
+ 'ip routing',
+ '!',
+ 'router ospf 1',
+ '   router-id 2.2.2.2',
+ '   network 2.2.2.2/32 area 0.0.0.0',
+ '   network 10.0.0.0/24 area 0.0.0.0',
+ '   max-lsa 12000',
+ '!',
+ 'management api http-commands',
+ '   protocol https port 8443',
+ '   no shutdown',
+ '!',
+ 'end',
+ '']
+'++++++++++++++++++++++++++++++++++++++++'
+'The Startup-Config'
+''
+Are running and startup configs the same y or n ?: n
+[{'messages': ['Copy completed successfully.']}]
+[{'messages': ['Copy completed successfully.']}]
+Now they are...
 Todds-MBP:arista_ceos_stuff toddriemenschneider$ 
 Todds-MBP:arista_ceos_stuff toddriemenschneider$ 
 Todds-MBP:arista_ceos_stuff toddriemenschneider$ 
 Todds-MBP:arista_ceos_stuff toddriemenschneider$ 
-Todds-MBP:arista_ceos_stuff toddriemenschneider$ python script3.py 
+Todds-MBP:arista_ceos_stuff toddriemenschneider$ 
+Todds-MBP:arista_ceos_stuff toddriemenschneider$ 
+Todds-MBP:arista_ceos_stuff toddriemenschneider$ python3 script3.py 
 '****************************************'
 'The Running-Config'
 ['! Command: show running-config',
@@ -439,7 +547,7 @@ Todds-MBP:arista_ceos_stuff toddriemenschneider$ python script3.py
 '++++++++++++++++++++++++++++++++++++++++'
 'The Startup-Config'
 ('! Command: show startup-config\n'
- '! Startup-config last modified at  Fri Nov  2 18:35:02 2018 by arista\n'
+ '! Startup-config last modified at  Fri Nov  2 18:47:05 2018 by arista\n'
  '! device: ceos1 (cEOSSim, EOS-4.20.5F)\n'
  '!\n'
  'transceiver qsfp default-mode 4x10G\n'
@@ -522,7 +630,7 @@ Todds-MBP:arista_ceos_stuff toddriemenschneider$ python script3.py
 '++++++++++++++++++++++++++++++++++++++++'
 'The Startup-Config'
 ('! Command: show startup-config\n'
- '! Startup-config last modified at  Fri Nov  2 18:35:03 2018 by arista\n'
+ '! Startup-config last modified at  Fri Nov  2 18:47:05 2018 by arista\n'
  '! device: ceos2 (cEOSSim, EOS-4.20.5F)\n'
  '!\n'
  'transceiver qsfp default-mode 4x10G\n'
@@ -561,8 +669,7 @@ Todds-MBP:arista_ceos_stuff toddriemenschneider$ python script3.py
  '   no shutdown\n'
  '!\n'
  'end')
-Are running and startup configs the same y or n ?: n
-[{'messages': ['Copy completed successfully.']}]
-[{'messages': ['Copy completed successfully.']}]
-Now they are...
+Are running and startup configs the same y or n ?: y
+Cool!
 Todds-MBP:arista_ceos_stuff toddriemenschneider$ 
+```
