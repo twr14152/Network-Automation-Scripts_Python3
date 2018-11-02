@@ -8,13 +8,11 @@ node1.api("ipinterfaces").create("Ethernet1")
 node2.api("ipinterfaces").create("Ethernet1")
 
 node1.config("ip name-server 8.8.8.8")
-node1.config("ip route 0.0.0.0/0 192.168.1.1")
+node1.config("ip domain lookup")
+
 
 node2.config("ip name-server 8.8.8.8")
-node2.config("ip route 0.0.0.0/0 192.168.1.1")
-
-pp(node1.run_commands("ping cisco.com"))
-pp(node2.run_commands("ping cisco.com"))
+node2.config("ip domain lookup")
 
 cmds = ["show version", "show running-config", "show management api http-commands"]
 
@@ -66,4 +64,8 @@ print("#" * 45)
 print("Printing results of ping to loopbacks advertised via ospf")
 pp(node2.run_commands(pingHost))
 pp(node2.run_commands("show running-config"))
+
+pp(node1.run_commands("ping cisco.com"))
+pp(node2.run_commands("ping cisco.com"))
+
 
