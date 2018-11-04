@@ -1,6 +1,6 @@
 # Script outputs
 
-## show command script
+- show command script
 
 ```
 Todds-MBP-3:pyeapi_stuff toddriemenschneider$ python3 pyeapi_show_cmds_script.py
@@ -131,7 +131,7 @@ Todds-MBP-3:pyeapi_stuff toddriemenschneider$
 
 ```
 
-## config script
+- config script
 
 ```
 Todds-MBP-3:pyeapi_stuff toddriemenschneider$ python3 pyeapi_config_script.py 
