@@ -27,9 +27,9 @@ This has been a iterative learning process for me and I will be archiving or del
 - restconf_ex1.py
 
 ### Pyeapi - Python client for Aristas eAPI 
+ - Cleaning up directory archived some scripts and created interactive script folder
  - Posted configs and validation scripts for ceos demo
  - Posted configs and validation from demo
- - Interactive config script for multiple devices (multi_dev_cfg_script2.py )
  - hidden host config file, needs to be located in ~/.eapi.conf
  - created two sample scripts
 
