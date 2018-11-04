@@ -19,7 +19,7 @@ This has been a iterative learning process for me and I will be archiving or del
 ### Nxapi 
 - Found this api documentation to be lacking
 - Script examples I found were rigid and not very flexible
-- Created a script to allow user to enter any commands (config/show) w/o having to rewrite their script.
+- Created a script to allow user to enter any commands (config/show) w/o having to rewrite the script.
   - nxapi_script_ex1.py
 
 ### Restconf 
