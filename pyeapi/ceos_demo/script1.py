@@ -31,6 +31,8 @@ configurations1 = [
 "network 10.0.0.0 0.0.0.255 area 0",
 "network 1.1.1.1 0.0.0.0 area 0",
 "router-id 1.1.1.1",
+"management telnet",
+"no shutdown",
 ]
 
 configurations2 = [
@@ -46,6 +48,8 @@ configurations2 = [
 "network 10.0.0.0 0.0.0.255 area 0",
 "network 2.2.2.2 0.0.0.0 area 0",
 "router-id 2.2.2.2",
+"management telnet",
+"no shutdown",
 ]
 
 
