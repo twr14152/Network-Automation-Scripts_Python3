@@ -26,7 +26,7 @@ This has been a iterative learning process for me and I will be archiving or del
 - Still learning this api
 - restconf_ex1.py
 
-### Pyeapi - Python client for Aristas eAPI 
+### Pyeapi - Python client for Arista eAPI 
  - Cleaning up directory archived some scripts and created interactive script folder
  - Posted configs and validation scripts for ceos demo
  - Posted configs and validation from demo
