@@ -1,0 +1,28 @@
+---
+ceos1:
+    hostname: 127.0.0.1
+    username: arista
+    password: arista
+    port: 443
+#    port: 2022
+    groups: 
+        - lab
+    platform: eos
+    data:
+        site: lab
+        role: spline
+        type: network_device
+
+ceos2:
+    hostname: 127.0.0.1
+    username: arista
+    password: arista
+    port: 8443
+#    port: 2023
+    groups: 
+        - lab
+    platform: eos
+    data:
+        site: lab
+        role: spline
+        type: network_device
