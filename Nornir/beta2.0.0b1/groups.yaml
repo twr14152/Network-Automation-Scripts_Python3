@@ -1,0 +1,6 @@
+---
+lab:
+    data:
+        site: lab
+        role: spline
+        type: network_device
