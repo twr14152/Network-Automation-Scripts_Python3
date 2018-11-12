@@ -9,6 +9,7 @@ This has been a iterative learning process for me and I will be archiving or del
 ### Nornir - TestDrive 
 - Cisco IOS - GNS3 lab - nornir/using_netmiko_plugin
 - Arista Ceos lab - nornir/using_napalm_plugin 
+- Testing newer verison of Nornir, not backwards compatible with version 1.x
 
 ### Netconf
 - Tested on Cisco DevNet Gear
