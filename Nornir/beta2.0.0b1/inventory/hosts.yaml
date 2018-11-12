@@ -3,8 +3,8 @@ ceos1:
     hostname: 127.0.0.1
     username: arista
     password: arista
-    port: 443
-#    port: 2022
+    port: 443  #Used for napalm to connect to via eapi
+#    port: 2022 # Used for netmiko
     groups: 
         - lab
     platform: eos
@@ -17,8 +17,8 @@ ceos2:
     hostname: 127.0.0.1
     username: arista
     password: arista
-    port: 8443
-#    port: 2023
+    port: 8443 #Used for napalm to connect via eapi
+#    port: 2023 # used for netmiko
     groups: 
         - lab
     platform: eos
