@@ -17,7 +17,7 @@ with open('host_file.txt') as f:
     hosts = f.read().splitlines()
 
 
-#for host in hosts:
+
 def run_script(host_ip):
     remote_device = {"device_type":"autodetect",
                      "host": host_ip,
