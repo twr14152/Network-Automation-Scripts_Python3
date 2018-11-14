@@ -33,7 +33,6 @@ with open('host_file.txt') as f:
 #        'show ip eigrp nei', 'show interface status', 'show trunk', 'show int trunk', 'show etherchannel summ',
 #        'show mac address-table', 'show ip route 0.0.0.0', 'show spanning-tree brief']
 
-
 commands = '''
 show run | i hostname
 show run | i 255.255.
@@ -183,9 +182,6 @@ def run_script(host_ip):
             err_log.write(nl)
             err_log.write(host_ip)
             err_log.write(nl)
-
-
-
 
 
 if __name__ == "__main__":
