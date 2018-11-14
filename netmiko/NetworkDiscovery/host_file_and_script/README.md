@@ -5,74 +5,102 @@ The command syntax may need to be tweaked to match the os type.
 
 ### Run script ###
 ```
-todd@ubuntu:~/$ python3 ios_discovery_script.py 
-Username: 
-Password: 
-Connected to host: r4
-
----- Elapsed time= 5.298713207244873
-Connected to host: r3
-
----- Elapsed time= 5.311111688613892
-Connected to host: r1
-
----- Elapsed time= 5.554770231246948
-Connected to host: r2
-
----- Elapsed time= 5.6968512535095215
-************************************
-Unable to log into this device: bogus_rtr
-Connection to device timed-out: cisco_ios bogus_rtr:22
-************************************
-Connected to host: r7
-
----- Elapsed time= 25.446672677993774
-Connected to host: r5
-
----- Elapsed time= 25.807929277420044
-Connected to host: r6
-
----- Elapsed time= 26.059402227401733
-Connected to host: r8
-
----- Elapsed time= 26.09723997116089
-Connected to host: r9
-
----- Elapsed time= 27.029197454452515
-Connected to host: r10
-
----- Elapsed time= 46.77759075164795
-[None, None, None, None, None, None, None, None, None, None, None]
-todd@ubuntu:~/$ 
-```
-### Files added to directory ###
-```
-todd@ubuntu:~/$ ls -l
-total 180
+todd@ubuntu:~/automation/netmiko_stuff$ ls -l
+total 96
 -rw-rw-r-- 1 todd todd  3331 Jul 30 17:28 archive_discovery_script2.py
 -rw-rw-r-- 1 todd todd  3395 Jul 30 17:40 archive_discovery_script3.py
--rw-rw-r-- 1 todd todd  4834 Oct 27 11:33 Connection_Errors
+-rw-rw-r-- 1 todd todd  1023 Nov 14 14:03 auto_detect_script.py
+-rw-rw-r-- 1 todd todd   468 Nov 14 14:04 auto_detect_script_results.txt
+-rw-rw-r-- 1 todd todd  5690 Nov 14 13:45 Connection_Errors
+-rw-rw-r-- 1 todd todd  5684 Nov 14 11:41 dell_discovery_script.py
 -rw-rw-r-- 1 todd todd 10043 Oct 26 11:03 discovery_script2.py
 -rw-rw-r-- 1 todd todd 10619 Oct 26 11:28 discovery_script3.py
 -rw-rw-r-- 1 todd todd  4053 Oct 25 15:41 discovery_script.py
 -rw-rw-r-- 1 todd todd    41 Jul 31 13:41 host_file.txt
--rw-rw-r-- 1 todd todd  3379 Oct 27 11:32 ios_discovery_script.py
--rw-rw-r-- 1 todd todd 11166 Oct 27 11:33 r10_cmds_file.txt
--rw-rw-r-- 1 todd todd 11703 Oct 27 11:33 r1_cmds_file.txt
--rw-rw-r-- 1 todd todd 11738 Oct 27 11:33 r2_cmds_file.txt
--rw-rw-r-- 1 todd todd 11408 Oct 27 11:33 r3_cmds_file.txt
--rw-rw-r-- 1 todd todd 11413 Oct 27 11:33 r4_cmds_file.txt
--rw-rw-r-- 1 todd todd 11408 Oct 27 11:33 r5_cmds_file.txt
--rw-rw-r-- 1 todd todd 11414 Oct 27 11:33 r6_cmds_file.txt
--rw-rw-r-- 1 todd todd 11157 Oct 27 11:33 r7_cmds_file.txt
--rw-rw-r-- 1 todd todd 11176 Oct 27 11:33 r8_cmds_file.txt
--rw-rw-r-- 1 todd todd 11080 Oct 27 11:33 r9_cmds_file.txt
+-rw-rw-r-- 1 todd todd  5688 Nov 14 11:46 hp_discovery_script.py
+-rw-rw-r-- 1 todd todd  5683 Nov 14 13:46 ios_discovery_script.py
 -rw-rw-r-- 1 todd todd  1574 Jul 31 11:50 show_commands.py
 -rw-rw-r-- 1 todd todd   151 Oct 26 09:29 test_host
-todd@ubuntu:~/$ 
+-rw-rw-r-- 1 todd todd  5677 Oct 29 08:05 test_script_001.py
+todd@ubuntu:~/automation/netmiko_stuff$ python3 ios_discovery_script.py 
+Username: 
+Password: 
+************************************
+Unable to log into this device: bogus_rtr
+Connection to device timed-out: cisco_ios bogus_rtr:22
+************************************
+Connected to host: r3
+
+---- Elapsed time= 5.3688037395477295
+Connected to host: r4
+
+---- Elapsed time= 5.393296241760254
+Connected to host: r1
+
+---- Elapsed time= 5.74307918548584
+Connected to host: r2
+
+---- Elapsed time= 5.878320932388306
+Connected to host: r5
+
+---- Elapsed time= 6.15932035446167
+Connected to host: r6
+
+---- Elapsed time= 88.73258543014526
+Connected to host: r7
+
+---- Elapsed time= 89.67249798774719
+Connected to host: r8
+
+---- Elapsed time= 91.1974241733551
+Connected to host: r9
+
+---- Elapsed time= 93.47259020805359
+Connected to host: r10
+
+---- Elapsed time= 104.87565612792969
+ [None, None, None, None, None, None, None, None, None, None, None]
+ ```
+ 
+ ### Script added files to directory ###
+
 ```
-### Read the file ###
+todd@ubuntu:~/automation/netmiko_stuff$  ls -l
+total 4376
+-rw-rw-r-- 1 todd todd   3331 Jul 30 17:28 archive_discovery_script2.py
+-rw-rw-r-- 1 todd todd   3395 Jul 30 17:40 archive_discovery_script3.py
+-rw-rw-r-- 1 todd todd   1023 Nov 14 14:03 auto_detect_script.py
+-rw-rw-r-- 1 todd todd    468 Nov 14 14:04 auto_detect_script_results.txt
+-rw-rw-r-- 1 todd todd   5797 Nov 14 14:22 Connection_Errors
+-rw-rw-r-- 1 todd todd   5684 Nov 14 11:41 dell_discovery_script.py
+-rw-rw-r-- 1 todd todd  10043 Oct 26 11:03 discovery_script2.py
+-rw-rw-r-- 1 todd todd  10619 Oct 26 11:28 discovery_script3.py
+-rw-rw-r-- 1 todd todd   4053 Oct 25 15:41 discovery_script.py
+-rw-rw-r-- 1 todd todd     41 Jul 31 13:41 host_file.txt
+-rw-rw-r-- 1 todd todd   5688 Nov 14 11:46 hp_discovery_script.py
+-rw-rw-r-- 1 todd todd   5683 Nov 14 13:46 ios_discovery_script.py
+-rw-rw-r-- 1 todd todd 433203 Nov 14 14:26 r10_cmds_file.txt
+-rw-rw-r-- 1 todd todd 440992 Nov 14 14:24 r1_cmds_file.txt
+-rw-rw-r-- 1 todd todd 441972 Nov 14 14:24 r2_cmds_file.txt
+-rw-rw-r-- 1 todd todd 434677 Nov 14 14:24 r3_cmds_file.txt
+-rw-rw-r-- 1 todd todd 436756 Nov 14 14:24 r4_cmds_file.txt
+-rw-rw-r-- 1 todd todd 435341 Nov 14 14:24 r5_cmds_file.txt
+-rw-rw-r-- 1 todd todd 434058 Nov 14 14:25 r6_cmds_file.txt
+-rw-rw-r-- 1 todd todd 435011 Nov 14 14:25 r7_cmds_file.txt
+-rw-rw-r-- 1 todd todd 439256 Nov 14 14:25 r8_cmds_file.txt
+-rw-rw-r-- 1 todd todd 432354 Nov 14 14:26 r9_cmds_file.txt
+-rw-rw-r-- 1 todd todd   1574 Jul 31 11:50 show_commands.py
+-rw-rw-r-- 1 todd todd    151 Oct 26 09:29 test_host
+-rw-rw-r-- 1 todd todd   5677 Oct 29 08:05 test_script_001.py
+todd@ubuntu:~/automation/netmiko_stuff$
 ```
+
+### Read file 
+- The output in this script is from an older version of the script.
+- The current version of the scripts output is way to verbose to copy in to this file
+- The same concept of the file contents and creation holds true
+```
+
 todd@ubuntu:~/$ cat r4_cmds_file.txt 
 Connected to host: r4
 r4#
