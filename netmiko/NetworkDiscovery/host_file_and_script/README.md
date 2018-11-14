@@ -2,8 +2,7 @@ The ios discovery script is meant for cisco ios ios-xe devices routers or switch
 If the device is not ios the appropriate netmiko device type will need to be specified.
 For example nxos or eos. 
 The command syntax may need to be tweaked to match the os type.
-
-### Run script ###
+### Directory prior to running script ###
 ```
 todd@ubuntu:~/automation/netmiko_stuff$ ls -l
 total 96
@@ -22,6 +21,11 @@ total 96
 -rw-rw-r-- 1 todd todd  1574 Jul 31 11:50 show_commands.py
 -rw-rw-r-- 1 todd todd   151 Oct 26 09:29 test_host
 -rw-rw-r-- 1 todd todd  5677 Oct 29 08:05 test_script_001.py
+todd@ubuntu:~/automation/netmiko_stuff$
+```
+
+### Run script ###
+```
 todd@ubuntu:~/automation/netmiko_stuff$ python3 ios_discovery_script.py 
 Username: 
 Password: 
