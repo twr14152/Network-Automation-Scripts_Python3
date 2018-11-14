@@ -35,6 +35,8 @@ This has been a iterative learning process for me and I will be archiving or del
  - created two sample scripts
 
 ### Netmiko testing
+- Created a script to go out and automatically determine the device_type for a host_list or seedfile.
+  - auto_detect_script.py
 - sample script to connect to juniper device
   - juniper_script1.py
   - juniper_conf_from_file.py
