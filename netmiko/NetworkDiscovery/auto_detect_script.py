@@ -1,5 +1,5 @@
 # This script will go out and detect the device_type for any devices supported by netmiko
-# by Todd Riemenschneider 2018
+# (c) 2018 Todd Riemenschneider
 
 from multiprocessing import Pool
 from netmiko.ssh_autodetect import SSHDetect
