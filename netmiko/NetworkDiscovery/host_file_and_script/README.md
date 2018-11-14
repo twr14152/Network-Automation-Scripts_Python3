@@ -471,3 +471,24 @@ show spanning-tree brief
 **************************************
 todd@ubuntu:~/$ 
 ```
+
+If the script were to have issues logging into other devices. You could run the auto_detect_script.py to determine what kind of device it is. Then use that info to update your scripts to work with the device if its supported by netmiko.
+
+
+````
+$ python3 auto_detect_script.py 
+Username: 
+Password: 
+Error connecting to bogus_rtr
+cisco_ios is the device_type for r3
+cisco_ios is the device_type for r4
+cisco_ios is the device_type for r1
+cisco_ios is the device_type for r2
+cisco_ios is the device_type for r5
+cisco_ios is the device_type for r7
+cisco_ios is the device_type for r8
+cisco_ios is the device_type for r6
+cisco_ios is the device_type for r9
+cisco_ios is the device_type for r10
+[None, None, None, None, None, None, None, None, None, None, None]
+```
