@@ -16,13 +16,12 @@ if len(passwd) < 1 : passwd = "automate"
 with open('host_file.txt') as f:
     hosts = f.read().splitlines()
 
-
-
+    
 def run_script(host_ip):
     remote_device = {"device_type":"autodetect",
                      "host": host_ip,
-                     "username": "admin",
-                     "password": "automate"
+                     "username": uname,
+                     "password": passwd
                      }
     try:
         guesser = SSHDetect(**remote_device)
