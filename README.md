@@ -44,6 +44,7 @@ This has been a iterative learning process for me and I will be archiving or del
   - file transfers to veos devices hosted using vagrant
   - file transfers to multiple devices using containerized eos or ceos 
 - Network-Automation-Scripts_Python3/netmiko/NetworkDiscovery/host_file_and_script/
+  - ios_discovery_script_enable_mode.py
   - ios_discovery_script.py
   - host_file.txt
 - Added 3 examples of how to use jinja templates with netmiko
