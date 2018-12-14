@@ -26,7 +26,7 @@ This has been a iterative learning process for me and I will be archiving or del
 ### Restconf 
 - Still learning this api
 - restconf_ex1.py
-
+m
 ### Pyeapi - Python client for Arista eAPI 
  - Cleaning up directory archived some scripts and created interactive script folder
  - Posted configs and validation scripts for ceos demo
@@ -44,8 +44,8 @@ This has been a iterative learning process for me and I will be archiving or del
   - file transfers to veos devices hosted using vagrant
   - file transfers to multiple devices using containerized eos or ceos 
 - Network-Automation-Scripts_Python3/netmiko/NetworkDiscovery/host_file_and_script/
-  - ios_discovery_script_enable_mode.py
-  - ios_discovery_script.py
+  - ios_discovery_enable_mode.py <- if enable pw is required
+  - ios_discovery_script.py <- if username/password priv level 15
   - host_file.txt
 - Added 3 examples of how to use jinja templates with netmiko
  - conf_bgp_r4_r5_using_class_obj. - uses class object to populate template
