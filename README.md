@@ -84,7 +84,7 @@ m
     - EOS has been a more feature rich testbed with napalm
 
 ### Telnetlib module
-- Added script that would prompts you for enable mode
+- Added script that works with devices that require enable password
 - Use python3 telnetlib module
 - capture output of scripts
 
