@@ -36,6 +36,7 @@ m
 
 ### Netmiko testing
 - Reorganized some config scripts into config_scripts folder
+  - Scripts are self explanatory
 - Created a script to go out and automatically determine the device_type for a host_list or seedfile.
   - NetworkDiscovery/host_file_and_script/auto_detect_script.py
 - sample script to connect to juniper device
