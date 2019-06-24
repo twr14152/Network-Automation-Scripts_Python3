@@ -3,7 +3,7 @@
 # (c) 2018 Todd Riemenschneider
 # -----------------------------
 import netmiko
-from pprint import pprint as pp
+#from pprint import pprint as pp
 
 devs_to_cfg = input("Number of devices to configure: " )
 count = int(devs_to_cfg)
@@ -49,7 +49,7 @@ for k,v  in commands.items():
 #        pp(pre_change01)
         print("************************************")
         configs01 = net_connect.send_config_set(v)
-        pp(configs01)
+        print(configs01)
         print("++++++++++++++++++++++++++++++++++++")
  #       print("Post-change state: ", k)
  #       post_change01 = net_connect.send_command('show running-config')
