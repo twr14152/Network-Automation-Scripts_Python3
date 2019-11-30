@@ -90,7 +90,7 @@ m
 - Use python3 telnetlib module
 - capture output of scripts
 
-### Misc things
+### Misc stuff
 - simple way iterate through cli commands
   - loop_thru_cli_cmds.py
   - loop_thru_cli_cmds_output.txt
