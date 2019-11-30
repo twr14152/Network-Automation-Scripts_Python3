@@ -91,7 +91,7 @@ m
 - capture output of scripts
 
 ### Misc stuff
-- simple way iterate through cli commands
+- simple way to iterate through cli commands
   - loop_thru_cli_cmds.py
   - loop_thru_cli_cmds_output.txt
 
