@@ -1,6 +1,6 @@
 import sys
 
-configs = sys.argv
+cmds = sys.argv
 
-for cmd in configs[1:]:
+for cmd in cmds[1:]:
     print(cmd)
