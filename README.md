@@ -92,8 +92,8 @@ m
 
 ### Misc things
 - simple way iterate through cli commands
-  - test.py
-  - test_output.txt
+  - loop_thru_cli_cmds.py
+  - loop_thru_cli_cmds_output.txt
 
 
 
