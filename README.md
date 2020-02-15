@@ -91,6 +91,8 @@ m
 - capture output of scripts
 
 ### Misc stuff
+- script to find duplicate ips
+  - findingDupIPs.py
 - simple way to iterate through cli commands when running a script
   - loop_thru_cli_cmds.py
   - loop_thru_cli_cmds_output.txt
