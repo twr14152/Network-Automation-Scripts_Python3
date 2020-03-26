@@ -16,12 +16,15 @@ from requests.packages.urllib3.exceptions import InsecureRequestWarning
 # This line actually disabled the warning
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
-UN = input("Username: ")
-PW = getpass("Password: ")
-target = input("target host ip or dns name: ")
+UN = "admin"
+PW = "Admin_1234!"
+target = 'sbx-nxos-mgmt.cisco.com'
+#UN = input("Username: ")
+#PW = getpass("Password: ")
+#target = input("target host ip or dns name: ")
 
-if len(target) <= 0:
-    target = '64.103.37.14'
+#if len(target) <= 0:
+#    target = 'sbx-nxos-mgmt.cisco.com'
 
 # This is where you enter your commands
 commands = input('Commands seperate with ",":  ')
@@ -62,5 +65,7 @@ for command in cmds:
 # This applied the commands to the target device to execute, also the verify=False is necessary to work in lab
 # SSL set up is ok for lab, you would potentially want the verify process in production
 response = requests.post(url,data=json.dumps(payload), headers=myheaders,auth=(UN,PW),verify=False).json()
-pp(response)
+#Prints output in a more readable way
+print(json.dumps(response, indent=2, sort_keys=True))
+
 
