@@ -16,9 +16,11 @@ from requests.packages.urllib3.exceptions import InsecureRequestWarning
 # This line actually disabled the warning
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
-UN = "admin"
-PW = "Admin_1234!"
-target = 'sbx-nxos-mgmt.cisco.com'
+#Hard code Lab Creds
+UN = <>
+PW = <>
+target = <>
+#Prod Creds
 #UN = input("Username: ")
 #PW = getpass("Password: ")
 #target = input("target host ip or dns name: ")
