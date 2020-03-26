@@ -20,7 +20,7 @@ This has been a iterative learning process for me and I will be archiving or del
 ### Nxapi 
 - Minor update to the  to make output from commands more readable 
   - added : print(json.dumps(response, indent=2, sort_keys=True))
-  - added nxapi_script02.py and nxapi_script02_output.txt for comparison
+  - added nxapi_script02.py and nxapi_script02_output.txt for comparison to original script
 - Found this api documentation to be lacking
 - Script examples I found were rigid and not very flexible
 - Created a script to allow user to enter any commands (config/show) w/o having to rewrite the script.
