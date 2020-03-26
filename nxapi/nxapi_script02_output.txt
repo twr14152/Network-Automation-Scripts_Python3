@@ -1,0 +1,58 @@
+pi@RaspPi4:~/Coding/Python_folder/netOps/nxapi_stuff $ python3 nxapi_script02.py 
+Commands seperate with ",":  config t, interface loopback74, description nxapi_script_test, no shut, show run int loopback 74
+https://sbx-nxos-mgmt.cisco.com/ins
+'config t'
+' interface loopback74'
+' description nxapi_script_test'
+' no shut'
+' show run int loopback 74'
+[
+  {
+    "id": 1,
+    "jsonrpc": "2.0",
+    "result": null
+  },
+  {
+    "id": 2,
+    "jsonrpc": "2.0",
+    "result": null
+  },
+  {
+    "id": 3,
+    "jsonrpc": "2.0",
+    "result": null
+  },
+  {
+    "id": 4,
+    "jsonrpc": "2.0",
+    "result": null
+  },
+  {
+    "id": 5,
+    "jsonrpc": "2.0",
+    "result": {
+      "body": {
+        "nf:filter": {
+          "m:configure": {
+            "m:terminal": {
+              "interface": {
+                "__XML__PARAM__interface": {
+                  "__XML__value": "loopback74",
+                  "m1:description": {
+                    "m1:__XML__PARAM__desc_line": {
+                      "m1:__XML__value": "nxapi_script_test"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "nf:source": {
+          "nf:running": ""
+        }
+      }
+    }
+  }
+]
+pi@RaspPi4:~/Coding/Python_folder/netOps/nxapi_stuff $ 
