@@ -18,6 +18,8 @@ This has been a iterative learning process for me and I will be archiving or del
 - netconf_get_conf.py
 
 ### Nxapi 
+- Minor update to the files to make output from commands more readable
+  - added : print(json.dumps(response, indent=2, sort_keys=True))
 - Found this api documentation to be lacking
 - Script examples I found were rigid and not very flexible
 - Created a script to allow user to enter any commands (config/show) w/o having to rewrite the script.
