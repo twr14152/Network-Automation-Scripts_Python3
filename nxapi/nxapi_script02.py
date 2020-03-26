@@ -25,8 +25,9 @@ target = <>
 #PW = getpass("Password: ")
 #target = input("target host ip or dns name: ")
 
+#default target good for lab testing
 #if len(target) <= 0:
-#    target = 'sbx-nxos-mgmt.cisco.com'
+#    target = <>
 
 # This is where you enter your commands
 commands = input('Commands seperate with ",":  ')
