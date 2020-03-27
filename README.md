@@ -38,6 +38,8 @@ m
  - created two sample scripts
 
 ### Netmiko testing
+- Netmiko scripts for running show commands can be found in the networkDiscovery folder
+- Python3.7 works with the scripts as written. Python3.8 is not yet ready. 
 - Reorganized some config scripts into config_scripts folder
   - Scripts are self explanatory
 - Created a script to go out and automatically determine the device_type for a host_list or seedfile.
