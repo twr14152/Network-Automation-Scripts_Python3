@@ -38,9 +38,9 @@ m
  - created two sample scripts
 
 ### Netmiko testing
+- NetworkDiscovery/host_file_and_script/ has the most pragmatic scripts for doing network discovery (ie..scripts that run show commands and captures the results and saves them to files)
 - Netmiko scripts for running show commands can be found in the NetworkDiscovery folder 
-  - show_commands.py <-- easiest for every day troubleshooting and operations
-- NetworkDiscovery/host_file_and_script/ has the most prod ready scripts for doing network discovery (ie..scripts that run show commands and save the results to files)
+  - show_commands.py <-- easiest for every day troubleshooting and operations and lab work
 - Python3.7 works with the scripts as written. Python3.8 is not yet ready. 
 - Reorganized some config scripts into config_scripts folder
   - Scripts are self explanatory
