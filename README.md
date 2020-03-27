@@ -38,7 +38,9 @@ m
  - created two sample scripts
 
 ### Netmiko testing
-- Netmiko scripts for running show commands can be found in the networkDiscovery folder
+- Netmiko scripts for running show commands can be found in the NetworkDiscovery folder
+  - show_commands.py <-- easiest for every day troubleshooting and operations
+  - host_file_and_script/ Folder has multiple scripts for scripting the discovery for a lot of devices
 - Python3.7 works with the scripts as written. Python3.8 is not yet ready. 
 - Reorganized some config scripts into config_scripts folder
   - Scripts are self explanatory
