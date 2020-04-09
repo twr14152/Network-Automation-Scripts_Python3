@@ -13,7 +13,7 @@ This has been a iterative learning process for me and I will be archiving or del
 
 ### Netconf
 - Script to do config backups. 
-    - netconf_config_bkup.py <-- goes out pulls running config and places it in config_bkup/ directory
+    - netconf_config_bkup.py - goes out pulls running config and places it in config_bkup/ directory
     - netconf_config_output.txt - the results of the script
 - First time using netconf
   - netconf_ex1.py
@@ -42,7 +42,7 @@ m
 ### Netmiko testing
 - NetworkDiscovery/host_file_and_script/ has the most pragmatic scripts for doing network discovery (ie..scripts that run show commands and captures the results and saves them to files)
 - Netmiko scripts for running show commands can be found in the NetworkDiscovery folder 
-  - show_commands.py <-- easiest for every day troubleshooting and operations and lab work
+  - show_commands.py - easiest for every day troubleshooting and operations and lab work
 - Python3.7 works with the scripts as written. Python3.8 is not yet ready. 
 - Reorganized some config scripts into config_scripts folder
   - Scripts are self explanatory
@@ -55,8 +55,8 @@ m
   - file transfers to veos devices hosted using vagrant
   - file transfers to multiple devices using containerized eos or ceos 
 - Network-Automation-Scripts_Python3/netmiko/NetworkDiscovery/host_file_and_script/
-  - ios_discovery_enable_mode.py <- if enable pw is required
-  - ios_discovery_script.py <- if username/password priv level 15
+  - ios_discovery_enable_mode.py - if enable pw is required
+  - ios_discovery_script.py - if username/password priv level 15
   - host_file.txt
 - Added 3 examples of how to use jinja templates with netmiko
  - conf_bgp_r4_r5_using_class_obj. - uses class object to populate template
@@ -78,7 +78,7 @@ m
 ### Napalm for eos
 - /config_scripts/conf_merge 
 - /config_scripts
-- Tested with ipython(python3.6) -> EOS_lab_Napalm_test_results
+- Tested with ipython(python3.6) - EOS_lab_Napalm_test_results
 - napalm_eos_script1.py
 
 ### Napalm for cisco ios
