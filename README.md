@@ -12,10 +12,11 @@ This has been a iterative learning process for me and I will be archiving or del
 - Testing newer version of Nornir, not backwards compatible with version 1.x
 
 ### Netconf
-- Tested on Cisco DevNet Gear
-- Still learning not much here
-- netconf_ex1.py
-- netconf_get_conf.py
+- Started looking into netconf wrote a script to do config backups. 
+    - netconf_config_bkup.py <-- goes out pulls running config and places it in config_bkup/ directory
+- First time using netconf
+  - netconf_ex1.py
+  - netconf_get_conf.py
 
 ### Nxapi 
 - Minor update to the  to make output from commands more readable 
