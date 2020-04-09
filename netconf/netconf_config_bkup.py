@@ -1,6 +1,5 @@
 from ncclient import manager
 import xml.dom.minidom
-import sys 
 
 HOSTS = ['ios-xe-mgmt-latest.cisco.com', 'ios-xe-mgmt.cisco.com']
 PORT = 10000
