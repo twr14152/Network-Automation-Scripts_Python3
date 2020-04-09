@@ -1,0 +1,13 @@
+pi@RaspPi4:~/Coding/Python_folder/netOps/devnet_stuff $ cd config_bkups/               
+pi@RaspPi4:~/Coding/Python_folder/netOps/devnet_stuff/config_bkups $ ls -l
+total 0
+pi@RaspPi4:~/Coding/Python_folder/netOps/devnet_stuff/config_bkups $ cd ..
+pi@RaspPi4:~/Coding/Python_folder/netOps/devnet_stuff $ python3 netconf_config_bkup.py 
+ios-xe-mgmt-latest.cisco.com - running-config copied 
+ios-xe-mgmt.cisco.com - running-config copied 
+pi@RaspPi4:~/Coding/Python_folder/netOps/devnet_stuff $ cd config_bkups/
+pi@RaspPi4:~/Coding/Python_folder/netOps/devnet_stuff/config_bkups $ ls -l
+total 104
+-rw-r--r-- 1 pi pi 30299 Apr  9 09:40 ios-xe-mgmt.cisco.com_running_config.txt
+-rw-r--r-- 1 pi pi 71490 Apr  9 09:39 ios-xe-mgmt-latest.cisco.com_running_config.txt
+pi@RaspPi4:~/Coding/Python_folder/netOps/devnet_stuff/config_bkups $ 
