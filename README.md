@@ -12,7 +12,7 @@ This has been a iterative learning process for me and I will be archiving or del
 - Testing newer version of Nornir, not backwards compatible with version 1.x
 
 ### Netconf
-- Started looking into netconf wrote a script to do config backups. 
+- Script to do config backups. 
     - netconf_config_bkup.py <-- goes out pulls running config and places it in config_bkup/ directory
 - First time using netconf
   - netconf_ex1.py
