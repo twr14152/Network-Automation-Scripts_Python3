@@ -1,0 +1,24 @@
+pi@RaspPi4:~/Coding/Python_folder/netOps/devnet_stuff $ python3 netconf_config_device.py 
+This is the config to send 
+<config>
+ <native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
+ <interface>
+ <Loopback>
+ <name>70</name>
+ <description>netconf is a whole lot of work to config an interface!!!!</description>
+ <ip>
+ <address>
+ <primary>
+ <address>1.1.1.70</address>
+ <mask>255.255.255.255</mask>
+ </primary>
+ </address>
+ </ip>
+ </Loopback>
+ </interface>
+ </native>
+</config>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:7ae8216f-f650-4111-beb1-ecc8bde3516c" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0"><ok/></rpc-reply>
+pi@RaspPi4:~/Coding/Python_folder/netOps/devnet_stuff $ 
