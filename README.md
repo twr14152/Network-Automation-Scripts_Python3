@@ -12,6 +12,12 @@ This has been a iterative learning process for me and I will be archiving or del
 - Testing newer version of Nornir, not backwards compatible with version 1.x
 
 ### Netconf
+- Getting used to xmlns is a challenge and can be frustrating. Took me a while to find the proper xmlns to config a loopback
+- Documentation around netconf is not user friendly
+- Need to keep working at it. Trial and error process. 
+- Script to config loopback interface
+    - netconf_config_device.py - configured a loopback on devnet router
+    - netconf_config_device_output.text - results
 - Script to do config backups. 
     - netconf_config_bkup.py - goes out pulls running config and places it in config_bkup/ directory
     - netconf_config_output.txt - the results of the script
