@@ -34,10 +34,11 @@ starting_time = time()
 #Each member of the pool of 5 will be run through this function
 def run_script(host_ip):
     ios_rtr = {
-        "device_type": "cisco_ios",
+        "device_type": "cisco_xe",
         "ip": host_ip,
         "username": uname,
         "password": passwd,
+        "port" : 8181
         }
     #connect to the device via ssh
     net_connect = ConnectHandler(**ios_rtr)
