@@ -1,0 +1,50 @@
+pi@RaspPi4:~/Coding/Python_folder/netOps $ ./interactive_script.py 
+Is this going to be a config or show command? (Type config or show): config
+Number of devices you going to access: 2
+Enter host device: ios-xe-mgmt-latest.cisco.com
+Enter commands for device seperate with ",": interface loopback73, description netmiko_script, ip address 1.1.1.73 255.255.255.255,end
+['interface loopback73', ' description netmiko_script', ' ip address 1.1.1.73 255.255.255.255', 'end']
+
+
+Enter host device: ios-xe-mgmt.cisco.com
+Enter commands for device seperate with ",": interface loopback74, description netmiko_script, ip address 1.1.1.74 255.255.255.255, end
+['interface loopback74', ' description netmiko_script', ' ip address 1.1.1.74 255.255.255.255', ' end']
+
+
+ This is the dictionary before the loop {'ios-xe-mgmt-latest.cisco.com': ['interface loopback73', ' description netmiko_script', ' ip address 1.1.1.73 255.255.255.255', 'end'], 'ios-xe-mgmt.cisco.com': ['interface loopback74', ' description netmiko_script', ' ip address 1.1.1.74 255.255.255.255', ' end']}
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Pre-change State:  ios-xe-mgmt-latest.cisco.com
+SSH connection established to ios-xe-mgmt-latest.cisco.com:8181
+Interactive SSH session established
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+['interface loopback73', ' description netmiko_script', ' ip address 1.1.1.73 255.255.255.255', 'end']
+************************************
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+csr1000v-1(config)#interface loopback73
+csr1000v-1(config-if)# description netmiko_script
+csr1000v-1(config-if)# ip address 1.1.1.73 255.255.255.255
+csr1000v-1(config-if)#end
+csr1000v-1#
+++++++++++++++++++++++++++++++++++++
+Post-change state:  ios-xe-mgmt-latest.cisco.com
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Pre-change State:  ios-xe-mgmt.cisco.com
+SSH connection established to ios-xe-mgmt.cisco.com:8181
+Interactive SSH session established
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+['interface loopback74', ' description netmiko_script', ' ip address 1.1.1.74 255.255.255.255', ' end']
+************************************
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+csr1000v(config)#interface loopback74
+csr1000v(config-if)# description netmiko_script
+csr1000v(config-if)# ip address 1.1.1.74 255.255.255.255
+csr1000v(config-if)# end
+csr1000v#
+++++++++++++++++++++++++++++++++++++
+Post-change state:  ios-xe-mgmt.cisco.com
+Problems connecting to these hosts:  []
+pi@RaspPi4:~/Coding/Python_folder/netOps $ 
