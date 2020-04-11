@@ -49,6 +49,9 @@ m
  - created two sample scripts
 
 ### Netmiko testing
+- Haven't messed around with Netmiko in a while decided to play around and try and update an existing script to have (show/conf) functionality.
+- it's painfully slow as I haven't added anything MP to it, but it was working with Devnet CSRs.
+  - test_stuff/interactive_script.py
 - NetworkDiscovery/host_file_and_script/ has the most pragmatic scripts for doing network discovery (ie..scripts that run show commands and captures the results and saves them to files)
 - Netmiko scripts for running show commands can be found in the NetworkDiscovery folder 
   - show_commands.py - easiest for every day troubleshooting and operations and lab work
