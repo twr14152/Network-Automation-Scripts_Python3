@@ -2,6 +2,10 @@
 # -----------------------------
 # (c) 2020 Todd Riemenschneider
 # -----------------------------
+# This script is prompting user to determine if they plan on configuring the devices or gathering info using show commands.
+# Script tries to be a one stop shop for lab use. 
+# Its soo painfully slow may end up ditching it or adding MP processing.
+# 
 import netmiko
 from pprint import pprint as pp
 
