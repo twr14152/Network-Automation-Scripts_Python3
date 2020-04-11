@@ -13,7 +13,7 @@ This has been a iterative learning process for me and I will be archiving or del
 
 ### Netconf
 - Getting used to xmlns is a challenge and can be frustrating. Took me a while to find the proper xmlns to config a loopback
-- Wrote a script to find out where that URI is in the server capabilities dump
+- Wrote a script to find out where that xmlns is in the server capabilities dump
     - netconf_svr_capabilities.py
     - netconf_svr_capabilities_ouput.txt
 - Documentation around netconf is not intuitive from my point of view
