@@ -17,7 +17,7 @@ from time import time
 #create variables for configs and hosts
 uname = input("Username: ")
 passwd = getpass("Password: ")
-cmd = input("Enter config commands seperated by ',': ")
+cmd = input("Enter commands seperated by ',': ")
 host = input("Enter the host IPs seperate with space: ")
 
 #This will allow you to just press enter
