@@ -48,7 +48,7 @@ def run_script(host_ip):
     for show_commands in cmds:
         output = net_connect.send_command(show_commands)
         print("Connected to host:", host_ip)
-        print(output)
+        print("Command: ", show_commands, "\n", output)
         print('\n---- Elapsed time=', time()-starting_time)
 
 if __name__ == "__main__":
@@ -60,3 +60,4 @@ if __name__ == "__main__":
 #This is the key to sending show commands vs config commands
 #show commands --> net_connect.send_command()
 #config commmands --> net_connect.send_config_set()
+
