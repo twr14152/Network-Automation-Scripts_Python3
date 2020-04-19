@@ -6,7 +6,7 @@ I plan to continue to grow this respository as long as I'm still doing stuff in 
 
 This has been a iterative learning process for me and I will be archiving or deleting scripts that no longer have value.
 # Some thoughts:
-If I was going to recommend an automation library to learn first I would have to say Netmiko. I had great success across most if not all vendor platforms I came across. It was the swiss army knife of automation libraries. For me it was the most pragmatic library of the bunch. Once you learn it, the skills can translate to other libraries. More importantly it will allow you to become a more efficient engineer. The speed at which you can gather (Pull) info is the immediate benefit. Pushing configs will come with time, but its a maturity process.
+If I was going to recommend an automation library to learn first I would have to say Netmiko. I had great success across most if not all vendor platforms I came across. It was the swiss army knife of automation libraries. Once you learn it, the skills can translate to other libraries. More importantly it will allow you to become a more efficient engineer. The speed at which you can gather (Pull) info is the immediate benefit. Pushing configs will come with time, but its a maturity process.
 
 I am still not sold on model driven programmability as of early 2020. Quality resources are still too scarce, and barrier to entry is still too high. Seems to be an ever moving target. Time will tell.
 
