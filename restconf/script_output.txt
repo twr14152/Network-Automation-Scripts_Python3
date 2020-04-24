@@ -1,0 +1,265 @@
+pi@RaspPi4:~/Coding/Python_folder/netOps/restconf_stuff $ python3 create_intf.py 
+
+{
+  "Cisco-IOS-XE-native:interface": {
+    "GigabitEthernet": [
+      {
+        "name": "1",
+        "description": "MANAGEMENT INTERFACE - DON'T TOUCH ME",
+        "ip": {
+          "address": {
+            "primary": {
+              "address": "10.10.20.48",
+              "mask": "255.255.255.0"
+            }
+          }
+        },
+        "mop": {
+          "enabled": false,
+          "sysid": false
+        },
+        "Cisco-IOS-XE-ethernet:negotiation": {
+          "auto": true
+        }
+      },
+      {
+        "name": "2",
+        "description": "Gruesse an die Deutschsprachigen",
+        "ip": {
+          "address": {
+            "primary": {
+              "address": "10.255.255.1",
+              "mask": "255.255.255.0"
+            }
+          }
+        },
+        "mop": {
+          "enabled": false,
+          "sysid": false
+        },
+        "Cisco-IOS-XE-ethernet:negotiation": {
+          "auto": true
+        }
+      },
+      {
+        "name": "3",
+        "description": "Network Interface",
+        "shutdown": [null],
+        "mop": {
+          "enabled": false,
+          "sysid": false
+        },
+        "Cisco-IOS-XE-ethernet:negotiation": {
+          "auto": true
+        }
+      },
+      {
+        "name": "3.1",
+        "description": "testSerge",
+        "encapsulation": {
+          "dot1Q": {
+            "vlan-id": 101
+          }
+        },
+        "ip": {
+          "address": {
+            "secondary": [
+              {
+                "address": "101.0.1.1",
+                "mask": "255.255.255.0",
+                "secondary": [null]
+              },
+              {
+                "address": "101.0.2.1",
+                "mask": "255.255.255.0",
+                "secondary": [null]
+              }
+            ],
+            "primary": {
+              "address": "101.0.0.1",
+              "mask": "255.255.255.0"
+            }
+          }
+        }
+      }
+    ],
+    "Loopback": [
+      {
+        "name": 1,
+        "description": "Changed by me",
+        "ip": {
+          "address": {
+            "primary": {
+              "address": "1.2.3.4",
+              "mask": "255.255.255.0"
+            }
+          }
+        }
+      },
+      {
+        "name": 72,
+        "description": "RESTCONF_TEST",
+        "ip": {
+          "address": {
+            "primary": {
+              "address": "72.72.72.72",
+              "mask": "255.255.255.255"
+            }
+          }
+        }
+      },
+      {
+        "name": 101,
+        "description": "Pod Number 1410",
+        "ip": {
+          "address": {
+            "primary": {
+              "address": "10.10.10.1",
+              "mask": "255.255.255.0"
+            }
+          }
+        }
+      },
+      {
+        "name": 200,
+        "description": "Configured by RESTCONF200",
+        "ip": {
+          "address": {
+            "primary": {
+              "address": "172.16.100.1",
+              "mask": "255.255.255.0"
+            }
+          }
+        }
+      }
+    ]
+  }
+}
+
+pi@RaspPi4:~/Coding/Python_folder/netOps/restconf_stuff $ python3 delete_intf.py 
+
+{
+  "Cisco-IOS-XE-native:interface": {
+    "GigabitEthernet": [
+      {
+        "name": "1",
+        "description": "MANAGEMENT INTERFACE - DON'T TOUCH ME",
+        "ip": {
+          "address": {
+            "primary": {
+              "address": "10.10.20.48",
+              "mask": "255.255.255.0"
+            }
+          }
+        },
+        "mop": {
+          "enabled": false,
+          "sysid": false
+        },
+        "Cisco-IOS-XE-ethernet:negotiation": {
+          "auto": true
+        }
+      },
+      {
+        "name": "2",
+        "description": "Gruesse an die Deutschsprachigen",
+        "ip": {
+          "address": {
+            "primary": {
+              "address": "10.255.255.1",
+              "mask": "255.255.255.0"
+            }
+          }
+        },
+        "mop": {
+          "enabled": false,
+          "sysid": false
+        },
+        "Cisco-IOS-XE-ethernet:negotiation": {
+          "auto": true
+        }
+      },
+      {
+        "name": "3",
+        "description": "Network Interface",
+        "shutdown": [null],
+        "mop": {
+          "enabled": false,
+          "sysid": false
+        },
+        "Cisco-IOS-XE-ethernet:negotiation": {
+          "auto": true
+        }
+      },
+      {
+        "name": "3.1",
+        "description": "testSerge",
+        "encapsulation": {
+          "dot1Q": {
+            "vlan-id": 101
+          }
+        },
+        "ip": {
+          "address": {
+            "secondary": [
+              {
+                "address": "101.0.1.1",
+                "mask": "255.255.255.0",
+                "secondary": [null]
+              },
+              {
+                "address": "101.0.2.1",
+                "mask": "255.255.255.0",
+                "secondary": [null]
+              }
+            ],
+            "primary": {
+              "address": "101.0.0.1",
+              "mask": "255.255.255.0"
+            }
+          }
+        }
+      }
+    ],
+    "Loopback": [
+      {
+        "name": 1,
+        "description": "Changed by me",
+        "ip": {
+          "address": {
+            "primary": {
+              "address": "1.2.3.4",
+              "mask": "255.255.255.0"
+            }
+          }
+        }
+      },
+      {
+        "name": 101,
+        "description": "Pod Number 1410",
+        "ip": {
+          "address": {
+            "primary": {
+              "address": "10.10.10.1",
+              "mask": "255.255.255.0"
+            }
+          }
+        }
+      },
+      {
+        "name": 200,
+        "description": "Configured by RESTCONF200",
+        "ip": {
+          "address": {
+            "primary": {
+              "address": "172.16.100.1",
+              "mask": "255.255.255.0"
+            }
+          }
+        }
+      }
+    ]
+  }
+}
+
+pi@RaspPi4:~/Coding/Python_folder/netOps/restconf_stuff $ 
