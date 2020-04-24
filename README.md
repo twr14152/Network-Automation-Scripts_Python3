@@ -38,9 +38,11 @@ This has been a iterative learning process for me and I will be archiving or del
   - nxapi_script_ex1.py
 
 ### Restconf 
-- Still learning this api
-- restconf_ex1.py
-m
+- Created two scripts one to create and interface and the other to delete it
+    - create_intf.py
+    - delete_intf.py
+    - script_output.txt
+    
 ### Pyeapi - Python client for Arista eAPI 
  - Cleaning up directory archived some scripts and created interactive script folder
  - Posted configs and validation scripts for ceos demo
