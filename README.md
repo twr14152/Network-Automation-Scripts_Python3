@@ -38,7 +38,7 @@ This has been a iterative learning process for me and I will be archiving or del
   - nxapi_script_ex1.py
 
 ### Restconf 
-- Created two scripts one to create and interface and the other to delete it
+- Created two scripts one to create an interface and the other to delete it
     - create_intf.py
     - delete_intf.py
     - script_output.txt
