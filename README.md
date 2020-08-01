@@ -52,7 +52,7 @@ This has been a iterative learning process for me and I will be archiving or del
 
 ### Netmiko testing
 - Got a request today to help someone write a script. Created folder and will keep the scripts in there. 
-    - requests/req_config_script_07292020.py 
+    - script_requests/req_config_script_07292020.py 
 - Haven't messed around with Netmiko in quite a while decided to play around and try and update an old script to have both (show/conf) functionality.
 - It's painfully slow as I haven't added any features such as MP to it to speed it up, but it was working with the devnet CSRs.
 - Basically the script will ask the user if this is going to be a configuration or show commands script. Depending on the answer the script will do one or the other.  
