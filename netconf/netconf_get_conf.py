@@ -25,7 +25,9 @@ xmlDom = xml.dom.minidom.parseString( str( conn.get_config('running', hostname_f
 print(xmlDom.toprettyxml( indent = "  " ))
 
 '''
-python3 netconf_get_config.py 
+output:
+
+$ python3 netconf_get_config.py 
 
 <?xml version="1.0" ?>
 <rpc-reply message-id="urn:uuid:d36065b5-b332-40d0-8edd-d0c4e5dc8f3e" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
