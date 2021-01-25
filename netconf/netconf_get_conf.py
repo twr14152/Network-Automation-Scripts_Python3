@@ -25,8 +25,9 @@ xmlDom = xml.dom.minidom.parseString( str( conn.get_config('running', hostname_f
 print(xmlDom.toprettyxml( indent = "  " ))
 
 '''
+*******************************
 output:
-
+*******************************
 $ python3 netconf_get_config.py 
 
 <?xml version="1.0" ?>
