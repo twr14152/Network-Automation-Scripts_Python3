@@ -22,6 +22,7 @@ This has been a iterative learning process for me and I will be archiving or del
     - netconf_config_device.py - configured a loopback on devnet router
     - netconf_config_device_output.text - results
 - Script to do config backups. 
+    - netconf_iosxe_cfg_bkup.py - rewrite of netconf_config_bkup.py
     - netconf_config_bkup.py - goes out pulls running config and places it in config_bkup/ directory
     - netconf_config_output.txt - the results of the script
 - First time using netconf
