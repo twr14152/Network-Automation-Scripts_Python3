@@ -45,6 +45,7 @@ This has been a iterative learning process for me and I will be archiving or del
     - script_output.txt
     
 ### Pyeapi - Python client for Arista eAPI 
+ - pyeapi_w_out_conf.py - using pyeapi without config file
  - Cleaning up directory archived some scripts and created interactive script folder
  - Posted configs and validation scripts for ceos demo
  - Posted configs and validation from demo
