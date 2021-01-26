@@ -31,12 +31,17 @@ if __name__ == "__main__":
 
 
 '''
-pi@RaspPi4:~/Coding/Python_folder/netOps/netconf $ python3 iosxe_cfg_bkup.py 
+i@RaspPi4:~/Coding/Python_folder/netOps/netconf $ cd config_bkups  
+pi@RaspPi4:~/Coding/Python_folder/netOps/netconf/config_bkups $ ls -l
+total 0
+pi@RaspPi4:~/Coding/Python_folder/netOps/netconf/config_bkups $ cd ..
+pi@RaspPi4:~/Coding/Python_folder/netOps/netconf $ python3 netconf_iosxe_cfg_bkup.py 
 sandbox-iosxe-latest-1.cisco.com - running-config copied 
 ios-xe-mgmt.cisco.com - running-config copied 
-pi@RaspPi4:~/Coding/Python_folder/netOps/netconf $ cd config_bkups/
-pi@RaspPi4:~/Coding/Python_folder/netOps/netconf/config_bkups $ ls -l
+pi@RaspPi4:~/Coding/Python_folder/netOps/netconf $ ls -l config_bkups/
 total 64
--rw-r--r-- 1 pi pi 17861 Jan 25 19:39 ios-xe-mgmt.cisco.com_running_config.txt
--rw-r--r-- 1 pi pi 42620 Jan 25 19:39 sandbox-iosxe-latest-1.cisco.com_running_config.txt
+-rw-r--r-- 1 pi pi 17861 Jan 25 19:47 ios-xe-mgmt.cisco.com_running_config.txt
+-rw-r--r-- 1 pi pi 42620 Jan 25 19:47 sandbox-iosxe-latest-1.cisco.com_running_config.txt
+pi@RaspPi4:~/Coding/Python_folder/netOps/netconf $ 
+
 '''
