@@ -25,7 +25,7 @@ data = json.dumps({
         },
     "dns": {
         "ipAddress": "10.10.0.22",
-            "name": "testlab.com"
+            "name": "test.lab"
         },
     "netflow": {
         "port": "9995",
@@ -46,13 +46,14 @@ print(f"\nStatus code: {resp.status_code}\n")
 result = resp.json()
 print(json.dumps(result, indent=4))
 
-'''
+"""
+Results
 toddriemenschneider@Todds-MacBook-Pro-2 % python3 update_device_config.py
 
 Status code: 201
 
 
-Ticket value to use is NC-104-57a16f693cb447f5b678-nbi
+Ticket value to use is NC-106-e3b589a5608649ec8b0e-nbi
 
 
 Status code: 200
@@ -65,7 +66,7 @@ Status code: 200
         },
         "dns": {
             "ipAddress": "10.10.0.22",
-            "name": "testlab.com"
+            "name": "test.lab"
         },
         "netflow": {
             "port": "9995",
@@ -88,5 +89,5 @@ Status code: 200
     },
     "version": "1.0"
 }
-toddriemenschneider@Todds-MacBook-Pro-2 %
-'''
+toddriemenschneider@Todds-MacBook-Pro-2 % 
+"""
