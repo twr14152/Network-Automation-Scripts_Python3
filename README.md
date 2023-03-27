@@ -6,8 +6,10 @@ I plan to continue to grow this respository as long as I'm still doing stuff in 
 
 This has been a iterative learning process for me and I will be archiving or deleting scripts that no longer have value.
 
-### Network Automation Controllers
+### Network Controllers
 - Playing around with Packet Tracer and testing out its network controller
+- Grab network device info - network_controller/get_device_info.py
+- Update network devices (site wide) - network_controller/update_device_config.py
 
 ### Nornir - TestDrive 
 - Cisco IOS - GNS3 lab - nornir/using_netmiko_plugin
