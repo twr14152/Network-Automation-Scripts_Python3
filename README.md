@@ -9,6 +9,7 @@ This has been a iterative learning process for me and I will be archiving or del
 ### Network Controllers
 - Playing around with Packet Tracer and testing out its network controller
 - Grab network device info - network_controller/get_device_info.py
+- Grab more generic info from network devices - network_controller/get_all_devices_info.py
 - Update network devices (site wide) - network_controller/update_device_config.py
 
 ### Nornir - TestDrive 
