@@ -6,6 +6,9 @@ I plan to continue to grow this respository as long as I'm still doing stuff in 
 
 This has been a iterative learning process for me and I will be archiving or deleting scripts that no longer have value.
 
+### Network Automation Controllers
+- Playing around with Packet Tracer and testing out its network controller
+
 ### Nornir - TestDrive 
 - Cisco IOS - GNS3 lab - nornir/using_netmiko_plugin
 - Arista Ceos lab - nornir/using_napalm_plugin 
