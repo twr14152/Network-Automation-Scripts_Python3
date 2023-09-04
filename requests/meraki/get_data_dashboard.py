@@ -53,8 +53,8 @@ for url in urls:
 
 
 '''
-OutPut
-$ ./get_data_dashboard.py
+output of script
+ $ ./get_data_dashboard.py
 
         Example:
         Enter Org ID: 573083052582915264
@@ -118,6 +118,23 @@ Loop 3
     "isBoundToConfigTemplate": false
   },
   {
+    "id": "L_627126248111380188",
+    "organizationId": "1097053",
+    "name": "Lunas Network",
+    "productTypes": [
+      "switch"
+    ],
+    "timeZone": "America/Los_Angeles",
+    "tags": [
+      "tag1",
+      "tag2"
+    ],
+    "enrollmentString": null,
+    "url": "https://n114.meraki.com/Lunas-Network-sw/n/Tn1rEdYb/manage/usage/list",
+    "notes": "Boy this sure is involved",
+    "isBoundToConfigTemplate": false
+  },
+  {
     "id": "N_627126248111476956",
     "organizationId": "1097053",
     "name": "Jacks_Room",
@@ -143,6 +160,23 @@ Loop 3
     "enrollmentString": null,
     "url": "https://n114.meraki.com/Evee_Network/n/HgaoccYb/manage/usage/list",
     "notes": null,
+    "isBoundToConfigTemplate": false
+  },
+  {
+    "id": "N_627126248111476961",
+    "organizationId": "1097053",
+    "name": "My office Network",
+    "productTypes": [
+      "wireless"
+    ],
+    "timeZone": "America/Los_Angeles",
+    "tags": [
+      "hideout",
+      "man_cave"
+    ],
+    "enrollmentString": null,
+    "url": "https://n114.meraki.com/My-office-Networ/n/YjIdXbYb/manage/usage/list",
+    "notes": "This is my new office network",
     "isBoundToConfigTemplate": false
   }
 ]
