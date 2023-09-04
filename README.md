@@ -6,10 +6,12 @@ I plan to continue to grow this respository as long as I'm still doing stuff in 
 
 This has been a iterative learning process for me and I will be archiving or deleting scripts that no longer have value.
 
-### Network Controllers
+### Requests/Meraki
 - Using requests to GET data from the meraki dashboard api (Orgs and Networks)
 - Using requests POST to create a network through the meraki dashboard api
 - Using requests PUT to update a SSID on a wireless device through the meraki dashboard api 
+
+### Network Controller
 - Playing around with Packet Tracer and testing out its network controller
 - Grab network device info - network_controller/get_device_info.py
 - Grab more generic info from network devices - network_controller/get_all_devices_info.py
