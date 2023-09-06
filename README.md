@@ -6,7 +6,12 @@ I plan to continue to grow this respository as long as I'm still doing stuff in 
 
 This has been a iterative learning process for me and I will be archiving or deleting scripts that no longer have value.
 
-### Requests/Meraki
+### DNAC
+- Grabbing data out of DNAC
+    - get_device_dnac.py
+    - get_client_info_dnac.py
+
+### Meraki
 - Using requests to GET data from the meraki dashboard api (Orgs and Networks)
 - Using requests POST to create a network through the meraki dashboard api
 - Using requests PUT to update a SSID on a wireless device through the meraki dashboard api 
