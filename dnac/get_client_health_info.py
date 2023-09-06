@@ -28,7 +28,8 @@ response = requests.request("GET", url, headers=headers, data=payload, verify=Fa
 data = json.loads(response.text)
 print(json.dumps(data, indent=4))
 
-(devcor_ve) pi@RaspPi4:~/Coding/Python_folder/devcor_stuff/dnac $ ./get_client_health_dnac.py
+'''
+$ ./get_client_health_dnac.py
 {
     "response": [
         {
@@ -316,3 +317,4 @@ print(json.dumps(data, indent=4))
         }
     ]
 }
+'''
