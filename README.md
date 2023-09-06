@@ -9,7 +9,7 @@ This has been a iterative learning process for me and I will be archiving or del
 ### DNAC
 - Grabbing data out of DNAC
     - get_device_dnac.py
-    - get_client_info_dnac.py
+    - get_client_health_info.py
 
 ### Meraki
 - Using requests to GET data from the meraki dashboard api (Orgs and Networks)
