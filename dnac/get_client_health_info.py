@@ -1,32 +1,36 @@
 #!/usr/bin/python
-
-import requests
-import json
+import requests, json
+from requests.auth import HTTPBasicAuth
 
 requests.packages.urllib3.disable_warnings()
 
 #Get auth token
-url = "https://sandboxdnac2.cisco.com/dna/system/api/v1/auth/token"
-
-payload = {}
-headers = {
-  'Authorization': 'Basic ZGV2bmV0dXNlcjpDaXNjbzEyMyE='
-}
-
-response = requests.request("POST", url, headers=headers, data=payload, verify=False)
-data = json.loads(response.text)
-token = data['Token']
+UN = "devnetuser"
+PW = "Cisco123!"
+token = requests.post(
+            'https://sandboxdnac2.cisco.com/dna/system/api/v1/auth/token',
+       auth=HTTPBasicAuth(
+           username = UN,
+           password = PW
+       ),
+       headers={'content-type': 'application/json'},
+       verify=False,
+    )
+data = token.json()
+auth_token = data['Token']
 
 
 #Get client info
 url = "https://sandboxdnac2.cisco.com/dna/intent/api/v1/client-health"
 
 payload = {}
-headers = {'X-Auth-Token': token}
+headers = {'X-Auth-Token': auth_token}
 
 response = requests.request("GET", url, headers=headers, data=payload, verify=False)
 data = json.loads(response.text)
 print(json.dumps(data, indent=4))
+
+
 
 '''
 $ ./get_client_health_dnac.py
@@ -45,10 +49,10 @@ $ ./get_client_health_dnac.py
                         "value": "ALL"
                     },
                     "randomMacCount": null,
-                    "starttime": 1694000100000,
+                    "starttime": 1694084400000,
                     "connectedToUdnCount": 0,
                     "clientCount": 2,
-                    "endtime": 1694000400000
+                    "endtime": 1694084700000
                 },
                 {
                     "scoreValue": 0,
@@ -61,10 +65,10 @@ $ ./get_client_health_dnac.py
                         "value": "WIRED"
                     },
                     "randomMacCount": 0,
-                    "starttime": 1694000100000,
+                    "starttime": 1694084400000,
                     "connectedToUdnCount": 0,
                     "clientCount": 2,
-                    "endtime": 1694000400000,
+                    "endtime": 1694084700000,
                     "scoreList": [
                         {
                             "scoreValue": -1,
@@ -77,10 +81,10 @@ $ ./get_client_health_dnac.py
                                 "value": "POOR"
                             },
                             "randomMacCount": null,
-                            "starttime": 1694000100000,
+                            "starttime": 1694084400000,
                             "connectedToUdnCount": 0,
                             "clientCount": 2,
-                            "endtime": 1694000400000,
+                            "endtime": 1694084700000,
                             "scoreList": [
                                 {
                                     "scoreValue": -1,
@@ -93,10 +97,10 @@ $ ./get_client_health_dnac.py
                                         "value": "ALL"
                                     },
                                     "randomMacCount": null,
-                                    "starttime": 1694000100000,
+                                    "starttime": 1694084400000,
                                     "connectedToUdnCount": 0,
                                     "clientCount": 2,
-                                    "endtime": 1694000400000
+                                    "endtime": 1694084700000
                                 },
                                 {
                                     "scoreValue": -1,
@@ -109,10 +113,10 @@ $ ./get_client_health_dnac.py
                                         "value": "DHCP"
                                     },
                                     "randomMacCount": null,
-                                    "starttime": 1694000100000,
+                                    "starttime": 1694084400000,
                                     "connectedToUdnCount": 0,
                                     "clientCount": 2,
-                                    "endtime": 1694000400000
+                                    "endtime": 1694084700000
                                 }
                             ]
                         },
@@ -127,10 +131,10 @@ $ ./get_client_health_dnac.py
                                 "value": "FAIR"
                             },
                             "randomMacCount": null,
-                            "starttime": 1694000100000,
+                            "starttime": 1694084400000,
                             "connectedToUdnCount": 0,
                             "clientCount": 0,
-                            "endtime": 1694000400000
+                            "endtime": 1694084700000
                         },
                         {
                             "scoreValue": -1,
@@ -143,10 +147,10 @@ $ ./get_client_health_dnac.py
                                 "value": "GOOD"
                             },
                             "randomMacCount": null,
-                            "starttime": 1694000100000,
+                            "starttime": 1694084400000,
                             "connectedToUdnCount": 0,
                             "clientCount": 0,
-                            "endtime": 1694000400000
+                            "endtime": 1694084700000
                         },
                         {
                             "scoreValue": -1,
@@ -159,10 +163,10 @@ $ ./get_client_health_dnac.py
                                 "value": "IDLE"
                             },
                             "randomMacCount": null,
-                            "starttime": 1694000100000,
+                            "starttime": 1694084400000,
                             "connectedToUdnCount": 0,
                             "clientCount": 0,
-                            "endtime": 1694000400000
+                            "endtime": 1694084700000
                         },
                         {
                             "scoreValue": -1,
@@ -175,10 +179,10 @@ $ ./get_client_health_dnac.py
                                 "value": "NODATA"
                             },
                             "randomMacCount": null,
-                            "starttime": 1694000100000,
+                            "starttime": 1694084400000,
                             "connectedToUdnCount": 0,
                             "clientCount": 0,
-                            "endtime": 1694000400000
+                            "endtime": 1694084700000
                         },
                         {
                             "scoreValue": -1,
@@ -191,10 +195,10 @@ $ ./get_client_health_dnac.py
                                 "value": "NEW"
                             },
                             "randomMacCount": null,
-                            "starttime": 1694000100000,
+                            "starttime": 1694084400000,
                             "connectedToUdnCount": 0,
                             "clientCount": 0,
-                            "endtime": 1694000400000
+                            "endtime": 1694084700000
                         }
                     ]
                 },
@@ -209,10 +213,10 @@ $ ./get_client_health_dnac.py
                         "value": "WIRELESS"
                     },
                     "randomMacCount": 0,
-                    "starttime": 1694000100000,
+                    "starttime": 1694084400000,
                     "connectedToUdnCount": 0,
                     "clientCount": 0,
-                    "endtime": 1694000400000,
+                    "endtime": 1694084700000,
                     "scoreList": [
                         {
                             "scoreValue": -1,
@@ -225,10 +229,10 @@ $ ./get_client_health_dnac.py
                                 "value": "POOR"
                             },
                             "randomMacCount": null,
-                            "starttime": 1694000100000,
+                            "starttime": 1694084400000,
                             "connectedToUdnCount": 0,
                             "clientCount": 0,
-                            "endtime": 1694000400000
+                            "endtime": 1694084700000
                         },
                         {
                             "scoreValue": -1,
@@ -241,10 +245,10 @@ $ ./get_client_health_dnac.py
                                 "value": "FAIR"
                             },
                             "randomMacCount": null,
-                            "starttime": 1694000100000,
+                            "starttime": 1694084400000,
                             "connectedToUdnCount": 0,
                             "clientCount": 0,
-                            "endtime": 1694000400000
+                            "endtime": 1694084700000
                         },
                         {
                             "scoreValue": -1,
@@ -257,10 +261,10 @@ $ ./get_client_health_dnac.py
                                 "value": "GOOD"
                             },
                             "randomMacCount": null,
-                            "starttime": 1694000100000,
+                            "starttime": 1694084400000,
                             "connectedToUdnCount": 0,
                             "clientCount": 0,
-                            "endtime": 1694000400000
+                            "endtime": 1694084700000
                         },
                         {
                             "scoreValue": -1,
@@ -273,10 +277,10 @@ $ ./get_client_health_dnac.py
                                 "value": "IDLE"
                             },
                             "randomMacCount": null,
-                            "starttime": 1694000100000,
+                            "starttime": 1694084400000,
                             "connectedToUdnCount": 0,
                             "clientCount": 0,
-                            "endtime": 1694000400000
+                            "endtime": 1694084700000
                         },
                         {
                             "scoreValue": -1,
@@ -289,10 +293,10 @@ $ ./get_client_health_dnac.py
                                 "value": "NODATA"
                             },
                             "randomMacCount": null,
-                            "starttime": 1694000100000,
+                            "starttime": 1694084400000,
                             "connectedToUdnCount": 0,
                             "clientCount": 0,
-                            "endtime": 1694000400000
+                            "endtime": 1694084700000
                         },
                         {
                             "scoreValue": -1,
@@ -305,10 +309,10 @@ $ ./get_client_health_dnac.py
                                 "value": "NEW"
                             },
                             "randomMacCount": null,
-                            "starttime": 1694000100000,
+                            "starttime": 1694084400000,
                             "connectedToUdnCount": 0,
                             "clientCount": 0,
-                            "endtime": 1694000400000
+                            "endtime": 1694084700000
                         }
                     ]
                 }
