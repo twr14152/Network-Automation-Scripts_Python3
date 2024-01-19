@@ -8,7 +8,7 @@ print('''
         Example:
         Enter Org ID: 573083052582915264
         Enter Network ID: L_573083052582991362
-        Enter API_KEY: 6bec40cf957de430a6f1f2baa056b99a4fac9ea0
+        Enter API_KEY: <>
         ''')
 
 
@@ -23,7 +23,7 @@ if len(networkId) == 0 : networkId = "L_627126248111380187"
 
 API_KEY = input("Enter API_KEY: " )
 # set default values
-if len(API_KEY) == 0 : API_KEY = "40bfc95138a521bffc6691b2ee0be63b1d0da812"
+if len(API_KEY) == 0 : API_KEY = "<>"
 
 url_0 = f"https://api.meraki.com/api/v1/organizations/"
 url_1 = f"https://api.meraki.com/api/v1/networks/{networkId}"
@@ -59,7 +59,7 @@ output of script
         Example:
         Enter Org ID: 573083052582915264
         Enter Network ID: L_573083052582991362
-        Enter API_KEY: 6bec40cf957de430a6f1f2baa056b99a4fac9ea0
+        Enter API_KEY: <>
 
 Enter Org ID:
 Enter Network ID:
