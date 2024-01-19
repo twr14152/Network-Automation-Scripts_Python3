@@ -12,7 +12,7 @@ payload = '''{
 headers = {
     "Content-Type": "application/json",
     "Accept": "application/json",
-    "X-Cisco-Meraki-API-Key": "40bfc95138a521bffc6691b2ee0be63b1d0da812"
+    "X-Cisco-Meraki-API-Key": "<>"
 }
 
 response = requests.request('PUT', url, headers=headers, data = payload)
