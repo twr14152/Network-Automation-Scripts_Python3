@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-# Work in progress....
+# Work in progress
 
 import requests
 import json
@@ -9,13 +9,14 @@ def get_token():
     #Get auth token
     headers = {"Content-Type": "application/json"}
     data = json.dumps({"username": "admin", "password": "cisco"})
-    resp = requests.post('http://localhost:58000/api/v1/ticket',data=data, headers=headers)
+    url = "http://localhost:58000/api/v1/ticket"
+    resp = requests.post(url,data=data, headers=headers)
     result = resp.json()
     ticket = result["response"]["serviceTicket"]
     print(f"\nTicket value to use is {ticket}\n")
     return ticket
 
-def get_dev_info(ticket):
+def get_device_info(ticket):
     print("\n\n\nGet devices info:")
     url = "http://localhost:58000/api/v1/network-device"
     payload = {}
@@ -28,26 +29,37 @@ def get_dev_info(ticket):
 def get_flow_info(ticket):
     headers = {"X-Auth-Token": ticket}
     payload = {}
-    flow_url = "http://localhost:58000/api/v1/flow-analysis"
-    response = requests.get(flow_url, headers=headers, data=payload) 
+    url = "http://localhost:58000/api/v1/flow-analysis"
+    response = requests.get(url, headers=headers, data=payload) 
     data = json.loads(response.text)
     print(json.dumps(data, indent=4))
 
 
 def post_flow_info(ticket, src, dst):
     headers = {"X-Auth-Token": ticket}
-    flow_url = "http://localhost:58000/api/v1/flow-analysis"
+    url = "http://localhost:58000/api/v1/flow-analysis"
     postData = json.dumps({"sourceIP": src, "destIP": dst })
-    response = requests.post(flow_url, data=postData, headers=headers)
+    response = requests.post(url, data=postData, headers=headers)
     data = json.loads(response.text)
     print(json.dumps(data, indent=4))
+
+def get_policy_tags(ticket):
+    print("\n\nGet Policy Tags:\n")
+    url = "http://localhost:58000/api/v1/policy/tag"
+    payload = {}
+    headers = {'X-Auth-Token': ticket}
+    response = requests.get(url, headers=headers, data=payload)
+    data = json.loads(response.text)
+    print(json.dumps(data, indent=4))
+    
 
 
 def main():
     ticket = get_token()
-    get_dev_info(ticket)
+    get_device_info(ticket)
     get_flow_info(ticket)
     post_flow_info(ticket, "10.0.0.12", "69.69.69.69")
+    #get_policy_tags(ticket)
 
     
 main()
@@ -55,7 +67,7 @@ main()
 '''
 toddriemenschneider@Todds-MBP-2 requests_stuff % ./pt_get_info_api.py 
 
-Ticket value to use is NC-50-bbbe3a72430845c58b2f-nbi
+Ticket value to use is NC-60-b8d100f220984961a026-nbi
 
 
 
@@ -70,8 +82,8 @@ Get devices info:
             "id": "CAT1010CXZC-uuid",
             "interfaceCount": "27",
             "inventoryStatusDetail": "Unreachable",
-            "lastUpdateTime": "3",
-            "lastUpdated": "2023-09-14 03:56:46",
+            "lastUpdateTime": "0",
+            "lastUpdated": "2023-09-14 04:45:00",
             "macAddress": "",
             "managementIpAddress": "10.0.0.20",
             "platformId": "",
@@ -95,8 +107,8 @@ Get devices info:
                 "157.130.0.1",
                 "157.130.0.5"
             ],
-            "lastUpdateTime": "2",
-            "lastUpdated": "2023-09-14 03:56:47",
+            "lastUpdateTime": "15",
+            "lastUpdated": "2023-09-14 04:44:45",
             "macAddress": "00D0.D39B.724B",
             "managementIpAddress": "157.130.0.5",
             "platformId": "",
@@ -118,8 +130,8 @@ Get devices info:
                 "157.130.0.2",
                 "157.130.1.1"
             ],
-            "lastUpdateTime": "2",
-            "lastUpdated": "2023-09-14 03:56:47",
+            "lastUpdateTime": "15",
+            "lastUpdated": "2023-09-14 04:44:45",
             "macAddress": "00E0.A351.E00D",
             "managementIpAddress": "157.130.1.1",
             "platformId": "",
@@ -141,8 +153,8 @@ Get devices info:
                 "157.130.1.5",
                 "157.130.0.6"
             ],
-            "lastUpdateTime": "2",
-            "lastUpdated": "2023-09-14 03:56:47",
+            "lastUpdateTime": "15",
+            "lastUpdated": "2023-09-14 04:44:45",
             "macAddress": "00D0.FF7D.2E2C",
             "managementIpAddress": "157.130.0.6",
             "platformId": "",
@@ -166,8 +178,8 @@ Get devices info:
                 "157.130.1.2",
                 "157.130.1.6"
             ],
-            "lastUpdateTime": "1",
-            "lastUpdated": "2023-09-14 03:56:48",
+            "lastUpdateTime": "14",
+            "lastUpdated": "2023-09-14 04:44:46",
             "macAddress": "00D0.58D0.2A35",
             "managementIpAddress": "157.130.1.6",
             "platformId": "",
@@ -185,8 +197,8 @@ Get devices info:
             "id": "CAT1010XD2F-uuid",
             "interfaceCount": "27",
             "inventoryStatusDetail": "Unreachable",
-            "lastUpdateTime": "3",
-            "lastUpdated": "2023-09-14 03:56:46",
+            "lastUpdateTime": "16",
+            "lastUpdated": "2023-09-14 04:44:44",
             "macAddress": "",
             "managementIpAddress": "10.0.2.20",
             "platformId": "",
@@ -204,8 +216,8 @@ Get devices info:
             "id": "",
             "interfaceCount": "",
             "inventoryStatusDetail": "Unreachable",
-            "lastUpdateTime": "1",
-            "lastUpdated": "2023-09-14 03:56:48",
+            "lastUpdateTime": "14",
+            "lastUpdated": "2023-09-14 04:44:46",
             "macAddress": "",
             "managementIpAddress": "1.1.1.1",
             "platformId": "",
@@ -240,8 +252,8 @@ Get devices info:
                 "10.0.69.2",
                 "54.0.0.1"
             ],
-            "lastUpdateTime": "1",
-            "lastUpdated": "2023-09-14 03:56:48",
+            "lastUpdateTime": "14",
+            "lastUpdated": "2023-09-14 04:44:46",
             "macAddress": "0003.E4D0.D7D0",
             "managementIpAddress": "70.70.70.70",
             "platformId": "ISR4300",
@@ -251,7 +263,7 @@ Get devices info:
             "serialNumber": "FDO13022813-",
             "softwareVersion": "16.6.4",
             "type": "Router",
-            "upTime": "2 days, 6 hours, 3 minutes, 59 seconds"
+            "upTime": "2 days, 6 hours, 51 minutes, 57 seconds"
         },
         {
             "collectionStatus": "Managed",
@@ -277,8 +289,8 @@ Get devices info:
                 "10.0.3.2",
                 "54.0.0.2"
             ],
-            "lastUpdateTime": "1",
-            "lastUpdated": "2023-09-14 03:56:48",
+            "lastUpdateTime": "14",
+            "lastUpdated": "2023-09-14 04:44:46",
             "macAddress": "0001.6342.8873",
             "managementIpAddress": "55.55.55.55",
             "platformId": "ISR4300",
@@ -288,7 +300,7 @@ Get devices info:
             "serialNumber": "FDO130291M2-",
             "softwareVersion": "16.6.4",
             "type": "Router",
-            "upTime": "1 days, 4 hours, 43 minutes, 51 seconds"
+            "upTime": "1 days, 5 hours, 31 minutes, 49 seconds"
         }
     ],
     "version": "1.0"
@@ -348,4 +360,5 @@ Get devices info:
     },
     "version": "1.0"
 }
+toddriemenschneider@Todds-MBP-2 requests_stuff % 
 '''
