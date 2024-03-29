@@ -6,7 +6,6 @@ import requests
 import json
 
 def get_token():
-    #Get auth token
     headers = {"Content-Type": "application/json"}
     data = json.dumps({"username": "admin", "password": "cisco"})
     url = "http://localhost:58000/api/v1/ticket"
