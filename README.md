@@ -21,6 +21,7 @@ This has been a iterative learning process for me and I will be archiving or del
 - Grab network device info - network_controller/get_device_info.py
 - Grab more generic info from network devices - network_controller/get_all_devices_info.py
 - Update network devices (site wide) - network_controller/update_device_config.py
+- Playing around with the controller pt_get_info_api.py (work in progess)
 
 ### Nornir - TestDrive 
 - Cisco IOS - GNS3 lab - nornir/using_netmiko_plugin
