@@ -1,0 +1,269 @@
+
+docker create --name=ceos1 --hostname=ceos1 --privileged -e INTFTYPE=eth -e ETBA=1 -e SKIP_ZEROTOUCH_BARRIER_IN_SYSDBINIT=1 -e CEOS=1 -e EOS_PLATFORM=ceoslab -e container=docker -i -t ceosimage:latest /sbin/init systemd.setenv=INTFTYPE=eth systemd.setenv=ETBA=1 systemd.setenv=SKIP_ZEROTOUCH_BARRIER_IN_SYSDBINIT=1 systemd.setenv=CEOS=1 systemd.setenv=EOS_PLATFORM=ceoslab systemd.setenv=container=docker systemd.setenv=MAPETH0=1 systemd.setenv=MGMT_INTF=eth0
+
+
+docker create --name=ceos2 --hostname=ceos2 --privileged -e INTFTYPE=eth -e ETBA=1 -e SKIP_ZEROTOUCH_BARRIER_IN_SYSDBINIT=1 -e CEOS=1 -e EOS_PLATFORM=ceoslab -e container=docker -i -t ceosimage:latest /sbin/init systemd.setenv=INTFTYPE=eth systemd.setenv=ETBA=1 systemd.setenv=SKIP_ZEROTOUCH_BARRIER_IN_SYSDBINIT=1 systemd.setenv=CEOS=1 systemd.setenv=EOS_PLATFORM=ceoslab systemd.setenv=container=docker systemd.setenv=MAPETH0=1 systemd.setenv=MGMT_INTF=eth0
+
+
+docker create --name=ceos3 --hostname=ceos3 --privileged -e INTFTYPE=eth -e ETBA=1 -e SKIP_ZEROTOUCH_BARRIER_IN_SYSDBINIT=1 -e CEOS=1 -e EOS_PLATFORM=ceoslab -e container=docker -i -t ceosimage:latest /sbin/init systemd.setenv=INTFTYPE=eth systemd.setenv=ETBA=1 systemd.setenv=SKIP_ZEROTOUCH_BARRIER_IN_SYSDBINIT=1 systemd.setenv=CEOS=1 systemd.setenv=EOS_PLATFORM=ceoslab systemd.setenv=container=docker systemd.setenv=MAPETH0=1 systemd.setenv=MGMT_INTF=eth0
+
+
+docker create --name=ceos4 --hostname=ceos4 --privileged -e INTFTYPE=eth -e ETBA=1 -e SKIP_ZEROTOUCH_BARRIER_IN_SYSDBINIT=1 -e CEOS=1 -e EOS_PLATFORM=ceoslab -e container=docker -i -t ceosimage:latest /sbin/init systemd.setenv=INTFTYPE=eth systemd.setenv=ETBA=1 systemd.setenv=SKIP_ZEROTOUCH_BARRIER_IN_SYSDBINIT=1 systemd.setenv=CEOS=1 systemd.setenv=EOS_PLATFORM=ceoslab systemd.setenv=container=docker systemd.setenv=MAPETH0=1 systemd.setenv=MGMT_INTF=eth0
+
+
+
+
+# create docker networks
+
+docker network create net1
+
+docker network create net2
+
+docker network create net3
+
+docker network create net4
+
+docker network create net5
+
+
+
+# connect docker instances to the networks
+
+docker network connect net1 ceos1
+
+docker network connect net1 ceos2
+
+
+docker network connect net2 ceos1
+
+docker network connect net2 ceos2
+
+
+docker network connect net3 ceos1
+
+docker network connect net3 ceos3
+
+
+docker network connect net4 ceos2
+
+docker network connect net4 ceos4
+
+
+docker network connect net5 ceos3
+
+docker network connect net5 ceos4
+
+
+Initial host config
+
+ceos1
+!
+no aaa root
+!
+username arista privilege 15 secret arista
+
+
+management api http-commands
+   protocol https
+   no shutdown
+
+interface Loopback0
+   description router_id
+   ip address 1.1.1.1/32
+!
+interface Management0
+   ip address 172.17.0.2/16
+!
+ip routing
+!
+ip route 0.0.0.0/0 172.17.0.1
+!
+router ospf 1
+   router-id 1.1.1.1
+   network 1.1.1.1/32 area 0.0.0.0
+    max-lsa 12000
+!
+end
+##########################################
+
+ceos2
+!
+no aaa root
+!
+username arista privilege 15 secret arista
+
+
+management api http-commands
+   protocol https
+   no shutdown
+
+interface Loopback0
+   description router_id
+   ip address 2.2.2.2/32
+!
+interface Management0
+   ip address 172.17.0.3/16
+!
+ip routing
+!
+ip route 0.0.0.0/0 172.17.0.1
+!
+router ospf 1
+   router-id 2.2.2.2
+   network 2.2.2.2/32 area 0.0.0.0
+    max-lsa 12000
+!
+end
+
+######################################
+
+ceos3
+!
+no aaa root
+!
+username arista privilege 15 secret arista
+
+
+management api http-commands
+   protocol https
+   no shutdown
+
+interface Loopback0
+   description router_id
+   ip address 3.3.3.3/32
+!
+interface Management0
+   ip address 172.17.0.4/16
+!
+ip routing
+!
+ip route 0.0.0.0/0 172.17.0.1
+!
+router ospf 1
+   router-id 3.3.3.3
+   network 3.3.3.3/32 area 0.0.0.0
+    max-lsa 12000
+!
+end
+
+######################################
+
+ceos4
+!
+no aaa root
+!
+username arista privilege 15 secret arista
+
+
+management api http-commands
+   protocol https
+   no shutdown
+
+interface Loopback0
+   description router_id
+   ip address 4.4.4.4/32
+!
+interface Management0
+   ip address 172.17.0.5/16
+!
+ip routing
+!
+ip route 0.0.0.0/0 172.17.0.1
+!
+router ospf 1
+   router-id 4.4.4.4
+   network 4.4.4.4/32 area 0.0.0.0
+    max-lsa 12000
+!
+end
+
+##########################
+Not necessary to get lab running!!!
+
+Optional
+
+GERNERATE SSL CERT:
+
+
+security pki key generate rsa 2048 self-signed.key
+security pki certificate generate self-signed self-signed.crt key self-signed.key validity 3000
+Common Name for use in subject: lab
+Two-Letter Country Code for use in subject: <enter>
+State for use in subject:<enter>
+Locality Name for use in subject:<enter>
+Organization Name for use in subject:<enter>
+Organization Unit Name for use in subject:<enter>
+Email address for use in subject:<enter>
+IP addresses (space separated) for use in subject-alternative-name:<enter>
+DNS names (space separated) for use in subject-alternative-name:<enter>
+Email addresses (space separated) for use in subject-alternative-name:<enter>
+URIs (space separated) for use in subject-alternative-name:<enter>
+certificate:self-signed.crt generated
+
+config
+management security
+ ssl profile self-signed-certs
+ certificate self-signed.crt key self-signed.key
+ end
+
+config
+management api http-commands
+protocol https ssl profile self-signed-certs
+end
+
+
+
+
+
+#build eapi.conf file
+
+[connection:ceos1]
+
+host=172.17.0.2
+
+username=arista
+
+password=arista
+
+transport=https
+
+
+
+
+
+[connection:ceos2]
+
+host=172.17.0.3
+
+username=arista
+
+password=arista
+
+transport=https
+
+
+
+
+[connection:ceos3]
+
+host=172.17.0.4
+
+username=arista
+
+password=arista
+
+transport=https
+
+
+
+
+[connection:ceos4]
+
+host=172.17.0.5
+
+username=arista
+
+password=arista
+
+transport=https
+
