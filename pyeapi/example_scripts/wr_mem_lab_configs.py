@@ -3,25 +3,16 @@
 import pyeapi
 from pprint import pprint as pp
 
-ans = input("Are you configuring more than one device? (y or n): ")
+hosts = ['ceos1', 'ceos2', 'ceos3', 'ceos4']
 
-if ans == 'y':
-    devices = input("Enter device names seperated by ',': ")
-    dev_list = devices.split(',')
-    cmds = input("Enter config lines separated by ',': ")
-    configuration = cmds.split(',')
-    for dev in dev_list:
-        node = pyeapi.connect_to(dev)
-        results = node.config(configuration)
-        pp(results)
-        pp(node.get_config())
-else:
-    device = input("Enter device you would like to configure: ")
-    config = input("Enter config commands seperate lines with ',': ")
-    configuration = config.split(",")
-    node1 = pyeapi.connect_to(device)
-    results = node1.config(configuration)
-    pp(results)
-    pp(node1.get_config())
+cmds = ["show running-config", 'write memory']
 
-print("End of Script!!")
+
+for host in hosts:
+    node = pyeapi.connect_to(host)
+    pp(node.run_commands(cmds[0]))
+    pp(node.run_commands(cmds[1]))
+    print("\n\n\n")
+
+
+
