@@ -61,7 +61,7 @@ This has been a iterative learning process for me and I will be archiving or del
     - script_output.txt
     
 ### Pyeapi - Python client for Arista eAPI 
- - Created some scripts for use with ceoslab in example_scripts folder
+ - Created some scripts for use with ceoslab
  - pyeapi_w_out_conf.py - using pyeapi without config file
  - Cleaning up directory archived some scripts and created interactive script folder
  - Posted configs and validation scripts for ceos demo
