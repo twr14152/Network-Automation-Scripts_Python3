@@ -54,7 +54,10 @@ docker network connect net5 ceos3
 docker network connect net5 ceos4
 
 
+
+-------------------
 Initial host config
+-------------------
 
 ceos1
 !
@@ -266,4 +269,6 @@ username=arista
 password=arista
 
 transport=https
+
+
 
