@@ -6,7 +6,7 @@ from pprint import pprint as pp
 ans = input("Are you configuring more than one device? (y or n): ")
 
 if ans == 'y':
-    devices = input("Enter device names seperated by ',': ")
+    devices = input("Enter device names seperated by ',' no trailing spaces: ")
     dev_list = devices.split(',')
     cmds = input("Enter config lines separated by ',': ")
     configuration = cmds.split(',')
