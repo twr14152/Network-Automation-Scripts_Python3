@@ -6,7 +6,7 @@ from pprint import pprint as pp
 #Command below is unneccessary if you are using .eapi.conf
 #pyeapi.load_config('nodes.conf') 
 
-ans = input("Are you configuring more than one device? (y or n): ")
+ans = input("Are you configuring more than one device with the same config? (y or n): ")
 
 if ans == 'y':
     devices = input("Enter device names seperated by spaces: ")
