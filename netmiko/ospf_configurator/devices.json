@@ -1,0 +1,71 @@
+{
+    "devices": [
+        {
+            "device_type": "cisco_ios",
+            "host": "192.168.29.100",
+            "username": "admin",
+            "password": "123456",
+            "secret": "enablepass",
+            "ospf": {
+                "process_id": 1,
+                "areas": [
+                    {
+                        "area_id": "0",
+                        "type": "normal",
+                        "networks": [
+                            {
+                                "network": "1.1.1.1",
+                                "wildcard": "0.0.0.0",
+                                "comment": "Loopback interface"
+                            },
+                            {
+                                "network": "192.168.123.0",
+                                "wildcard": "0.0.0.255",
+                                "comment": "LAN segment"
+                            }
+                        ]
+                    },
+                    {
+                        "area_id": "15",
+                        "type": "nssa",
+                        "networks": [
+                            {
+                                "network": "192.168.15.0",
+                                "wildcard": "0.0.0.255",
+                                "comment": "NSSA area network"
+                            }
+                        ]
+                    }
+                ],
+                "additional_commands": [
+                    "auto-cost reference-bandwidth 1000",
+                    "passive-interface default"
+                ]
+            }
+        },
+        {
+            "device_type": "cisco_ios",
+            "host": "192.168.29.130",
+            "username": "admin",
+            "password": "123456",
+            "ospf": {
+                "process_id": 1,
+                "areas": [
+                    {
+                        "area_id": "0",
+                        "networks": [
+                            {
+                                "network": "2.2.2.2",
+                                "wildcard": "0.0.0.0"
+                            },
+                            {
+                                "network": "192.168.234.0",
+                                "wildcard": "0.0.0.255"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}
