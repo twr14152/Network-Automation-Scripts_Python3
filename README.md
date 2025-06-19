@@ -70,6 +70,8 @@ This has been a iterative learning process for me and I will be archiving or del
  - created two sample scripts
 
 ### Netmiko testing
+- 06/19/2025 - contribution from Uniuqe: ospf_configurator
+    -  netmiko/ospf_configurator 
 - Playing around with FRR in containerlabs sample code FRR/lab_script.py
 - Got a request today to help someone write a script. Created folder and will keep the scripts in there. 
     - script_requests/req_config_script_07292020.py 
