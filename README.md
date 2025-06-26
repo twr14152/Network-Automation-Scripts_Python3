@@ -70,6 +70,8 @@ This has been a iterative learning process for me and I will be archiving or del
  - created two sample scripts
 
 ### Netmiko testing
+- 06/25/2025 - Playing around with clabs and FRR simple script to make config changes on frr devices:
+    -  netmiko/FRR/load_config_file
 - 06/19/2025 - contribution from Uniuqe: ospf_configurator
     -  netmiko/ospf_configurator 
 - Playing around with FRR in containerlabs sample code FRR/lab_script.py
