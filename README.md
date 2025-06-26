@@ -72,6 +72,9 @@ This has been a iterative learning process for me and I will be archiving or del
 ### Netmiko testing
 - 06/25/2025 - Playing around with clabs and FRR simple script to make config changes on frr devices:
     -  netmiko/FRR/load_config_file
+    -  The files used to load the configs could also be used to run multiple show commands
+    -  The netmiko script simply is looping through the series of command line instructions
+    -  Netmiko does not have a FRR NOS option so you have to use linux
 - 06/19/2025 - contribution from Uniuqe: ospf_configurator
     -  netmiko/ospf_configurator 
 - Playing around with FRR in containerlabs sample code FRR/lab_script.py
